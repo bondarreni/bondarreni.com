@@ -869,7 +869,7 @@
               <button id="loadingBtn" type="button">Kérlek várj...</button>
             </form>
 
-            <p id="successMessageText">Köszönöm! Hamarosan hallasz rólam. ✦</p>
+            <p id="successMessageText">Köszönöm! Küldtem neked egy emailt, nézd meg a beérkező leveleidet!</p>
             <p id="errorMessageText"></p>
             <button id="backBtn" type="button">Vissza</button>
 
@@ -1081,6 +1081,7 @@
       const submitButton = document.getElementById('submitBtn')
       const loadingButton = document.getElementById('loadingBtn')
       const backButton = document.getElementById('backBtn')
+      const emailAddress = document.querySelector('input[name="email"]')?.value
 
       if (checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })) return
 
@@ -1118,6 +1119,7 @@
                 window.location.href = payload.result.redirectTo
               } else {
                 successMessageText.style.display = 'block'
+                successMessageText.innerText = `Köszönöm! Küldtem neked egy emailt a ${emailAddress} címre, nézd meg a beérkező leveleidet!`
               }
               form.reset()
             } else {
