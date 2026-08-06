@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bondár Reni</title>
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZJ1Q9NGRDW');
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit" defer></script>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #6b6b6b;
+      --paper: #fafaf8;
+      --accent: #c8a96e;
+      --border: #e8e5e0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links-right {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links-right-hamburger {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+    
+    .hamburger-menu img {
+      height: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links-right {
+        display: none;
+      }
+      .nav-links-right-hamburger {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      .hamburger-menu {
+        display: flex;
+    }
+    }
+
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--ink);
+    }
+
+    .hero-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    #signupForm {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    #signupForm .formInput {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    #signupForm .formInput::placeholder {
+      color: var(--ink-light);
+      opacity: 0.55;
+    }
+
+    #signupForm .formInput:focus {
+      border-color: var(--accent);
+    }
+
+    #submitBtn, #loadingBtn {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 0.25rem;
+    }
+
+    #submitBtn:hover {
+      background: #333;
+      transform: translateY(-1px);
+    }
+
+    #loadingBtn {
+      display: none;
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    #backBtn {
+      display: none;
+      width: 100%;
+      padding: 0.9rem;
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--border);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: border-color 0.2s;
+    }
+
+    #backBtn:hover {
+      border-color: var(--ink);
+    }
+
+    #captchaContainer {
+      display: none;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .signup-note {
+      font-size: 0.7rem;
+      color: var(--ink-light);
+      opacity: 0.5;
+      margin-top: 1rem;
+    }
+
+    /* TALE */
+    .tale {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 8rem 2rem;
+    }
+
+    .tale-inner {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tale-content {
+      text-align: center;
+    }
+
+    .tale-content .tale-text {
+      text-align: center;
+    }
+
+    .tale-content .hero-divider {
+      margin: 2rem 0;
+    }
+
+    .tale-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 300;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    .tale-text em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .tale-body {
+      font-size: 0.92rem;
+      color: var(--ink-light);
+      line-height: 1.9;
+      max-width: 58ch;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .tale-body p + p {
+      margin-top: 1.2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .social-link {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .tiktok-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tiktok-logo {
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    .social-link:hover {
+      color: var(--ink);
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--border);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+
+      .tale, .projects, footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .tale-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../index.html" class="nav-name">Bondár Reni</a>
+    <div class="nav-links-right">
+      <a href="../index.html" class="nav-link">Beszélő könyv</a>
+      <a href="../index.html#rajzaim" class="nav-link">Rajzok</a>
+      <a href="../index.html#rolam" class="nav-link">Rólam</a>
+    </div>
+  </nav>
+
+  <section class="tale" id="mese">
+    <div class="tale-inner">
+      <div class="tale-content">
+        <p class="tale-text">
+          A róka és a farkas a lakodalomban
+        </p>
+        <div class="hero-divider"></div>
+        <div class="tale-body">
+          <p>
+            Egyszer lakodalom volt egy faluban. A róka megérezte a szagot, s gondolta, jó volna belopódzni oda. Rábeszélte a farkast, hogy menjenek el ők is a lakodalomba. Azt mondja a farkas:<br>
+            - Menjünk! Bár attól félek, hogy megbánjuk.<br>
+            Feleli a róka:<br>
+            - Ne félj semmit, csak gyere velem!<br>
+            Amint bementek az udvarba, a vendégek már mind bent ültek az asztalnál a szobában. Azt mondja a róka:<br>
+            - Te csak húzódj meg itt, farkas koma! Én majd megszimatolom, hogy hol menjünk be.<br>
+            A róka szaglászott, aztán szép óvatosan bement a tornácra.<br>
+            “Elébb bemegyek a kamrába” - gondolta magában. Keresi is a kamrát. A tornácon nem volt senki.<br>
+            <br>
+            Végre megtalálja, s megnyitja a kamraajtót. Látja, hogy mennyi bor meg pálinka van ott. A sok sütemény is mind ott volt.<br>
+            “No, ide jó lesz behúzódni” - gondolta.<br>
+            Hívta a farkas komáját is. Odasettenkedtek most már mindketten. Éppen nekikezdtek volna a süteménynek, akkor veszi észre a róka, hogy van ott jó fazék töltöttkáposzta is. Odaszól a farkasnak:<br>
+            - Ezt lesz jó megkóstolni legelébb!<br>
+            Nekiestek hát előbb a káposztának. Aztán vették sorra a kalácsot, kürtőst, fánkot, a csörögét.<br>
+            Azt mondja a farkas:<br>
+            - No, most már, róka koma, jó lenne valamit inni is.<br>
+            Csapra ütöttek egy nagy hordót, s nekifogtak az ivásnak. Annyit ittak, hogy végül is berúgtak. Nekikezdtek dudorászni! Egyik jobban ordított, mint a másik. De a rókának mégis volt annyi esze, ha be is volt rúgva, hogy a küszöb alatt vájjon egy lyukat, ahol ki tudjon bújni, ha veszedelembe jut.<br>
+            <br>
+            Benn a szobában a vendégek közben megették a levest. Indul a szakácsné, hogy a leves után feltálalja a káposztát a vendégeknek. Mikor megnyitja a kamraajtót, szinte meghal ijedtében attól, amit lát: egy részeg róka meg egy részeg farkas összeölelkezve dalol! Szalad be a vendégekhez, s mondja rémülten, hogy mit látott!<br>
+            Azok nem akarták hinni, azt gondolták, afféle lakodalmi tréfa. De egypáran mégis kimentek. Mire kiértek, a róka neszt fogott, s már kibújt a lyukon. Csak a farkast lelték ott. Neki! A szegény farkast úgy elverték, hogy csak úgy zörgött a csontja. Alig tudott kivánszorogni a kamrából.<br>
+            <br>
+            A róka közben szaladt, iszkolt a falu végére. Ott lefeküdt egy csomó pozdorjára, s elaludt. Egyszer csak arra ébredt fel, hogy nagyon lökdösi valami. Felnyitja a szemét nagy álmosan, nézi, hogy ki az, hát - nicsak, farkas komája! A szegény farkas alig tudott menni a részegség­től, meg attól, hogy minden oldalbordája meg volt dagadva. Jajgatott ugyancsak a rókának:<br>
+            - Menni se tudok!<br>
+            Azt feleli neki bosszúsan a róka:<br>
+            - Mit jajgatsz? A te csontod csak meg van dagadva, de az enyém, lám, mind kívül lóg az oldalamon. Látod, milyen fehér? - azzal mutatja azt a pozdorját ami ráragadt, ahol aludt.<br>
+            Csak könyörgött a farkas, hogy vegye fel a hátára őt a róka. Mert itt lepik az emberek! Jönnek! Mondja neki a róka:<br>
+            - Hogy vegyelek, mikor az én csontom, látod, kívül lóg a szőrömön? Vegyél inkább fel te engemet, vigyél.<br>
+            <br>
+            A bolond farkasnak részeg fővel csak annyi esze volt, hogy mégis nekidurálta magát, s felvette. Elindult, s vitte a hátán. A róka meg csak vigyorgott magában a farkas hátán. Végül is nagy elégedetten dudorászni kezdett.<br>
+            - Vert visz veretlent, vert visz veretlent.<br>
+            Azt mondja a farkas:<br>
+            - Mit pusmogsz te ott a hátamon, róka koma?<br>
+            Azt mondja a róka:<br>
+            - Jaj, kedves komám, azt mondom, hogy veretlen visz vertet, veretlen visz vertet.<br>
+            <br>
+            A farkas most már tisztán megértette, hogy mit mond a róka. Akkor már jó messze elvitte volt a rókát.<br>
+            Megharagudott hát, s ledobta a hátáról a rókát, de úgy, hogy most a róka oldalbordája is megreccsent. Fölugrott mérgesen a róka, neki a farkasnak! Csihi-puhi, zim-zum! Oda, ahol puha, ne törjön a csontja! Úgy egymásnak akaszkodtak, se láttak, se hallottak.Azt se vették észre, amikor a vendégek odaértek, közrevették, s vitték vissza őket olyan haddelhadd lagzira, hogy amíg élnek, megemlegetik.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@bondarreni" target="_blank" rel="noopener" class="social-link tiktok-link">
+        <img
+          class="tiktok-logo"
+          src="../assets/tiktok.svg"
+          alt="TikTok logo"
+        />
+        TikTok
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Bondár Reni</p>
+  </footer>
+
+  <script></script>
+
+</body>
+</html>
