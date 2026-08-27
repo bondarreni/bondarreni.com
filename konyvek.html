@@ -327,17 +327,235 @@
           aspect-ratio: 4 / 3;
         }
       }
+
+
+      .books-catalogue {
+  --ink: #292521;
+  --muted: #77716b;
+  --gold: #c69b55;
+  --line: #ece7df;
+  --soft: #fbfaf7;
+
+  padding: 140px 32px 110px;
+  color: var(--ink);
+}
+
+.books-catalogue-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* fejléc */
+
+.books-catalogue-header {
+  margin-bottom: 64px;
+}
+
+.books-catalogue-header .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+}
+
+.books-catalogue-header h1 {
+  margin: 0 0 20px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.books-catalogue-header p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* grid */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 64px 38px;
+}
+
+/* könyv */
+
+.book-card {
+  min-width: 0;
+}
+
+.book-cover-link {
+  display: block;
+  overflow: hidden;
+  background: var(--soft);
+}
+
+.book-cover-link img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.book-card:hover .book-cover-link img {
+  transform: scale(1.018);
+}
+
+.book-card-content {
+  padding-top: 20px;
+}
+
+.book-card-content h2 {
+  margin: 0 0 7px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.book-card-content p {
+  margin: 0 0 16px;
+
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.book-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  transition:
+    gap 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.book-card-link:hover {
+  gap: 12px;
+  border-color: var(--gold);
+}
+
+/* egyedi mese */
+
+.book-card-custom {
+  display: flex;
+}
+
+.custom-book-box {
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 42px;
+
+  border: 1px solid var(--line);
+  background: var(--soft);
+
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.custom-symbol {
+  margin-bottom: 24px;
+
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 2rem;
+}
+
+.custom-book-box h2 {
+  margin: 0 0 12px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.custom-book-box p {
+  max-width: 250px;
+  margin: 0 0 24px;
+
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* tablet */
+
+@media (max-width: 900px) {
+  .books-catalogue {
+    padding: 56px 24px 90px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px 26px;
+  }
+}
+
+/* mobil */
+
+@media (max-width: 560px) {
+  .books-catalogue {
+    padding: 42px 18px 70px;
+  }
+
+  .books-catalogue-header {
+    margin-bottom: 42px;
+  }
+
+  .books-catalogue-header h1 {
+    font-size: 3rem;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .book-card-content h2 {
+    font-size: 1.55rem;
+  }
+
+  .custom-book-box {
+    padding: 34px 28px;
+  }
+}
     </style>
   </head>
   <body>
     <!-- NAV -->
     <nav>
-      <a href="#" class="nav-name">Bondár Reni</a>
+      <a href="./index.html" class="nav-name">Bondár Reni</a>
       <div class="nav-links-right">
         <a href="./index.html" class="nav-link">Beszélő könyv</a>
-        <a href="./konyvek.html" class="nav-link">Könyvek</a>
+        <a href="./konyvek.html" class="nav-link activeNavLink">Könyvek</a>
         <a href="./rajzok.html" class="nav-link">Rajzok</a>
-        <a href="#" class="nav-link activeNavLink">Rólam</a>
+        <a href="./rolam.html" class="nav-link">Rólam</a>
       </div>
 
       <a class="hamburger-menu" onclick="showHamburger()">
@@ -345,52 +563,103 @@
       </a>
       <div id="nav-mobile">
         <a href="./index.html" class="nav-link">Beszélő könyv</a>
-        <a href="./konyvek.html" class="nav-link">Könyvek</a>
+        <a href="./konyvek.html" class="nav-link activeNavLink">Könyvek</a>
         <a href="./rajzok.html" class="nav-link">Rajzok</a>
-        <a href="#" class="nav-link activeNavLink">Rólam</a>
+        <a href="./rolam.html" class="nav-link">Rólam</a>
       </div>
     </nav>
 
-    <!-- ABOUT -->
-    <section class="about" id="rolam">
-      <div class="about-inner">
-        <div class="about-content">
-          <p class="section-label">Rólam</p>
-          <p class="about-text">
-            Programozó vagyok, két kisgyerek anyukája -<br />
-            és imádok <em>alkotni</em>.
-          </p>
-          <div class="hero-divider"></div>
-          <div class="about-body">
-            <p>
-              Az egyetemen programozóként végeztem, jelenleg pedig a 2.5 éves kisfiammal és az 1
-              évves kislányommal vagyok itthon. Nincs sok szabadidőm, de ami van, azt rajzolással,
-              programozással, elektronikai projektekkel töltöm.
-            </p>
-            <p>
-              TikTokon azért kezdtem videókat készíteni, hogy másoknak is megmutassam, hogyan
-              valósítom meg az ötleteimet. A <b>beszélő mesekönyv</b>ről készült videóm után sokan
-              megkerestek, hogy segítsek nekik megőrizni a szeretteik hangját ebben a formában.
-            </p>
-          </div>
-          <div class="about-tags">
-            <span class="about-tag">Rajzolás</span>
-            <span class="about-tag">Programozás</span>
-            <span class="about-tag">Elektronika</span>
-            <span class="about-tag">DIY projektek</span>
-          </div>
-        </div>
-        <div class="about-photo">
-          <img src="reni-with-merlin-winter.jpeg" alt="Reni a kutyájával, Merlinnel" />
+    <section class="books-catalogue">
+  <div class="books-catalogue-inner">
+
+    <div class="books-grid">
+
+      <article class="book-card">
+        <a href="./konyvek/kis-gido.html" class="book-cover-link">
           <img
-            src="assets/signature.png"
-            alt="Aláírás"
-            style="object-fit: contain; margin-top: 10px"
-            height="50px"
-          />
+            src="./assets/books/Kis_gido_borito.png"
+            alt="A kis gidó mesekönyv borítója"
+          >
+        </a>
+
+        <div class="book-card-content">
+          <h2>A kis gidó</h2>
+          <p>Klasszikus népmese</p>
+
+          <a href="./konyvek/kis-gido.html" class="book-card-link">
+            Megnézem <span>→</span>
+          </a>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <article class="book-card">
+        <a href="./konyvek/repamese.html" class="book-cover-link">
+          <img
+            src="./assets/books/Repamese_borito.png"
+            alt="Répamese mesekönyv borítója"
+          >
+        </a>
+
+        <div class="book-card-content">
+          <h2>Répamese</h2>
+          <p>Klasszikus népmese</p>
+
+          <a href="./konyvek/repamese.html" class="book-card-link">
+            Megnézem <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card">
+        <a href="/konyvek/roka-es-farkas.html" class="book-cover-link">
+          <img
+            src="./assets/books/A_roka_es_a_farkas_a_lakodalomban.png"
+            alt="A róka és a farkas a lakodalomban mesekönyv borítója"
+          >
+        </a>
+
+        <div class="book-card-content">
+          <h2>A róka és a farkas a lakodalomban</h2>
+          <p>Klasszikus népmese</p>
+
+          <a href="/konyvek/roka-es-farkas.html" class="book-card-link">
+            Megnézem <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card">
+        <a href="/konyvek/kiskakas.html" class="book-cover-link">
+          <img
+            src="./assets/books/Nyulacska_borito.png"
+            alt="A kiskakas gyémánt félkrajcárja mesekönyv borítója"
+          >
+        </a>
+
+        <div class="book-card-content">
+          <h2>A nyulacska harangocskája</h2>
+          <p>Klasszikus népmese</p>
+
+          <a href="/konyvek/kiskakas.html" class="book-card-link">
+            Megnézem <span>→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="book-card book-card-custom">
+        <a href="/kapcsolat" class="custom-book-box">
+          <span class="custom-symbol">♡</span>
+          <h2>Más mesét keresel?</h2>
+          <p>Egy meglévő kedvenc történetből is készülhet könyv.</p>
+          <span class="book-card-link">
+            Érdeklődöm <span>→</span>
+          </span>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <!-- FOOTER -->
     <footer>

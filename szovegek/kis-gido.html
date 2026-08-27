@@ -125,6 +125,10 @@
       margin-bottom: 1.5rem;
     }
 
+    .activeNavLink {
+      color: var(--accent);
+    }
+
     #signupForm {
       display: flex;
       flex-direction: column;
@@ -212,6 +216,24 @@
       color: var(--ink-light);
       opacity: 0.5;
       margin-top: 1rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .section-label a {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+      font-family: 'Inter', sans-serif;
     }
 
     /* TALE */
@@ -331,12 +353,19 @@
     <a href="../index.html" class="nav-name">Bondár Reni</a>
     <div class="nav-links-right">
       <a href="../index.html" class="nav-link">Beszélő könyv</a>
+      <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
       <a href="../index.html#rajzaim" class="nav-link">Rajzok</a>
       <a href="../index.html#rolam" class="nav-link">Rólam</a>
     </div>
   </nav>
 
   <section class="tale" id="mese">
+    <p class="section-label">
+    <a href="../konyvek.html" class="nav-link">Könyvek</a>
+    /
+    <a href="../konyvek/kis-gido.html" class="nav-link">A kis gidó</a>
+    / szöveg
+  </p>
     <div class="tale-inner">
       <div class="tale-content">
         <p class="tale-text">

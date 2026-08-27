@@ -154,6 +154,10 @@
         color: var(--ink);
       }
 
+      .activeNavLink {
+        color: var(--accent);
+      }
+
       /* HERO */
       .hero {
         min-height: 100vh;
@@ -1071,7 +1075,8 @@
     <nav>
       <a href="#" class="nav-name">Bondár Reni</a>
       <div class="nav-links-right">
-        <a href="#" class="nav-link">Beszélő könyv</a>
+        <a href="#" class="nav-link activeNavLink">Beszélő könyv</a>
+        <a href="./konyvek.html" class="nav-link">Könyvek</a>
         <a href="./rajzok.html" class="nav-link">Rajzok</a>
         <a href="./rolam.html" class="nav-link">Rólam</a>
       </div>
@@ -1080,7 +1085,8 @@
         <img src="assets/hamburger-menu.svg" alt="Hamburger menu" />
       </a>
       <div id="nav-mobile">
-        <a href="#" class="nav-link">Beszélő könyv</a>
+        <a href="#" class="nav-link activeNavLink">Beszélő könyv</a>
+        <a href="./konyvek.html" class="nav-link">Könyvek</a>
         <a href="./rajzok.html" class="nav-link">Rajzok</a>
         <a href="./rolam.html" class="nav-link">Rólam</a>
       </div>
@@ -1185,26 +1191,31 @@
               <li>♡ Teljesen egyedi történet</li>
             </ul>
 
-            <a href="/konyvek" class="step-button"> Összes könyv → </a>
+            <a href="./konyvek.html" class="step-button"> Összes könyv → </a>
           </div>
 
           <div class="book-grid">
-            <a href="/konyvek/kis-gido" class="book-card">
+            <a href="./konyvek/kis-gido.html" class="book-card">
               <img src="assets/books/Kis_gido_borito.png" alt="Kis gidó" />
               <span>A kis gidó</span>
             </a>
 
-            <a href="/konyvek/repamese" class="book-card">
+            <a href="./konyvek/repamese.html" class="book-card">
               <img src="assets/books/Repamese_borito.png" alt="Répamese" />
               <span>Répamese</span>
             </a>
 
-            <a href="/konyvek/roka" class="book-card">
+            <a href="#" class="book-card">
+              <img src="assets/books/Nyulacska_borito.png" alt="A nyulacska harangocskája" />
+              <span>A nyulacska harangocskája</span>
+            </a>
+
+            <a href="#" class="book-card">
               <img src="assets/books/A_roka_es_a_farkas_a_lakodalomban.png" alt="A róka és a farkas a lakodalomban" />
               <span>A róka és a farkas a lakodalomban</span>
             </a>
 
-            <a href="/kapcsolat" class="book-card book-card--custom">
+            <a href="./konyvek.html" class="book-card book-card--custom">
               <div class="book-card__more">
                 <span class="heart">♡</span>
                 <span>Új mese</span>
