@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bondár Reni</title>
+  <meta name="description" content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre. Ismerd meg Bondár Reni rajzait és mesekönyveit." />
+  <meta property="og:title" content="Bondár Reni - Beszélő mesekönyv" />
+  <meta property="og:description" content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/books/a-kis-gido/a-kis-gido-1.webp" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZJ1Q9NGRDW');
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit" defer></script>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #6b6b6b;
+      --paper: #fafaf8;
+      --accent: #c8a96e;
+      --border: #e8e5e0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links-right {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+    
+    .hamburger-menu img {
+      height: 25px;
+    }
+
+    #nav-mobile {
+      display: none;
+      position: absolute;
+      top:  100%;
+      left: 0;
+      background: rgba(250, 250, 248, 0.92);
+      z-index: 1;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    #nav-mobile a {
+      color: var(--ink-light);
+      padding: 1rem 1.5rem;
+      display: block;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links-right {
+        display: none;
+      }
+      .hamburger-menu {
+        display: flex;
+      }
+    }
+    @media (min-width: 769px) {
+      #nav-mobile {
+        display: none !important;
+      }
+    }
+
+    .nav-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--ink);
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+    }
+
+    /* GALLERY */
+    .gallery {
+      border-top: 1px solid var(--border);
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+
+    .gallery-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-filter {
+      display: flex;
+      gap: 0.4rem;
+      justify-content: center;
+      margin: 2.5rem 0 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--ink-light);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    .filter-btn.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+
+    .gallery-desc-text {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      max-width: 52ch;
+      margin: 0 auto 3rem;
+      line-height: 1.85;
+      min-height: 3.5em;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      cursor: zoom-in;
+      background: #f0ede8;
+      aspect-ratio: 9 / 12;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease, opacity 0.2s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .gallery-item.hidden {
+      display: none;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(8, 8, 8, 0.93);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(90vw, 640px);
+      max-height: 90vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 1.8rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.4rem;
+      transition: color 0.15s;
+      font-weight: 300;
+    }
+
+    .lightbox-close:hover {
+      color: #fff;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      transition: color 0.15s;
+      line-height: 0;
+      z-index: 1;
+    }
+
+    .lightbox-nav:hover {
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .lightbox-prev { left: 0.5rem; }
+    .lightbox-next { right: 0.5rem; }
+
+    #lightboxImg {
+      transition: opacity 0.18s ease;
+    }
+
+    #lightboxImg.fading {
+      opacity: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .social-link {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .tiktok-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tiktok-logo {
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    .social-link:hover {
+      color: var(--ink);
+    }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--border);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-name">Bondár Reni</a>
+    <div class="nav-links-right">
+      <a href="./index.html" class="nav-link">Beszélő könyv</a>
+      <a href="#" class="nav-link">Rajzok</a>
+      <a href="./rolam.html" class="nav-link">Rólam</a>
+    </div>
+
+    <a class="hamburger-menu" onclick="showHamburger()">
+      <img
+        src="assets/hamburger-menu.svg"
+        alt="Hamburger menu"
+      />
+    </a>
+    <div id="nav-mobile">
+      <a href="./index.html" class="nav-link">Beszélő könyv</a>
+      <a href="#" class="nav-link">Rajzok</a>
+      <a href="./rolam.html" class="nav-link">Rólam</a>
+    </div>
+  </nav>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="rajzaim">
+    <div class="gallery-inner">
+      <p class="section-label">Rajzaim</p>
+      <!--<h2>Rajzaim</h2>-->
+
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">Összes</button>
+        <button class="filter-btn" data-filter="plush">Plüssök</button>
+        <button class="filter-btn" data-filter="pets">Háziállatok</button>
+      </div>
+
+      <p class="gallery-desc-text" id="galleryDesc">
+        Emlékek megőrzése rajz formában. Minden illusztráció egyedileg, kézzel készül, szeretettel. 🤍
+      </p>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bobo.webp" loading="lazy" alt="Bobo" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/doll1.webp" loading="lazy" alt="Baba" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/boribon.webp" loading="lazy" alt="Boribon" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny5.webp" loading="lazy" alt="Nyuszi 5" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bear.webp" loading="lazy" alt="Maci" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/sheep.webp" loading="lazy" alt="Bárány" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/berrybear.webp" loading="lazy" alt="Berry Bear" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny.webp" loading="lazy" alt="Nyuszi" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny2.webp" loading="lazy" alt="Nyuszi 2" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny3.webp" loading="lazy" alt="Nyuszi 3" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny4.webp" loading="lazy" alt="Nyuszi 4" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/chick.webp" loading="lazy" alt="Kiscsibe" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/doll2.webp" loading="lazy" alt="Baba 2" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/elephant.webp" loading="lazy" alt="Elefánt" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/elephant2.webp" loading="lazy" alt="Elefánt 2" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/elephantsheep.webp" loading="lazy" alt="Elefánt-bárány" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/nyuszika.webp" loading="lazy" alt="Nyuszika" /></div>
+        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/octopus.webp" loading="lazy" alt="Polip" /></div>
+        <div class="gallery-item" data-category="pets"><img src="assets/drawings/pets/merlin1.webp" loading="lazy" alt="Merlin" /></div>
+        <div class="gallery-item" data-category="pets"><img src="assets/drawings/pets/merlin2.webp" loading="lazy" alt="Merlin 2" /></div>
+        <div class="gallery-item" data-category="pets"><img src="assets/drawings/pets/pegi.webp" loading="lazy" alt="Pegi" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 4L8 14L18 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lightboxNext">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4L20 14L10 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- BOOK LIGHTBOX -->
+  <div class="book-lightbox" id="bookLightbox">
+    <button class="lightbox-close" id="bookLightboxClose">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="bookLightboxPrev">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 4L8 14L18 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <img id="bookLightboxImg" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" id="bookLightboxNext">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4L20 14L10 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a
+        href="mailto:bondarreni@gmail.com"
+        class="social-link tiktok-link"
+      >
+        <img class="tiktok-logo" src="assets/email.svg" alt="Email icon"/>
+        bondarreni@gmail.com
+      </a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@bondarreni" target="_blank" rel="noopener" class="social-link tiktok-link">
+        <img
+          class="tiktok-logo"
+          src="assets/tiktok.svg"
+          alt="TikTok logo"
+        />
+        TikTok
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2026  Bondár Reni</p>
+  </footer>
+
+  <script>
+
+    let turnstileToken = null
+    let turnstileWidgetId = null
+    let pendingSubmit = false
+
+    function onloadTurnstileCallback() {
+      const container = document.getElementById('turnstileWidget')
+      if (container) {
+        turnstileWidgetId = turnstile.render(container, {
+          sitekey: '0x4AAAAAADjl8zPCcTc3eqv7',
+          theme: 'light',
+          size: 'normal',
+          appearance: 'execute',
+          callback: function(token) {
+            turnstileToken = token
+            if (pendingSubmit) {
+              pendingSubmit = false
+              localStorage.removeItem('timestamp')
+              document.getElementById('signupForm').dispatchEvent(new Event('submit'))
+            }
+          },
+          'expired-callback': function() { turnstileToken = null; pendingSubmit = false },
+          'error-callback': function() { turnstileToken = null; pendingSubmit = false }
+        })
+      }
+    }
+
+    function checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton }) {
+      const timestamp = Date.now()
+      const previousTimestamp = localStorage.getItem('timestamp')
+      if (previousTimestamp && Number(previousTimestamp) + 5000 > timestamp) {
+        document.getElementById('captchaContainer').style.display = 'none'
+        errorMessageText.innerText = 'Túl sok kísérlet, kérlek próbáld újra egy kis idő múlva.'
+        inputs.forEach(input => { if (input) input.style.display = 'none' })
+        submitButton.style.display = 'none'
+        errorMessageText.style.display = 'block'
+        backButton.style.display = 'block'
+        return true
+      }
+    }
+
+    // GALLERY FILTER
+    const galleryDescs = {
+      all: 'Emlékek megőrzése rajz formában. Minden illusztráció egyedileg, kézzel készül, szeretettel. 🤍',
+      plush: 'A plüss rajzaimmal segítek megőrizni egy különleges korszak emlékeit - azt az időszakot, amikor a gyerekek mindenhová magukkal viszik a kis barátjukat.',
+      pets: 'A háziállat családtag. Portéimmal a hozzájuk kötődő emlékeket és történeteket őrzöm meg.'
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'))
+        btn.classList.add('active')
+        const filter = btn.dataset.filter
+        document.getElementById('galleryDesc').textContent = galleryDescs[filter]
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          item.classList.toggle('hidden', filter !== 'all' && item.dataset.category !== filter)
+        })
+      })
+    })
+
+    // LIGHTBOX (gallery)
+    const lightbox = document.getElementById('lightbox')
+    const lightboxImg = document.getElementById('lightboxImg')
+    let lbItems = []
+    let lbIndex = 0
+    let touchStartX = 0
+
+    function getVisibleImgs() {
+      return Array.from(document.querySelectorAll('.gallery-item:not(.hidden) img'))
+    }
+
+    function showLightboxImg(img) {
+      lightboxImg.classList.add('fading')
+      setTimeout(() => {
+        lightboxImg.src = img.src
+        lightboxImg.alt = img.alt
+        lightboxImg.classList.remove('fading')
+      }, 160)
+    }
+
+    function lbNavigate(dir) {
+      lbIndex = (lbIndex + dir + lbItems.length) % lbItems.length
+      showLightboxImg(lbItems[lbIndex])
+    }
+
+    function openLightbox(img) {
+      lbItems = getVisibleImgs()
+      lbIndex = lbItems.indexOf(img)
+      lightboxImg.src = img.src
+      lightboxImg.alt = img.alt
+      lightbox.classList.add('open')
+      document.body.style.overflow = 'hidden'
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open')
+      document.body.style.overflow = ''
+    }
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img))
+    })
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox)
+    document.getElementById('lightboxPrev').addEventListener('click', e => { e.stopPropagation(); lbNavigate(-1) })
+    document.getElementById('lightboxNext').addEventListener('click', e => { e.stopPropagation(); lbNavigate(1) })
+
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox() })
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') lbNavigate(-1)
+      if (e.key === 'ArrowRight') lbNavigate(1)
+    })
+
+    lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX }, { passive: true })
+    lightbox.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX
+      if (Math.abs(dx) > 40) lbNavigate(dx < 0 ? 1 : -1)
+    })
+
+    function showHamburger () {
+      const navLinks = document.getElementById("nav-mobile");
+      if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+      } else {
+        navLinks.style.display = "flex";
+      }
+    }
+  </script>
+
+</body>
+</html>

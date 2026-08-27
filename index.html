@@ -1,1358 +1,1669 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bondár Reni</title>
-  <meta name="description" content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre. Ismerd meg Bondár Reni rajzait és mesekönyveit." />
-  <meta property="og:title" content="Bondár Reni - Beszélő mesekönyv" />
-  <meta property="og:description" content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/books/a-kis-gido/a-kis-gido-1.webp" />
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZJ1Q9NGRDW');
-  </script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit" defer></script>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondár Reni</title>
+    <meta
+      name="description"
+      content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre. Ismerd meg Bondár Reni rajzait és mesekönyveit."
+    />
+    <meta property="og:title" content="Bondár Reni - Beszélő mesekönyv" />
+    <meta
+      property="og:description"
+      content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/books/a-kis-gido/a-kis-gido-1.webp" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-ZJ1Q9NGRDW')
+    </script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit"
+      defer
+    ></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    :root {
-      --ink: #1a1a1a;
-      --ink-light: #6b6b6b;
-      --paper: #fafaf8;
-      --accent: #c8a96e;
-      --border: #e8e5e0;
-    }
+      :root {
+        --ink: #1a1a1a;
+        --ink-light: #6b6b6b;
+        --paper: #fafaf8;
+        --accent: #c8a96e;
+        --border: #e8e5e0;
+      }
 
-    html {
-      scroll-behavior: smooth;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      min-height: 100vh;
-    }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(250, 250, 248, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-    }
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
 
-    .nav-links-right {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .hamburger-menu {
-      display: none;
-    }
-    
-    .hamburger-menu img {
-      height: 25px;
-    }
-
-    #nav-mobile {
-      display: none;
-      position: absolute;
-      top:  100%;
-      left: 0;
-      background: rgba(250, 250, 248, 0.92);
-      z-index: 1;
-      width: 100%;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    #nav-mobile a {
-      color: var(--ink-light);
-      padding: 1rem 1.5rem;
-      display: block;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
       .nav-links-right {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hamburger-menu {
         display: none;
       }
-      .hamburger-menu {
-        display: flex;
+
+      .hamburger-menu img {
+        height: 25px;
       }
-    }
-    @media (min-width: 769px) {
+
       #nav-mobile {
-        display: none !important;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(250, 250, 248, 0.92);
+        z-index: 1;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
       }
-    }
 
-    .nav-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      color: var(--ink);
-    }
-
-    .nav-link {
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--ink-light);
-      transition: color 0.2s;
-    }
-
-    .nav-link:hover {
-      color: var(--ink);
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding-top: 73px;
-    }
-
-    .hero-left {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f0ede8;
-      background-image: url("assets/books/a-kis-gido/a-kis-gido-1.webp");
-      background-position: right;
-      background-size: cover;
-      padding: 4rem 3rem;
-      border-right: 1px solid var(--border);
-    }
-
-    .tiktok-facade {
-      position: relative;
-      width: 325px;
-      max-width: 100%;
-      aspect-ratio: 9 / 16;
-      cursor: pointer;
-      overflow: hidden;
-      background: #111;
-    }
-
-    .tiktok-facade img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.2s;
-    }
-
-    .tiktok-facade:hover img {
-      opacity: 0.82;
-    }
-
-    .tiktok-play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 62px;
-      height: 62px;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .tiktok-facade:hover .tiktok-play-btn {
-      transform: translate(-50%, -50%) scale(1.08);
-      background: #fff;
-    }
-
-    .tiktok-play-icon {
-      width: 0;
-      height: 0;
-      border-top: 12px solid transparent;
-      border-bottom: 12px solid transparent;
-      border-left: 20px solid #1a1a1a;
-      margin-left: 4px;
-    }
-
-    .tiktok-facade iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .hero-right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 3rem;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 3.5vw, 3.8rem);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      font-weight: 300;
-    }
-
-    .hero-divider {
-      width: 40px;
-      height: 1px;
-      background: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-desc {
-      font-size: 0.9rem;
-      color: var(--ink-light);
-      line-height: 1.85;
-      max-width: 44ch;
-      margin-bottom: 2.5rem;
-    }
-
-    /* FORM */
-    .hero-form-wrap {
-      max-width: 380px;
-    }
-
-    .hero-form-label {
-      display: block;
-      font-size: 0.67rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 1rem;
-    }
-
-    #signupForm {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    #signupForm .formInput {
-      width: 100%;
-      padding: 0.9rem 1.1rem;
-      background: #fff;
-      border: 1px solid var(--border);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 300;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    #signupForm .formInput::placeholder {
-      color: var(--ink-light);
-      opacity: 0.55;
-    }
-
-    #signupForm .formInput:focus {
-      border-color: var(--accent);
-    }
-
-    #submitBtn, #loadingBtn {
-      width: 100%;
-      padding: 0.9rem;
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-      margin-top: 0.25rem;
-    }
-
-    #submitBtn:hover {
-      background: #333;
-      transform: translateY(-1px);
-    }
-
-    #loadingBtn {
-      display: none;
-      opacity: 0.5;
-      cursor: default;
-    }
-
-    #backBtn {
-      display: none;
-      width: 100%;
-      padding: 0.9rem;
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--border);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 0.5rem;
-      transition: border-color 0.2s;
-    }
-
-    #backBtn:hover {
-      border-color: var(--ink);
-    }
-
-    #captchaContainer {
-      display: none;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .signup-note {
-      font-size: 0.7rem;
-      color: var(--ink-light);
-      opacity: 0.5;
-      margin-top: 1rem;
-    }
-
-    #successMessageText {
-      display: none;
-      padding: 1.5rem;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-    }
-
-    #errorMessageText {
-      display: none;
-      padding: 1.2rem;
-      border: 1px solid rgba(220, 100, 80, 0.4);
-      color: rgba(180, 60, 40, 1);
-      font-size: 0.82rem;
-      line-height: 1.6;
-    }
-
-    /* ABOUT */
-    .about {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 8rem 2rem;
-    }
-
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .about-content {
-      text-align: left;
-    }
-
-    .about-content .section-label {
-      text-align: left;
-    }
-
-    .about-content .about-text {
-      text-align: left;
-    }
-
-    .about-content .hero-divider {
-      margin: 2rem 0;
-    }
-
-    .about-content .about-tags {
-      justify-content: flex-start;
-    }
-
-    .about-photo {
-      width: 340px;
-      flex-shrink: 0;
-    }
-
-    .about-photo img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      aspect-ratio: 3 / 4;
-    }
-
-    .section-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 2.5rem;
-    }
-
-    .about-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      font-weight: 300;
-      line-height: 1.55;
-      color: var(--ink);
-    }
-
-    .about-text em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .about-body {
-      font-size: 0.92rem;
-      color: var(--ink-light);
-      line-height: 1.9;
-      max-width: 58ch;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .about-body p + p {
-      margin-top: 1.2rem;
-    }
-
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-      margin: 2.5rem auto 0;
-    }
-
-    .about-tag {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.9rem;
-      background: #fff;
-    }
-
-    /* GALLERY */
-    .gallery {
-      border-top: 1px solid var(--border);
-      padding: 8rem 2rem;
-      text-align: center;
-    }
-
-    .gallery-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 300;
-      margin-bottom: 0.5rem;
-    }
-
-    .gallery-filter {
-      display: flex;
-      gap: 0.4rem;
-      justify-content: center;
-      margin: 2.5rem 0 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn {
-      padding: 0.55rem 1.5rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--ink-light);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
-    }
-
-    .filter-btn:hover {
-      border-color: var(--ink);
-      color: var(--ink);
-    }
-
-    .filter-btn.active {
-      background: var(--ink);
-      border-color: var(--ink);
-      color: var(--paper);
-    }
-
-    .gallery-desc-text {
-      font-size: 0.88rem;
-      color: var(--ink-light);
-      max-width: 52ch;
-      margin: 0 auto 3rem;
-      line-height: 1.85;
-      min-height: 3.5em;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 4px;
-    }
-
-    .gallery-item {
-      overflow: hidden;
-      cursor: zoom-in;
-      background: #f0ede8;
-      aspect-ratio: 9 / 12;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.45s ease, opacity 0.2s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-
-    .gallery-item.hidden {
-      display: none;
-    }
-
-    /* LIGHTBOX */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 500;
-      background: rgba(8, 8, 8, 0.93);
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .lightbox.open {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: min(90vw, 640px);
-      max-height: 90vh;
-      object-fit: contain;
-      display: block;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 1.2rem;
-      right: 1.5rem;
-      background: none;
-      border: none;
-      color: rgba(255, 255, 255, 0.55);
-      font-size: 1.8rem;
-      line-height: 1;
-      cursor: pointer;
-      padding: 0.4rem;
-      transition: color 0.15s;
-      font-weight: 300;
-    }
-
-    .lightbox-close:hover {
-      color: #fff;
-    }
-
-    .lightbox-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: rgba(255, 255, 255, 0.4);
-      cursor: pointer;
-      padding: 1rem 1.2rem;
-      transition: color 0.15s;
-      line-height: 0;
-      z-index: 1;
-    }
-
-    .lightbox-nav:hover {
-      color: rgba(255, 255, 255, 0.95);
-    }
-
-    .lightbox-prev { left: 0.5rem; }
-    .lightbox-next { right: 0.5rem; }
-
-    #lightboxImg {
-      transition: opacity 0.18s ease;
-    }
-
-    #lightboxImg.fading {
-      opacity: 0;
-    }
-
-    /* BOOK POLAROIDS */
-    .hero-right-inner {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 2rem;
-      width: 100%;
-    }
-
-    .hero-right-content {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .polaroid-col {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      flex-shrink: 0;
-      padding: 1rem 0.5rem;
-    }
-
-    .polaroid {
-      background: #fff;
-      padding: 8px 8px 22px;
-      box-shadow: 2px 5px 14px rgba(0,0,0,0.13);
-      cursor: zoom-in;
-      position: relative;
-      z-index: 1;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .polaroid:nth-child(1) { transform: rotate(-3.5deg); }
-    .polaroid:nth-child(2) { transform: rotate(2deg); }
-    .polaroid:nth-child(3) { transform: rotate(-2deg); }
-    .polaroid:nth-child(4) { transform: rotate(3.5deg); }
-
-    .polaroid:hover {
-      transform: rotate(0deg) scale(1.1) translateY(-6px);
-      box-shadow: 4px 12px 30px rgba(0,0,0,0.22);
-      z-index: 10;
-    }
-
-    .polaroid img {
-      width: 110px;
-      height: 135px;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* BOOK LIGHTBOX */
-    .book-lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 500;
-      background: rgba(8, 8, 8, 0.93);
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .book-lightbox.open {
-      display: flex;
-    }
-
-    .book-lightbox img {
-      max-width: min(90vw, 720px);
-      max-height: 90vh;
-      object-fit: contain;
-      display: block;
-      transition: opacity 0.18s ease;
-    }
-
-    .book-lightbox img.fading {
-      opacity: 0;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .social-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--ink-light);
-      transition: color 0.2s;
-    }
-
-    .tiktok-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .tiktok-logo {
-      height: 25px;
-      margin-right: 5px;
-    }
-
-    .social-link:hover {
-      color: var(--ink);
-    }
-
-    .footer-copy {
-      font-size: 0.72rem;
-      color: var(--border);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
+      #nav-mobile a {
+        color: var(--ink-light);
+        padding: 1rem 1.5rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+      @media (min-width: 769px) {
+        #nav-mobile {
+          display: none !important;
+        }
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--ink);
+      }
+
+      /* HERO */
       .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 73px;
       }
 
       .hero-left {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 3rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0ede8;
+        background-image: url('assets/books/a-kis-gido/a-kis-gido-1.webp');
+        background-position: right;
+        background-size: cover;
+        padding: 4rem 3rem;
+        border-right: 1px solid var(--border);
+      }
+
+      .tiktok-facade {
+        position: relative;
+        width: 325px;
+        max-width: 100%;
+        aspect-ratio: 9 / 16;
+        cursor: pointer;
+        overflow: hidden;
+        background: #111;
+      }
+
+      .tiktok-facade img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.2s;
+      }
+
+      .tiktok-facade:hover img {
+        opacity: 0.82;
+      }
+
+      .tiktok-play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 62px;
+        height: 62px;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+
+      .tiktok-facade:hover .tiktok-play-btn {
+        transform: translate(-50%, -50%) scale(1.08);
+        background: #fff;
+      }
+
+      .tiktok-play-icon {
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 20px solid #1a1a1a;
+        margin-left: 4px;
+      }
+
+      .tiktok-facade iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
 
       .hero-right {
-        padding: 3rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 3rem;
       }
 
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.4rem, 3.5vw, 3.8rem);
+        font-weight: 300;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title em {
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .hero-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-desc {
+        font-size: 0.9rem;
+        color: var(--ink-light);
+        line-height: 1.85;
+        max-width: 44ch;
+        margin-bottom: 2.5rem;
+      }
+
+      /* FORM */
       .hero-form-wrap {
-        max-width: 100%;
+        max-width: 380px;
       }
 
+      .hero-form-label {
+        display: block;
+        font-size: 0.67rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-light);
+        margin-bottom: 1rem;
+      }
+
+      #signupForm {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      #signupForm .formInput {
+        width: 100%;
+        padding: 0.9rem 1.1rem;
+        background: #fff;
+        border: 1px solid var(--border);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.88rem;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+
+      #signupForm .formInput::placeholder {
+        color: var(--ink-light);
+        opacity: 0.55;
+      }
+
+      #signupForm .formInput:focus {
+        border-color: var(--accent);
+      }
+
+      #submitBtn,
+      #loadingBtn {
+        width: 100%;
+        padding: 0.9rem;
+        background: var(--ink);
+        color: var(--paper);
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        margin-top: 0.25rem;
+      }
+
+      #submitBtn:hover {
+        background: #333;
+        transform: translateY(-1px);
+      }
+
+      #loadingBtn {
+        display: none;
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      #backBtn {
+        display: none;
+        width: 100%;
+        padding: 0.9rem;
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--border);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: border-color 0.2s;
+      }
+
+      #backBtn:hover {
+        border-color: var(--ink);
+      }
+
+      #captchaContainer {
+        display: none;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .signup-note {
+        font-size: 0.7rem;
+        color: var(--ink-light);
+        opacity: 0.5;
+        margin-top: 1rem;
+      }
+
+      #successMessageText {
+        display: none;
+        padding: 1.5rem;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+
+      #errorMessageText {
+        display: none;
+        padding: 1.2rem;
+        border: 1px solid rgba(220, 100, 80, 0.4);
+        color: rgba(180, 60, 40, 1);
+        font-size: 0.82rem;
+        line-height: 1.6;
+      }
+
+      .section-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* HOW IT WORKS */
+      .how-it-works {
+        border-top: 1px solid var(--border);
+        padding: 8rem 2rem;
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      .how-it-works-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .how-it-works h1 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .how-it-works__header {
+        max-width: 900px;
+        margin: 0 auto 55px;
+        text-align: center;
+      }
+
+      .how-it-works__header h2 {
+        margin: 0;
+        font-size: clamp(2.4rem, 5vw, 4.2rem);
+        font-weight: 500;
+        line-height: 1.05;
+      }
+
+      .how-it-works__header p {
+        margin-top: 18px;
+        color: var(--ink-light);
+        font-size: 1.05rem;
+      }
+
+      .steps {
+        max-width: 1250px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .step-card {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.85fr) 1.5fr;
+        gap: 42px;
+        align-items: center;
+
+        padding: 34px;
+        border: 1px solid var(--border);
+        border-radius: 30px;
+
+        box-shadow: 0 12px 35px rgba(70, 45, 35, 0.035);
+        margin-bottom: 2.5rem;
+      }
+
+      .step-card--reverse .step-info {
+        order: 2;
+      }
+
+      .step-card--reverse .step-image {
+        order: 1;
+      }
+
+      .card-voice-recording {
+        background-image: url("assets/soundWave.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+      }
+
+      .step-card-video {
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+
+      .step-heading {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .step-number {
+        width: 35px;
+        height: 35px;
+        flex: 0 0 35px;
+
+        display: grid;
+        place-items: center;
+
+        border-radius: 50%;
+        background: var(--ink);
+        color: #fff;
+
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .step-heading h3 {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .step-info > p {
+        margin: 0 0 14px;
+        color: var(--ink);
+        font-size: 1.02rem;
+        line-height: 1.75;
+      }
+
+      .step-image {
+        height: 310px;
+        overflow: hidden;
+        border-radius: 22px;
+      }
+
+      .step-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+        transition: transform 0.5s ease;
+      }
+
+      .image-static {
+        transition: none !important;
+        transform: none !important;
+      }
+
+      .step-card:hover .step-image img {
+        transform: scale(1.025);
+      }
+
+      /* ---------- STEP 1 ---------- */
+
+      .step-card--books {
+        grid-template-columns: 300px 1fr;
+      }
+
+      .step-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        margin: 24px 0;
+        padding: 0;
+
+        list-style: none;
+
+        color: var(--ink-light);
+      }
+
+      .step-options li {
+        line-height: 1.4;
+      }
+
+      .step-options li::first-letter {
+        color: var(--accent);
+      }
+
+      .step-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: fit-content;
+        padding: 13px 22px;
+
+        border-radius: 999px;
+
+        background: var(--ink);
+        color: #fff;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .step-button:hover {
+        transform: translateY(-2px);
+        background: var(--accent);
+      }
+
+      .book-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .book-card {
+        position: relative;
+        display: block;
+
+        aspect-ratio: 1 / 1;
+
+        overflow: hidden;
+
+        border: 1px solid var(--border);
+        border-radius: 18px;
+
+        text-decoration: none;
+        color: var(--text);
+
+        box-shadow: 0 7px 18px rgba(80, 45, 30, 0.045);
+
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .book-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow: 0 12px 28px rgba(80, 45, 30, 0.09);
+      }
+
+      .book-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        object-fit: cover;
+
+        transition: transform 0.35s ease;
+      }
+
+      .book-card:hover img {
+        transform: scale(1.04);
+      }
+
+      .book-card > span {
+        display: none;
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 100px;
+
+        padding: 8px 10px;
+
+        border-radius: 10px;
+
+        background: rgba(255, 253, 250, 0.91);
+        backdrop-filter: blur(6px);
+
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 0.95rem;
+
+        text-align: center;
+      }
+
+      .book-card:hover span {
+        display: block;
+      }
+
+      .book-card--more,
+      .book-card--custom {
+        display: grid;
+        place-items: center;
+      }
+
+      .book-card__more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .book-card__more .heart {
+        color: var(--accent);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .book-card__more strong {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      /* ---------- Step 4 ---------- */
+      .bookMakingVideoDiv {
+        background-image: url("assets/IMG_7999.png");
+        background-size: cover;
+        border-radius: 0px 30px 30px 0 !important;
+      }
+      .bookMakingVideo {
+        width: 100%;
+        max-width: 320px;
+
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: center;
+
+        margin: 0 auto;
+        display: block;
+
+        border-radius: 24px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      }
+
+      /* ---------- TABLET ---------- */
+
+      @media (max-width: 950px) {
+        .step-card,
+        .step-card--books {
+          grid-template-columns: 1fr;
+        }
+
+        .step-card--reverse .step-info,
+        .step-card--reverse .step-image {
+          order: initial;
+        }
+
+        .book-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .step-image {
+          height: 380px;
+        }
+
+        .bookMakingVideoDiv {
+        background-image: none;
+      }
+      }
+      /* ---------- MOBILE ---------- */
+
+      @media (max-width: 650px) {
+        .how-it-works {
+          padding: 65px 14px;
+        }
+
+        .how-it-works__header {
+          margin-bottom: 35px;
+        }
+
+        .steps {
+          gap: 16px;
+        }
+
+        .step-card {
+          padding: 22px;
+          border-radius: 22px;
+          gap: 26px;
+        }
+
+        .step-heading {
+          align-items: flex-start;
+        }
+
+        .step-number {
+          width: 40px;
+          height: 40px;
+          flex-basis: 40px;
+          font-size: 1rem;
+        }
+
+        .book-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+
+        .book-card {
+          border-radius: 14px;
+        }
+
+        .book-card > span {
+          font-size: 0.82rem;
+        }
+
+        .step-image {
+          height: 260px;
+          border-radius: 16px;
+        }
+      }
+
+      /* LIGHTBOX */
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 500;
+        background: rgba(8, 8, 8, 0.93);
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .lightbox.open {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: min(90vw, 640px);
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0.4rem;
+        transition: color 0.15s;
+        font-weight: 300;
+      }
+
+      .lightbox-close:hover {
+        color: #fff;
+      }
+
+      .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        padding: 1rem 1.2rem;
+        transition: color 0.15s;
+        line-height: 0;
+        z-index: 1;
+      }
+
+      .lightbox-nav:hover {
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .lightbox-prev {
+        left: 0.5rem;
+      }
+      .lightbox-next {
+        right: 0.5rem;
+      }
+
+      #lightboxImg {
+        transition: opacity 0.18s ease;
+      }
+
+      #lightboxImg.fading {
+        opacity: 0;
+      }
+
+      /* BOOK POLAROIDS */
       .hero-right-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+      }
+
+      .hero-right-content {
+        flex: 1;
+        min-width: 0;
+        display: flex;
         flex-direction: column;
       }
 
       .polaroid-col {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.2rem;
-        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-shrink: 0;
+        padding: 1rem 0.5rem;
       }
 
-      .polaroid:nth-child(1),
-      .polaroid:nth-child(2),
-      .polaroid:nth-child(3),
+      .polaroid {
+        background: #fff;
+        padding: 8px 8px 22px;
+        box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.13);
+        cursor: zoom-in;
+        position: relative;
+        z-index: 1;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .polaroid:nth-child(1) {
+        transform: rotate(-3.5deg);
+      }
+      .polaroid:nth-child(2) {
+        transform: rotate(2deg);
+      }
+      .polaroid:nth-child(3) {
+        transform: rotate(-2deg);
+      }
       .polaroid:nth-child(4) {
-        transform: rotate(0deg);
+        transform: rotate(3.5deg);
       }
 
-      .about, .projects, footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+      .polaroid:hover {
+        transform: rotate(0deg) scale(1.1) translateY(-6px);
+        box-shadow: 4px 12px 30px rgba(0, 0, 0, 0.22);
+        z-index: 10;
       }
 
-      .about-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+      .polaroid img {
+        width: 110px;
+        height: 135px;
+        object-fit: cover;
+        display: block;
       }
 
-      .about-photo {
-        width: 100%;
-        order: -1;
+      /* BOOK LIGHTBOX */
+      .book-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 500;
+        background: rgba(8, 8, 8, 0.93);
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
       }
 
-      .about-photo img {
-        aspect-ratio: 4 / 3;
+      .book-lightbox.open {
+        display: flex;
       }
 
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3px;
+      .book-lightbox img {
+        max-width: min(90vw, 720px);
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+        transition: opacity 0.18s ease;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-name">Bondár Reni</a>
-    <div class="nav-links-right">
-      <a href="#" class="nav-link">Beszélő könyv</a>
-      <a href="#rajzaim" class="nav-link">Rajzok</a>
-      <a href="#rolam" class="nav-link">Rólam</a>
-    </div>
+      .book-lightbox img.fading {
+        opacity: 0;
+      }
 
-    <a class="hamburger-menu" onclick="showHamburger()">
-      <img
-        src="assets/hamburger-menu.svg"
-        alt="Hamburger menu"
-      />
-    </a>
-    <div id="nav-mobile">
-      <a href="#" class="nav-link">Beszélő könyv</a>
-      <a href="#rajzaim" class="nav-link">Rajzok</a>
-      <a href="#rolam" class="nav-link">Rólam</a>
-    </div>
-  </nav>
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <div class="tiktok-facade" id="tiktokFacade">
-        <img id="tiktokThumb" src="" alt="Beszélő könyv TikTok videó" />
-        <div class="tiktok-play-btn">
-          <div class="tiktok-play-icon"></div>
-        </div>
+      .social-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .social-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .tiktok-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tiktok-logo {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      .social-link:hover {
+        color: var(--ink);
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: var(--border);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+
+        .hero-left {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+          padding: 3rem 1.5rem;
+        }
+
+        .hero-right {
+          padding: 3rem 1.5rem;
+        }
+
+        .hero-form-wrap {
+          max-width: 100%;
+        }
+
+        .hero-right-inner {
+          flex-direction: column;
+        }
+
+        .polaroid-col {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1.2rem;
+          padding: 0.5rem;
+        }
+
+        .polaroid:nth-child(1),
+        .polaroid:nth-child(2),
+        .polaroid:nth-child(3),
+        .polaroid:nth-child(4) {
+          transform: rotate(0deg);
+        }
+
+        .projects,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-name">Bondár Reni</a>
+      <div class="nav-links-right">
+        <a href="#" class="nav-link">Beszélő könyv</a>
+        <a href="./rajzok.html" class="nav-link">Rajzok</a>
+        <a href="./rolam.html" class="nav-link">Rólam</a>
       </div>
-    </div>
 
-    <div class="hero-right" id="feliratkozas">
-      <div class="hero-right-inner">
-        <div class="hero-right-content">
-          <p class="hero-eyebrow">Beszélő mesekönyv</p>
-          <h1 class="hero-title">Őrizd meg a szeretteid hangját egy <br><em>mesekönyvben.</em></h1>
-          <div class="hero-divider"></div>
-          <p class="hero-desc">
-            Egyedi, kézzel rajzolt mesekönyv, ami a szeretteid hangján szólal meg, hogy a legkedvesebb történetek és emlékek örökké veled maradhassanak. 🤍 
-          </p>
-
-          <div class="hero-form-wrap">
-            <span class="hero-form-label">Szeretnék egy saját mesekönyvet</span>
-            <form id="signupForm" action="https://api.bluefox.email/v1/signup-forms/6a2c64c64dbba21160210763" method="POST">
-              <input class="formInput" type="email" name="email" placeholder="E-mail cím" required />
-              <div id="captchaContainer">
-                <div id="turnstileWidget"></div>
-              </div>
-              <button id="submitBtn" type="submit">Feliratkozom</button>
-              <button id="loadingBtn" type="button">Kérlek várj...</button>
-            </form>
-
-            <p id="successMessageText">Köszönöm! Küldtem neked egy emailt, nézd meg a beérkező leveleidet!</p>
-            <p id="errorMessageText"></p>
-            <button id="backBtn" type="button">Vissza</button>
-
-            <p class="signup-note">Az adataidat biztonságosan kezelem. Bármikor leiratkozhatsz.</p>
-          </div>
-        </div>
-
-        <div class="polaroid-col">
-          <div class="polaroid" title="A kis gidó – 1. kép">
-            <img src="assets/books/a-kis-gido/book1.webp" alt="A kis gidó – 1. kép" />
-          </div>
-          <div class="polaroid" title="A kis gidó – 2. kép">
-            <img src="assets/books/a-kis-gido/book2.webp" alt="A kis gidó – 2. kép" />
-          </div>
-          <div class="polaroid" title="A kis gidó – 3. kép">
-            <img src="assets/books/a-kis-gido/book3.webp" alt="A kis gidó – 3. kép" />
-          </div>
-          <div class="polaroid" title="A kis gidó – 4. kép">
-            <img src="assets/books/a-kis-gido/book4.webp" alt="A kis gidó – 4. kép" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery" id="rajzaim">
-    <div class="gallery-inner">
-      <p class="section-label">Rajzaim</p>
-      <!--<h2>Rajzaim</h2>-->
-
-      <div class="gallery-filter">
-        <button class="filter-btn active" data-filter="all">Összes</button>
-        <button class="filter-btn" data-filter="plush">Plüssök</button>
-        <button class="filter-btn" data-filter="pets">Háziállatok</button>
-      </div>
-
-      <p class="gallery-desc-text" id="galleryDesc">
-        Emlékek megőrzése rajz formában. Minden illusztráció egyedileg, kézzel készül, szeretettel. 🤍
-      </p>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bobo.webp" loading="lazy" alt="Bobo" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/doll1.webp" loading="lazy" alt="Baba" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/boribon.webp" loading="lazy" alt="Boribon" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny5.webp" loading="lazy" alt="Nyuszi 5" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bear.webp" loading="lazy" alt="Maci" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/sheep.webp" loading="lazy" alt="Bárány" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/berrybear.webp" loading="lazy" alt="Berry Bear" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny.webp" loading="lazy" alt="Nyuszi" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny2.webp" loading="lazy" alt="Nyuszi 2" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny3.webp" loading="lazy" alt="Nyuszi 3" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/bunny4.webp" loading="lazy" alt="Nyuszi 4" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/chick.webp" loading="lazy" alt="Kiscsibe" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/doll2.webp" loading="lazy" alt="Baba 2" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/elephant.webp" loading="lazy" alt="Elefánt" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/elephant2.webp" loading="lazy" alt="Elefánt 2" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/elephantsheep.webp" loading="lazy" alt="Elefánt-bárány" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/nyuszika.webp" loading="lazy" alt="Nyuszika" /></div>
-        <div class="gallery-item" data-category="plush"><img src="assets/drawings/plush/octopus.webp" loading="lazy" alt="Polip" /></div>
-        <div class="gallery-item" data-category="pets"><img src="assets/drawings/pets/merlin1.webp" loading="lazy" alt="Merlin" /></div>
-        <div class="gallery-item" data-category="pets"><img src="assets/drawings/pets/merlin2.webp" loading="lazy" alt="Merlin 2" /></div>
-        <div class="gallery-item" data-category="pets"><img src="assets/drawings/pets/pegi.webp" loading="lazy" alt="Pegi" /></div>
-      </div>
-    </div>
-  </section>
-
-    <!-- ABOUT -->
-  <section class="about" id="rolam">
-    <div class="about-inner">
-      <div class="about-content">
-        <p class="section-label">Rólam</p>
-        <p class="about-text">
-          Programozó vagyok, két kisgyerek anyukája -<br>
-          és imádok <em>alkotni</em>.
-        </p>
-        <div class="hero-divider"></div>
-        <div class="about-body">
-          <p>
-            Az egyetemen programozóként végeztem, jelenleg pedig a 2.5 éves kisfiammal és az 1 évves kislányommal vagyok itthon. Nincs sok szabadidőm, de ami van, azt rajzolással, programozással, elektronikai projektekkel töltöm. 
-          </p>
-          <p>
-            TikTokon azért kezdtem videókat készíteni, hogy másoknak is megmutassam, hogyan valósítom meg az ötleteimet. A <b>beszélő mesekönyv</b>ről készült videóm után sokan megkerestek, hogy segítsek nekik megőrizni a szeretteik hangját ebben a formában.
-          </p>
-        </div>
-        <div class="about-tags">
-          <span class="about-tag">Rajzolás</span>
-          <span class="about-tag">Programozás</span>
-          <span class="about-tag">Elektronika</span>
-          <span class="about-tag">DIY projektek</span>
-        </div>
-      </div>
-      <div class="about-photo">
-        <img src="reni-with-merlin-winter.jpeg" alt="Reni a kutyájával, Merlinnel" />
-        <img src="assets/signature.png" alt="Aláírás" style="object-fit:contain; margin-top: 10px" height="50px"/>
-      </div>
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">&times;</button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 4L8 14L18 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <img id="lightboxImg" src="" alt="" />
-    <button class="lightbox-nav lightbox-next" id="lightboxNext">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4L20 14L10 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-  </div>
-
-  <!-- BOOK LIGHTBOX -->
-  <div class="book-lightbox" id="bookLightbox">
-    <button class="lightbox-close" id="bookLightboxClose">&times;</button>
-    <button class="lightbox-nav lightbox-prev" id="bookLightboxPrev">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 4L8 14L18 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <img id="bookLightboxImg" src="" alt="" />
-    <button class="lightbox-nav lightbox-next" id="bookLightboxNext">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4L20 14L10 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="social-links">
-      <a href="https://www.tiktok.com/@bondarreni" target="_blank" rel="noopener" class="social-link tiktok-link">
-        <img
-          class="tiktok-logo"
-          src="assets/tiktok.svg"
-          alt="TikTok logo"
-        />
-        TikTok
+      <a class="hamburger-menu" onclick="showHamburger()">
+        <img src="assets/hamburger-menu.svg" alt="Hamburger menu" />
       </a>
+      <div id="nav-mobile">
+        <a href="#" class="nav-link">Beszélő könyv</a>
+        <a href="./rajzok.html" class="nav-link">Rajzok</a>
+        <a href="./rolam.html" class="nav-link">Rólam</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="tiktok-facade" id="tiktokFacade">
+          <img id="tiktokThumb" src="" alt="Beszélő könyv TikTok videó" />
+          <div class="tiktok-play-btn">
+            <div class="tiktok-play-icon"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right" id="feliratkozas">
+        <div class="hero-right-inner">
+          <div class="hero-right-content">
+            <p class="hero-eyebrow">Beszélő mesekönyv</p>
+            <h1 class="hero-title">
+              Őrizd meg a szeretteid hangját egy <br /><em>mesekönyvben.</em>
+            </h1>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">
+              Egyedi, kézzel rajzolt mesekönyv, ami a szeretteid hangján szólal meg, hogy a
+              legkedvesebb történetek és emlékek örökké veled maradhassanak. 🤍
+            </p>
+
+            <div class="hero-form-wrap">
+              <span class="hero-form-label">Szeretnék egy saját mesekönyvet</span>
+              <form
+                id="signupForm"
+                action="https://api.bluefox.email/v1/signup-forms/6a2c64c64dbba21160210763"
+                method="POST"
+              >
+                <input
+                  class="formInput"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail cím"
+                  required
+                />
+                <div id="captchaContainer">
+                  <div id="turnstileWidget"></div>
+                </div>
+                <button id="submitBtn" type="submit">Feliratkozom</button>
+                <button id="loadingBtn" type="button">Kérlek várj...</button>
+              </form>
+
+              <p id="successMessageText">
+                Köszönöm! Küldtem neked egy emailt, nézd meg a beérkező leveleidet!
+              </p>
+              <p id="errorMessageText"></p>
+              <button id="backBtn" type="button">Vissza</button>
+
+              <p class="signup-note">
+                Az adataidat biztonságosan kezelem. Bármikor leiratkozhatsz.
+              </p>
+            </div>
+          </div>
+
+          <div class="polaroid-col">
+            <div class="polaroid" title="A kis gidó – 1. kép">
+              <img src="assets/books/a-kis-gido/book1.webp" alt="A kis gidó – 1. kép" />
+            </div>
+            <div class="polaroid" title="A kis gidó – 2. kép">
+              <img src="assets/books/a-kis-gido/book2.webp" alt="A kis gidó – 2. kép" />
+            </div>
+            <div class="polaroid" title="A kis gidó – 3. kép">
+              <img src="assets/books/a-kis-gido/book3.webp" alt="A kis gidó – 3. kép" />
+            </div>
+            <div class="polaroid" title="A kis gidó – 4. kép">
+              <img src="assets/books/a-kis-gido/book4.webp" alt="A kis gidó – 4. kép" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="how-it-works-inner">
+        <p class="section-label">Hogyan készül?</p>
+        <h1>Így készül a beszélő mesekönyved</h1>
+
+        <div class="step-card step-card--books">
+          <div class="step-info">
+            <div class="step-heading">
+              <span class="step-number">1</span>
+              <h3>Válassz egy mesét</h3>
+            </div>
+
+            <p>
+              Válassz a már elkészült mesék közül, kérd egy régi kedvencedet, vagy akár egyedi
+              történetet.
+            </p>
+
+            <ul class="step-options">
+              <li>♡ Már elkészült mesék</li>
+              <li>♡ Egy létező kedvenc mese</li>
+              <li>♡ Teljesen egyedi történet</li>
+            </ul>
+
+            <a href="/konyvek" class="step-button"> Összes könyv → </a>
+          </div>
+
+          <div class="book-grid">
+            <a href="/konyvek/kis-gido" class="book-card">
+              <img src="assets/books/Kis_gido_borito.png" alt="Kis gidó" />
+              <span>A kis gidó</span>
+            </a>
+
+            <a href="/konyvek/repamese" class="book-card">
+              <img src="assets/books/Repamese_borito.png" alt="Répamese" />
+              <span>Répamese</span>
+            </a>
+
+            <a href="/konyvek/roka" class="book-card">
+              <img src="assets/books/A_roka_es_a_farkas_a_lakodalomban.png" alt="A róka és a farkas a lakodalomban" />
+              <span>A róka és a farkas a lakodalomban</span>
+            </a>
+
+            <a href="/kapcsolat" class="book-card book-card--custom">
+              <div class="book-card__more">
+                <span class="heart">♡</span>
+                <span>Új mese</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="step-card card-voice-recording">
+          <div class="step-info">
+            <div class="step-heading">
+              <span class="step-number">2</span>
+              <h3>Vegyétek fel a hangot</h3>
+            </div>
+
+            <p>
+              Miután mindent megbeszéltünk, elkészíthetitek a hangfelvételt. A mesét felolvashatod te, egy családtagod, a nagymama, vagy akár többen is felváltva. 
+              Ha a meglévő mesék közül választottál, elküldöm nektek hozzá a mese szövegét.
+            </p>
+
+            <p class="step-note">
+              Nem kell tökéletesnek lennie. Ha valaki elront egy mondatot, nyugodtan újrakezdheti –
+              a hanganyagot én majd megszerkesztem.
+            </p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-info">
+            <div class="step-heading">
+              <span class="step-number">3</span>
+              <h3>Illusztrálás</h3>
+            </div>
+
+            <p>
+              Elkészítem a meséhez tartozó rajzokat, tördelem a szöveget, összeállítom
+              a könyv teljes képi világát.
+            </p>
+
+            <p class="step-note">
+              Minden illusztráció kézzel készül  az adott meséhez.
+            </p>
+          </div>
+
+          <div class="step-image">
+            <img src="assets/IMG_0757.jpg" alt="Illusztrálás" class="image-static" />
+          </div>
+        </div>
+
+        <div class="step-card step-card-video">
+          <div class="step-info">
+            <div class="step-heading">
+              <span class="step-number">4</span>
+              <h3>A könyv összeállítása</h3>
+            </div>
+
+            <p>
+              Elkészülnek a keménylapos oldalak, bekerül a hangmodul,
+              rátöltöm a hangot, majd mindent gondosan letesztelek.
+            </p>
+
+            <p class="step-note">
+              A könyv már készen is áll, hogy elinduljon hozzád! ❤️
+            </p>
+          </div>
+
+          <div class="bookMakingVideoDiv">
+            <video
+              class="bookMakingVideo"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              >
+              <source src="assets/repamese_osszerakas.MP4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 4L8 14L18 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img id="lightboxImg" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lightboxNext">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 4L20 14L10 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
     </div>
-    <p class="footer-copy">&copy; 2026  Bondár Reni</p>
-  </footer>
 
-  <script>
-    const TIKTOK_VIDEO_ID = '7650158337044090134'
+    <!-- BOOK LIGHTBOX -->
+    <div class="book-lightbox" id="bookLightbox">
+      <button class="lightbox-close" id="bookLightboxClose">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="bookLightboxPrev">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 4L8 14L18 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <img id="bookLightboxImg" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="bookLightboxNext">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 4L20 14L10 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
 
-    fetch('https://www.tiktok.com/oembed?url=' + encodeURIComponent('https://www.tiktok.com/@bondarreni/video/' + TIKTOK_VIDEO_ID))
-      .then(r => r.json())
-      .then(data => {
-        if (data.thumbnail_url) {
-          document.getElementById('tiktokThumb').src = data.thumbnail_url
-        }
-      })
-      .catch(() => {})
+    <!-- FOOTER -->
+    <footer>
+      <div class="social-links">
+        <a
+          href="mailto:bondarreni@gmail.com"
+          class="social-link tiktok-link"
+        >
+          <img class="tiktok-logo" src="assets/email.svg" alt="Email icon"/>
+          bondarreni@gmail.com
+        </a>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://www.tiktok.com/@bondarreni"
+          target="_blank"
+          rel="noopener"
+          class="social-link tiktok-link"
+        >
+          <img class="tiktok-logo" src="assets/tiktok.svg" alt="TikTok logo" />
+          TikTok
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Bondár Reni</p>
+    </footer>
 
-    document.getElementById('tiktokFacade').addEventListener('click', () => {
-      const facade = document.getElementById('tiktokFacade')
-      const iframe = document.createElement('iframe')
-      iframe.src = 'https://www.tiktok.com/embed/v2/' + TIKTOK_VIDEO_ID + '?autoplay=1'
-      iframe.style.width = '325px'
-      iframe.style.maxWidth = '100%'
-      iframe.style.height = '100%'
-      iframe.style.border = 'none'
-      iframe.allow = 'autoplay; fullscreen; picture-in-picture'
-      iframe.allowFullscreen = true
-      facade.parentNode.replaceChild(iframe, facade)
-    })
+    <script>
+      const TIKTOK_VIDEO_ID = '7650158337044090134'
 
-    let turnstileToken = null
-    let turnstileWidgetId = null
-    let pendingSubmit = false
-
-    function onloadTurnstileCallback() {
-      const container = document.getElementById('turnstileWidget')
-      if (container) {
-        turnstileWidgetId = turnstile.render(container, {
-          sitekey: '0x4AAAAAADjl8zPCcTc3eqv7',
-          theme: 'light',
-          size: 'normal',
-          appearance: 'execute',
-          callback: function(token) {
-            turnstileToken = token
-            if (pendingSubmit) {
-              pendingSubmit = false
-              localStorage.removeItem('timestamp')
-              document.getElementById('signupForm').dispatchEvent(new Event('submit'))
-            }
-          },
-          'expired-callback': function() { turnstileToken = null; pendingSubmit = false },
-          'error-callback': function() { turnstileToken = null; pendingSubmit = false }
+      fetch(
+        'https://www.tiktok.com/oembed?url=' +
+          encodeURIComponent('https://www.tiktok.com/@bondarreni/video/' + TIKTOK_VIDEO_ID)
+      )
+        .then((r) => r.json())
+        .then((data) => {
+          if (data.thumbnail_url) {
+            document.getElementById('tiktokThumb').src = data.thumbnail_url
+          }
         })
-      }
-    }
+        .catch(() => {})
 
-    function checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton }) {
-      const timestamp = Date.now()
-      const previousTimestamp = localStorage.getItem('timestamp')
-      if (previousTimestamp && Number(previousTimestamp) + 5000 > timestamp) {
-        document.getElementById('captchaContainer').style.display = 'none'
-        errorMessageText.innerText = 'Túl sok kísérlet, kérlek próbáld újra egy kis idő múlva.'
-        inputs.forEach(input => { if (input) input.style.display = 'none' })
-        submitButton.style.display = 'none'
-        errorMessageText.style.display = 'block'
-        backButton.style.display = 'block'
-        return true
-      }
-    }
-
-    function submitHandler(event) {
-      event.preventDefault()
-      const form = document.getElementById('signupForm')
-      const inputs = document.querySelectorAll('#signupForm .formInput')
-      const successMessageText = document.getElementById('successMessageText')
-      const errorMessageText = document.getElementById('errorMessageText')
-      const submitButton = document.getElementById('submitBtn')
-      const loadingButton = document.getElementById('loadingBtn')
-      const backButton = document.getElementById('backBtn')
-      const emailAddress = document.querySelector('input[name="email"]')?.value
-
-      if (checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })) return
-
-      localStorage.setItem('timestamp', Date.now())
-      submitButton.style.display = 'none'
-      loadingButton.style.display = 'block'
-
-      let data = {}
-      inputs.forEach(input => {
-        data[input.name] = input.type === 'checkbox' ? input.checked : input.value
+      document.getElementById('tiktokFacade').addEventListener('click', () => {
+        const facade = document.getElementById('tiktokFacade')
+        const iframe = document.createElement('iframe')
+        iframe.src = 'https://www.tiktok.com/embed/v2/' + TIKTOK_VIDEO_ID + '?autoplay=1'
+        iframe.style.width = '325px'
+        iframe.style.maxWidth = '100%'
+        iframe.style.height = '100%'
+        iframe.style.border = 'none'
+        iframe.allow = 'autoplay; fullscreen; picture-in-picture'
+        iframe.allowFullscreen = true
+        facade.parentNode.replaceChild(iframe, facade)
       })
-      data.turnstileToken = turnstileToken
 
-      if (!turnstileToken) {
-        pendingSubmit = true
-        submitButton.style.display = 'block'
-        loadingButton.style.display = 'none'
-        document.getElementById('captchaContainer').style.display = 'flex'
-        if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
-          turnstile.execute(turnstileWidgetId)
-        }
-        return
-      }
+      let turnstileToken = null
+      let turnstileWidgetId = null
+      let pendingSubmit = false
 
-      fetch(event.target.action, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
-        .then(res => [res.ok, res.json()])
-        .then(([ok, dataPromise]) => {
-          dataPromise.then(payload => {
-            if (ok) {
-              if (payload.result && payload.result.redirectTo) {
-                window.location.href = payload.result.redirectTo
-              } else {
-                successMessageText.style.display = 'block'
-                successMessageText.innerText = `Köszönöm! Küldtem neked egy emailt a ${emailAddress} címre, nézd meg a beérkező leveleidet!`
+      function onloadTurnstileCallback() {
+        const container = document.getElementById('turnstileWidget')
+        if (container) {
+          turnstileWidgetId = turnstile.render(container, {
+            sitekey: '0x4AAAAAADjl8zPCcTc3eqv7',
+            theme: 'light',
+            size: 'normal',
+            appearance: 'execute',
+            callback: function (token) {
+              turnstileToken = token
+              if (pendingSubmit) {
+                pendingSubmit = false
+                localStorage.removeItem('timestamp')
+                document.getElementById('signupForm').dispatchEvent(new Event('submit'))
               }
-              form.reset()
-            } else {
-              errorMessageText.style.display = 'block'
-              if (payload.status === 401) {
-                errorMessageText.innerText = 'Domain not whitelisted. Please contact support.'
-              } else {
-                errorMessageText.innerText = (payload.error && payload.error.message) || 'Hiba történt.'
-              }
+            },
+            'expired-callback': function () {
+              turnstileToken = null
+              pendingSubmit = false
+            },
+            'error-callback': function () {
+              turnstileToken = null
+              pendingSubmit = false
             }
           })
-        })
-        .catch(error => {
-          if (error.message === 'Failed to fetch') {
-            checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })
-            return
-          }
-          errorMessageText.style.display = 'block'
-          errorMessageText.innerText = error.message || 'Váratlan hiba történt.'
-          localStorage.removeItem('timestamp')
-        })
-        .finally(() => {
-          document.getElementById('captchaContainer').style.display = 'none'
-          if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
-            turnstile.reset(turnstileWidgetId)
-            turnstileToken = null
-          }
-          inputs.forEach(input => { if (input) input.style.display = 'none' })
-          loadingButton.style.display = 'none'
-          backButton.style.display = 'block'
-        })
-    }
-
-    function resetFormHandler() {
-      const inputs = document.querySelectorAll('#signupForm .formInput')
-      const successMessageText = document.getElementById('successMessageText')
-      const errorMessageText = document.getElementById('errorMessageText')
-      const submitButton = document.getElementById('submitBtn')
-      const backButton = document.getElementById('backBtn')
-
-      if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
-        turnstile.reset(turnstileWidgetId)
-        turnstileToken = null
+        }
       }
-      successMessageText.style.display = 'none'
-      errorMessageText.style.display = 'none'
-      errorMessageText.innerText = 'Hoppá! Valami nem sikerült, kérlek próbáld újra.'
-      backButton.style.display = 'none'
-      inputs.forEach(input => { if (input) input.style.display = 'block' })
-      submitButton.style.display = 'block'
-    }
 
-    // GALLERY FILTER
-    const galleryDescs = {
-      all: 'Emlékek megőrzése rajz formában. Minden illusztráció egyedileg, kézzel készül, szeretettel. 🤍',
-      plush: 'A plüss rajzaimmal segítek megőrizni egy különleges korszak emlékeit - azt az időszakot, amikor a gyerekek mindenhová magukkal viszik a kis barátjukat.',
-      pets: 'A háziállat családtag. Portéimmal a hozzájuk kötődő emlékeket és történeteket őrzöm meg.'
-    }
+      function checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton }) {
+        const timestamp = Date.now()
+        const previousTimestamp = localStorage.getItem('timestamp')
+        if (previousTimestamp && Number(previousTimestamp) + 5000 > timestamp) {
+          document.getElementById('captchaContainer').style.display = 'none'
+          errorMessageText.innerText = 'Túl sok kísérlet, kérlek próbáld újra egy kis idő múlva.'
+          inputs.forEach((input) => {
+            if (input) input.style.display = 'none'
+          })
+          submitButton.style.display = 'none'
+          errorMessageText.style.display = 'block'
+          backButton.style.display = 'block'
+          return true
+        }
+      }
 
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'))
-        btn.classList.add('active')
-        const filter = btn.dataset.filter
-        document.getElementById('galleryDesc').textContent = galleryDescs[filter]
-        document.querySelectorAll('.gallery-item').forEach(item => {
-          item.classList.toggle('hidden', filter !== 'all' && item.dataset.category !== filter)
+      function submitHandler(event) {
+        event.preventDefault()
+        const form = document.getElementById('signupForm')
+        const inputs = document.querySelectorAll('#signupForm .formInput')
+        const successMessageText = document.getElementById('successMessageText')
+        const errorMessageText = document.getElementById('errorMessageText')
+        const submitButton = document.getElementById('submitBtn')
+        const loadingButton = document.getElementById('loadingBtn')
+        const backButton = document.getElementById('backBtn')
+        const emailAddress = document.querySelector('input[name="email"]')?.value
+
+        if (checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })) return
+
+        localStorage.setItem('timestamp', Date.now())
+        submitButton.style.display = 'none'
+        loadingButton.style.display = 'block'
+
+        let data = {}
+        inputs.forEach((input) => {
+          data[input.name] = input.type === 'checkbox' ? input.checked : input.value
         })
-      })
-    })
+        data.turnstileToken = turnstileToken
 
-    // LIGHTBOX (gallery)
-    const lightbox = document.getElementById('lightbox')
-    const lightboxImg = document.getElementById('lightboxImg')
-    let lbItems = []
-    let lbIndex = 0
-    let touchStartX = 0
+        if (!turnstileToken) {
+          pendingSubmit = true
+          submitButton.style.display = 'block'
+          loadingButton.style.display = 'none'
+          document.getElementById('captchaContainer').style.display = 'flex'
+          if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
+            turnstile.execute(turnstileWidgetId)
+          }
+          return
+        }
 
-    function getVisibleImgs() {
-      return Array.from(document.querySelectorAll('.gallery-item:not(.hidden) img'))
-    }
+        fetch(event.target.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then((res) => [res.ok, res.json()])
+          .then(([ok, dataPromise]) => {
+            dataPromise.then((payload) => {
+              if (ok) {
+                if (payload.result && payload.result.redirectTo) {
+                  window.location.href = payload.result.redirectTo
+                } else {
+                  successMessageText.style.display = 'block'
+                  successMessageText.innerText = `Köszönöm! Küldtem neked egy emailt a ${emailAddress} címre, nézd meg a beérkező leveleidet!`
+                }
+                form.reset()
+              } else {
+                errorMessageText.style.display = 'block'
+                if (payload.status === 401) {
+                  errorMessageText.innerText = 'Domain not whitelisted. Please contact support.'
+                } else {
+                  errorMessageText.innerText =
+                    (payload.error && payload.error.message) || 'Hiba történt.'
+                }
+              }
+            })
+          })
+          .catch((error) => {
+            if (error.message === 'Failed to fetch') {
+              checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })
+              return
+            }
+            errorMessageText.style.display = 'block'
+            errorMessageText.innerText = error.message || 'Váratlan hiba történt.'
+            localStorage.removeItem('timestamp')
+          })
+          .finally(() => {
+            document.getElementById('captchaContainer').style.display = 'none'
+            if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
+              turnstile.reset(turnstileWidgetId)
+              turnstileToken = null
+            }
+            inputs.forEach((input) => {
+              if (input) input.style.display = 'none'
+            })
+            loadingButton.style.display = 'none'
+            backButton.style.display = 'block'
+          })
+      }
 
-    function showLightboxImg(img) {
-      lightboxImg.classList.add('fading')
-      setTimeout(() => {
-        lightboxImg.src = img.src
-        lightboxImg.alt = img.alt
-        lightboxImg.classList.remove('fading')
-      }, 160)
-    }
+      function resetFormHandler() {
+        const inputs = document.querySelectorAll('#signupForm .formInput')
+        const successMessageText = document.getElementById('successMessageText')
+        const errorMessageText = document.getElementById('errorMessageText')
+        const submitButton = document.getElementById('submitBtn')
+        const backButton = document.getElementById('backBtn')
 
-    function lbNavigate(dir) {
-      lbIndex = (lbIndex + dir + lbItems.length) % lbItems.length
-      showLightboxImg(lbItems[lbIndex])
-    }
+        if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
+          turnstile.reset(turnstileWidgetId)
+          turnstileToken = null
+        }
+        successMessageText.style.display = 'none'
+        errorMessageText.style.display = 'none'
+        errorMessageText.innerText = 'Hoppá! Valami nem sikerült, kérlek próbáld újra.'
+        backButton.style.display = 'none'
+        inputs.forEach((input) => {
+          if (input) input.style.display = 'block'
+        })
+        submitButton.style.display = 'block'
+      }
 
-    function openLightbox(img) {
-      lbItems = getVisibleImgs()
-      lbIndex = lbItems.indexOf(img)
-      lightboxImg.src = img.src
-      lightboxImg.alt = img.alt
-      lightbox.classList.add('open')
-      document.body.style.overflow = 'hidden'
-    }
+      // BOOK LIGHTBOX
+      const bookLightbox = document.getElementById('bookLightbox')
+      const bookLightboxImg = document.getElementById('bookLightboxImg')
+      const bookImages = [
+        { src: 'assets/books/a-kis-gido/book1.webp', alt: 'A kis gidó – 1. kép' },
+        { src: 'assets/books/a-kis-gido/book2.webp', alt: 'A kis gidó – 2. kép' },
+        { src: 'assets/books/a-kis-gido/book3.webp', alt: 'A kis gidó – 3. kép' },
+        { src: 'assets/books/a-kis-gido/book4.webp', alt: 'A kis gidó – 4. kép' }
+      ]
+      let blIndex = 0
+      let blTouchStartX = 0
 
-    function closeLightbox() {
-      lightbox.classList.remove('open')
-      document.body.style.overflow = ''
-    }
+      function showBookLightboxAt(index) {
+        blIndex = (index + bookImages.length) % bookImages.length
+        bookLightboxImg.classList.add('fading')
+        setTimeout(() => {
+          bookLightboxImg.src = bookImages[blIndex].src
+          bookLightboxImg.alt = bookImages[blIndex].alt
+          bookLightboxImg.classList.remove('fading')
+        }, 160)
+      }
 
-    document.querySelectorAll('.gallery-item img').forEach(img => {
-      img.addEventListener('click', () => openLightbox(img))
-    })
-
-    document.getElementById('lightboxClose').addEventListener('click', closeLightbox)
-    document.getElementById('lightboxPrev').addEventListener('click', e => { e.stopPropagation(); lbNavigate(-1) })
-    document.getElementById('lightboxNext').addEventListener('click', e => { e.stopPropagation(); lbNavigate(1) })
-
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox() })
-
-    document.addEventListener('keydown', e => {
-      if (!lightbox.classList.contains('open')) return
-      if (e.key === 'Escape') closeLightbox()
-      if (e.key === 'ArrowLeft') lbNavigate(-1)
-      if (e.key === 'ArrowRight') lbNavigate(1)
-    })
-
-    lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX }, { passive: true })
-    lightbox.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - touchStartX
-      if (Math.abs(dx) > 40) lbNavigate(dx < 0 ? 1 : -1)
-    })
-
-    // BOOK LIGHTBOX
-    const bookLightbox = document.getElementById('bookLightbox')
-    const bookLightboxImg = document.getElementById('bookLightboxImg')
-    const bookImages = [
-      { src: 'assets/books/a-kis-gido/book1.webp', alt: 'A kis gidó – 1. kép' },
-      { src: 'assets/books/a-kis-gido/book2.webp', alt: 'A kis gidó – 2. kép' },
-      { src: 'assets/books/a-kis-gido/book3.webp', alt: 'A kis gidó – 3. kép' },
-      { src: 'assets/books/a-kis-gido/book4.webp', alt: 'A kis gidó – 4. kép' },
-    ]
-    let blIndex = 0
-    let blTouchStartX = 0
-
-    function showBookLightboxAt(index) {
-      blIndex = (index + bookImages.length) % bookImages.length
-      bookLightboxImg.classList.add('fading')
-      setTimeout(() => {
+      function openBookLightbox(index) {
+        blIndex = index
         bookLightboxImg.src = bookImages[blIndex].src
         bookLightboxImg.alt = bookImages[blIndex].alt
-        bookLightboxImg.classList.remove('fading')
-      }, 160)
-    }
-
-    function openBookLightbox(index) {
-      blIndex = index
-      bookLightboxImg.src = bookImages[blIndex].src
-      bookLightboxImg.alt = bookImages[blIndex].alt
-      bookLightbox.classList.add('open')
-      document.body.style.overflow = 'hidden'
-    }
-
-    function closeBookLightbox() {
-      bookLightbox.classList.remove('open')
-      document.body.style.overflow = ''
-    }
-
-    document.querySelectorAll('.polaroid').forEach((polaroid, i) => {
-      polaroid.addEventListener('click', () => openBookLightbox(i))
-    })
-
-    document.getElementById('bookLightboxClose').addEventListener('click', closeBookLightbox)
-    document.getElementById('bookLightboxPrev').addEventListener('click', e => { e.stopPropagation(); showBookLightboxAt(blIndex - 1) })
-    document.getElementById('bookLightboxNext').addEventListener('click', e => { e.stopPropagation(); showBookLightboxAt(blIndex + 1) })
-
-    bookLightbox.addEventListener('click', e => { if (e.target === bookLightbox) closeBookLightbox() })
-
-    document.addEventListener('keydown', e => {
-      if (!bookLightbox.classList.contains('open')) return
-      if (e.key === 'Escape') closeBookLightbox()
-      if (e.key === 'ArrowLeft') showBookLightboxAt(blIndex - 1)
-      if (e.key === 'ArrowRight') showBookLightboxAt(blIndex + 1)
-    })
-
-    bookLightbox.addEventListener('touchstart', e => { blTouchStartX = e.touches[0].clientX }, { passive: true })
-    bookLightbox.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - blTouchStartX
-      if (Math.abs(dx) > 40) showBookLightboxAt(blIndex + (dx < 0 ? 1 : -1))
-    })
-
-    const signupForm = document.getElementById('signupForm')
-    const backButton = document.getElementById('backBtn')
-
-    if (!signupForm.classList.contains('handlers-added')) {
-      signupForm.addEventListener('submit', submitHandler)
-      signupForm.classList.add('handlers-added')
-    }
-    if (!backButton.classList.contains('handlers-added')) {
-      backButton.addEventListener('click', resetFormHandler)
-      backButton.classList.add('handlers-added')
-    }
-
-
-    function showHamburger () {
-      const navLinks = document.getElementById("nav-mobile");
-      if (navLinks.style.display === "flex") {
-        navLinks.style.display = "none";
-      } else {
-        navLinks.style.display = "flex";
+        bookLightbox.classList.add('open')
+        document.body.style.overflow = 'hidden'
       }
-    }
-  </script>
 
-</body>
+      function closeBookLightbox() {
+        bookLightbox.classList.remove('open')
+        document.body.style.overflow = ''
+      }
+
+      document.querySelectorAll('.polaroid').forEach((polaroid, i) => {
+        polaroid.addEventListener('click', () => openBookLightbox(i))
+      })
+
+      document.getElementById('bookLightboxClose').addEventListener('click', closeBookLightbox)
+      document.getElementById('bookLightboxPrev').addEventListener('click', (e) => {
+        e.stopPropagation()
+        showBookLightboxAt(blIndex - 1)
+      })
+      document.getElementById('bookLightboxNext').addEventListener('click', (e) => {
+        e.stopPropagation()
+        showBookLightboxAt(blIndex + 1)
+      })
+
+      bookLightbox.addEventListener('click', (e) => {
+        if (e.target === bookLightbox) closeBookLightbox()
+      })
+
+      document.addEventListener('keydown', (e) => {
+        if (!bookLightbox.classList.contains('open')) return
+        if (e.key === 'Escape') closeBookLightbox()
+        if (e.key === 'ArrowLeft') showBookLightboxAt(blIndex - 1)
+        if (e.key === 'ArrowRight') showBookLightboxAt(blIndex + 1)
+      })
+
+      bookLightbox.addEventListener(
+        'touchstart',
+        (e) => {
+          blTouchStartX = e.touches[0].clientX
+        },
+        { passive: true }
+      )
+      bookLightbox.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - blTouchStartX
+        if (Math.abs(dx) > 40) showBookLightboxAt(blIndex + (dx < 0 ? 1 : -1))
+      })
+
+      const signupForm = document.getElementById('signupForm')
+      const backButton = document.getElementById('backBtn')
+
+      if (!signupForm.classList.contains('handlers-added')) {
+        signupForm.addEventListener('submit', submitHandler)
+        signupForm.classList.add('handlers-added')
+      }
+      if (!backButton.classList.contains('handlers-added')) {
+        backButton.addEventListener('click', resetFormHandler)
+        backButton.classList.add('handlers-added')
+      }
+
+      function showHamburger() {
+        const navLinks = document.getElementById('nav-mobile')
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none'
+        } else {
+          navLinks.style.display = 'flex'
+        }
+      }
+    </script>
+  </body>
 </html>
