@@ -1,391 +1,449 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bondár Reni</title>
-  <link rel="icon" href="../favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZJ1Q9NGRDW');
-  </script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit" defer></script>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --ink: #1a1a1a;
-      --ink-light: #6b6b6b;
-      --paper: #fafaf8;
-      --accent: #c8a96e;
-      --border: #e8e5e0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      min-height: 100vh;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(250, 250, 248, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-links-right {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-links-right-hamburger {
-      display: none;
-    }
-
-    .hamburger-menu {
-      display: none;
-    }
-    
-    .hamburger-menu img {
-      height: 25px;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links-right {
-        display: none;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondár Reni</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
       }
-      .nav-links-right-hamburger {
+      gtag('js', new Date())
+      gtag('config', 'G-ZJ1Q9NGRDW')
+    </script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit"
+      defer
+    ></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --ink-light: #6b6b6b;
+        --paper: #fafaf8;
+        --accent: #c8a96e;
+        --border: #e8e5e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links-right {
         display: flex;
         gap: 2rem;
         align-items: center;
       }
+
+      .nav-links-right-hamburger {
+        display: none;
+      }
+
       .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .nav-links-right-hamburger {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--ink);
+      }
+
+      .hero-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      #signupForm {
         display: flex;
-    }
-    }
+        flex-direction: column;
+        gap: 0.75rem;
+      }
 
-    .nav-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      color: var(--ink);
-    }
+      #signupForm .formInput {
+        width: 100%;
+        padding: 0.9rem 1.1rem;
+        background: #fff;
+        border: 1px solid var(--border);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.88rem;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.2s;
+      }
 
-    .nav-link {
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--ink-light);
-      transition: color 0.2s;
-    }
+      #signupForm .formInput::placeholder {
+        color: var(--ink-light);
+        opacity: 0.55;
+      }
 
-    .nav-link:hover {
-      color: var(--ink);
-    }
+      #signupForm .formInput:focus {
+        border-color: var(--accent);
+      }
 
-    .hero-divider {
-      width: 40px;
-      height: 1px;
-      background: var(--accent);
-      margin-bottom: 1.5rem;
-    }
+      #submitBtn,
+      #loadingBtn {
+        width: 100%;
+        padding: 0.9rem;
+        background: var(--ink);
+        color: var(--paper);
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        margin-top: 0.25rem;
+      }
 
-    #signupForm {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+      #submitBtn:hover {
+        background: #333;
+        transform: translateY(-1px);
+      }
 
-    #signupForm .formInput {
-      width: 100%;
-      padding: 0.9rem 1.1rem;
-      background: #fff;
-      border: 1px solid var(--border);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 300;
-      outline: none;
-      transition: border-color 0.2s;
-    }
+      #loadingBtn {
+        display: none;
+        opacity: 0.5;
+        cursor: default;
+      }
 
-    #signupForm .formInput::placeholder {
-      color: var(--ink-light);
-      opacity: 0.55;
-    }
+      #backBtn {
+        display: none;
+        width: 100%;
+        padding: 0.9rem;
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--border);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: border-color 0.2s;
+      }
 
-    #signupForm .formInput:focus {
-      border-color: var(--accent);
-    }
+      #backBtn:hover {
+        border-color: var(--ink);
+      }
 
-    #submitBtn, #loadingBtn {
-      width: 100%;
-      padding: 0.9rem;
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-      margin-top: 0.25rem;
-    }
+      #captchaContainer {
+        display: none;
+        justify-content: center;
+        width: 100%;
+      }
 
-    #submitBtn:hover {
-      background: #333;
-      transform: translateY(-1px);
-    }
+      .signup-note {
+        font-size: 0.7rem;
+        color: var(--ink-light);
+        opacity: 0.5;
+        margin-top: 1rem;
+      }
 
-    #loadingBtn {
-      display: none;
-      opacity: 0.5;
-      cursor: default;
-    }
+      .section-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
 
-    #backBtn {
-      display: none;
-      width: 100%;
-      padding: 0.9rem;
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--border);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 0.5rem;
-      transition: border-color 0.2s;
-    }
+      .section-label a {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
 
-    #backBtn:hover {
-      border-color: var(--ink);
-    }
-
-    #captchaContainer {
-      display: none;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .signup-note {
-      font-size: 0.7rem;
-      color: var(--ink-light);
-      opacity: 0.5;
-      margin-top: 1rem;
-    }
-
-    /* TALE */
-    .tale {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 8rem 2rem;
-    }
-
-    .tale-inner {
-      display: flex;
-      justify-content: center;
-    }
-
-    .tale-content {
-      text-align: center;
-    }
-
-    .tale-content .tale-text {
-      text-align: center;
-    }
-
-    .tale-content .hero-divider {
-      margin: 2rem 0;
-    }
-
-    .tale-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      font-weight: 300;
-      line-height: 1.55;
-      color: var(--ink);
-    }
-
-    .tale-text em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .tale-body {
-      font-size: 0.92rem;
-      color: var(--ink-light);
-      line-height: 1.9;
-      max-width: 58ch;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .tale-body p + p {
-      margin-top: 1.2rem;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .social-link {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--ink-light);
-      transition: color 0.2s;
-    }
-
-    .tiktok-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .tiktok-logo {
-      height: 25px;
-      margin-right: 5px;
-    }
-
-    .social-link:hover {
-      color: var(--ink);
-    }
-
-    .footer-copy {
-      font-size: 0.72rem;
-      color: var(--border);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-
-      .tale, .projects, footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+      /* TALE */
+      .tale {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 8rem 2rem;
       }
 
       .tale-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        display: flex;
+        justify-content: center;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="../index.html" class="nav-name">Bondár Reni</a>
-    <div class="nav-links-right">
-      <a href="../index.html" class="nav-link">Beszélő könyv</a>
-      <a href="../konyvek.html" class="nav-link">Könyvek</a>
-      <a href="../index.html#rajzaim" class="nav-link">Rajzok</a>
-      <a href="../index.html#rolam" class="nav-link">Rólam</a>
-    </div>
-  </nav>
+      .tale-content {
+        text-align: center;
+      }
 
-  <section class="tale" id="mese">
-    <div class="tale-inner">
-      <div class="tale-content">
-        <p class="tale-text">
-          A nyulacska harangocskája
+      .tale-content .tale-text {
+        text-align: center;
+      }
+
+      .tale-content .hero-divider {
+        margin: 2rem 0;
+      }
+
+      .tale-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        font-weight: 300;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+
+      .tale-text em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .tale-body {
+        font-size: 0.92rem;
+        color: var(--ink-light);
+        line-height: 1.9;
+        max-width: 58ch;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .tale-body p + p {
+        margin-top: 1.2rem;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .social-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .tiktok-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tiktok-logo {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      .social-link:hover {
+        color: var(--ink);
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: var(--border);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .tale,
+        .projects,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .tale-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="../index.html" class="nav-name">Bondár Reni</a>
+      <div class="nav-links-right">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link">Könyvek</a>
+        <a href="../index.html#rajzaim" class="nav-link">Rajzok</a>
+        <a href="../index.html#rolam" class="nav-link">Rólam</a>
+      </div>
+    </nav>
+
+    <section class="tale" id="mese">
+      <div>
+        <p class="section-label">
+          <a href="../konyvek.html" class="nav-link">Könyvek</a>
+          <a href="../konyvek/a-nyulacska-harangocskaja.html" class="nav-link"
+            >/ A nyulacska harangocskája</a
+          >
+          / szöveg
         </p>
-        <div class="hero-divider"></div>
-        <div class="tale-body">
-          <p>
-            Egyszer volt, hol nem volt, volt egyszer egy nyulacska.
-            Ennek a nyulacskának volt egy szépen szóló harangocskája.<br>
-            Egyszer a nyulacska elment az erdő szélére, lefeküdt egy bokor tövébe, és a bokorra felakasztotta a harangocskáját.<br>
-            Reggel, mikor felébredt, a bokrot sehol sem látta, hanem egy nagy fát látott helyette. Felnézett reá, és látta, hogy a harangocskája a fán van. Kérte a fát, hogy adja vissza a harangocskáját, de a fa nem adta vissza.<br>
-            <br>
-            Ekkor a nyulacska elment a fejszéhez, és kérte, hogy a fát vágja ki, hogy a fa adja vissza a szépen szóló harangocskát. De a fejsze nem vágta ki a fát.<br>
-            Most a nyulacska elment a köszörűkőhöz, hogy fenje meg a fejszét, hogy a fejsze vágja ki a fát, hogy a fa adja vissza a harangocskát. De a köszörűkő nem fente meg a fejszét.<br>
-            Ekkor a nyulacska elment a vízhez, hogy hajtsa a köszörűt, hogy a köszörű fenje meg a fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát. De a víz nem hajtotta a köszörűt.<br>
-            Ekkor a nyulacska elment a bikához, hogy igya meg a vizet, a víz hajtsa a köszörűt, a köszörű fenje meg a fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát. De a bika nem itta meg a vizet.<br>
-            Ekkor a nyulacska elment az egérhez, hogy csípje meg a bikát, a bika igya meg a vizet, a víz hajtsa a köszörűt, a köszörű fenje meg a fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát. De az egér nem csípte meg a bikát.<br>
-            Ekkor a nyulacska elment a macskához, hogy fogja meg az egeret, az egér csípje meg a bikát, a bika igya meg a vizet, a víz hajtsa a köszörűt, a köszörű fenje meg a fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát. A macska azt mondta, hogy ő megfogja, de előbb adjon neki tejecskét.<br>
-            A nyulacska elment a tehénhez, kért tőle tejecskét. A tehén azt mondja, hogy ő ad tejecskét, csak vigyen neki füvecskét.<br>
-            <br>
-            A nyulacska elment a kaszáshoz, hogy adjon neki füvecskét. A kaszás adott is füvecskét, s a nyulacska vitte a tehénnek.<br>
-            A tehén adott neki tejecskét, s a nyulacska vitte a macskának.<br>
-            A macska megfogta az egeret, az egér megcsípte a bikát, a bika megitta a vizet, a víz hajtotta a köszörűkövet, a köszörűkő megfente a fejszét, a fejsze kivágta a fát, a fa visszaadta a szépen szóló harangocskát.<br>
-            <br>
-            A nyulacska megörvendett, a szépen szóló harangocskát visszaakasztotta a nyakába, és mindig ott tartotta. Itt a vége, fuss el véle, ha nem hiszed, járj végére!      
-          </p>
+      </div>
+      <div class="tale-inner">
+        <div class="tale-content">
+          <p class="tale-text">A nyulacska harangocskája</p>
+          <div class="hero-divider"></div>
+          <div class="tale-body">
+            <p>
+              Egyszer volt, hol nem volt, volt egyszer egy nyulacska. Ennek a nyulacskának volt egy
+              szépen szóló harangocskája.<br />
+              Egyszer a nyulacska elment az erdő szélére, lefeküdt egy bokor tövébe, és a bokorra
+              felakasztotta a harangocskáját.<br />
+              Reggel, mikor felébredt, a bokrot sehol sem látta, hanem egy nagy fát látott helyette.
+              Felnézett reá, és látta, hogy a harangocskája a fán van. Kérte a fát, hogy adja vissza
+              a harangocskáját, de a fa nem adta vissza.<br />
+              <br />
+              Ekkor a nyulacska elment a fejszéhez, és kérte, hogy a fát vágja ki, hogy a fa adja
+              vissza a szépen szóló harangocskát. De a fejsze nem vágta ki a fát.<br />
+              Most a nyulacska elment a köszörűkőhöz, hogy fenje meg a fejszét, hogy a fejsze vágja
+              ki a fát, hogy a fa adja vissza a harangocskát. De a köszörűkő nem fente meg a
+              fejszét.<br />
+              Ekkor a nyulacska elment a vízhez, hogy hajtsa a köszörűt, hogy a köszörű fenje meg a
+              fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát. De a víz nem
+              hajtotta a köszörűt.<br />
+              Ekkor a nyulacska elment a bikához, hogy igya meg a vizet, a víz hajtsa a köszörűt, a
+              köszörű fenje meg a fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát.
+              De a bika nem itta meg a vizet.<br />
+              Ekkor a nyulacska elment az egérhez, hogy csípje meg a bikát, a bika igya meg a vizet,
+              a víz hajtsa a köszörűt, a köszörű fenje meg a fejszét, a fejsze vágja ki a fát, a fa
+              adja vissza a harangocskát. De az egér nem csípte meg a bikát.<br />
+              Ekkor a nyulacska elment a macskához, hogy fogja meg az egeret, az egér csípje meg a
+              bikát, a bika igya meg a vizet, a víz hajtsa a köszörűt, a köszörű fenje meg a
+              fejszét, a fejsze vágja ki a fát, a fa adja vissza a harangocskát. A macska azt
+              mondta, hogy ő megfogja, de előbb adjon neki tejecskét.<br />
+              A nyulacska elment a tehénhez, kért tőle tejecskét. A tehén azt mondja, hogy ő ad
+              tejecskét, csak vigyen neki füvecskét.<br />
+              <br />
+              A nyulacska elment a kaszáshoz, hogy adjon neki füvecskét. A kaszás adott is
+              füvecskét, s a nyulacska vitte a tehénnek.<br />
+              A tehén adott neki tejecskét, s a nyulacska vitte a macskának.<br />
+              A macska megfogta az egeret, az egér megcsípte a bikát, a bika megitta a vizet, a víz
+              hajtotta a köszörűkövet, a köszörűkő megfente a fejszét, a fejsze kivágta a fát, a fa
+              visszaadta a szépen szóló harangocskát.<br />
+              <br />
+              A nyulacska megörvendett, a szépen szóló harangocskát visszaakasztotta a nyakába, és
+              mindig ott tartotta. Itt a vége, fuss el véle, ha nem hiszed, járj végére!
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="social-links">
-      <a href="https://www.tiktok.com/@bondarreni" target="_blank" rel="noopener" class="social-link tiktok-link">
-        <img
-          class="tiktok-logo"
-          src="../assets/tiktok.svg"
-          alt="TikTok logo"
-        />
-        TikTok
-      </a>
-    </div>
-    <p class="footer-copy">&copy; 2026 Bondár Reni</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+      <div class="social-links">
+        <a
+          href="https://www.tiktok.com/@bondarreni"
+          target="_blank"
+          rel="noopener"
+          class="social-link tiktok-link"
+        >
+          <img class="tiktok-logo" src="../assets/tiktok.svg" alt="TikTok logo" />
+          TikTok
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Bondár Reni</p>
+    </footer>
 
-  <script></script>
-
-</body>
+    <script></script>
+  </body>
 </html>
