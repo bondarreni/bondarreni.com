@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
@@ -421,6 +421,7 @@
         color: var(--accent);
         margin-bottom: 2.5rem;
         font-family: 'Inter', sans-serif;
+        text-align: center;
       }
 
       /* HOW IT WORKS */
@@ -493,7 +494,7 @@
       }
 
       .card-voice-recording {
-        background-image: url("assets/soundWave.png");
+        background-image: url('assets/soundWave.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -724,7 +725,7 @@
 
       /* ---------- Step 4 ---------- */
       .bookMakingVideoDiv {
-        background-image: url("assets/IMG_7999.png");
+        background-image: url('assets/IMG_7999.png');
         background-size: cover;
         border-radius: 0px 30px 30px 0 !important;
       }
@@ -740,7 +741,7 @@
         display: block;
 
         border-radius: 24px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
       }
 
       /* ---------- TABLET ---------- */
@@ -765,8 +766,8 @@
         }
 
         .bookMakingVideoDiv {
-        background-image: none;
-      }
+          background-image: none;
+        }
       }
       /* ---------- MOBILE ---------- */
 
@@ -816,6 +817,109 @@
         .step-image {
           height: 260px;
           border-radius: 16px;
+        }
+      }
+
+      /* REVIEWS */
+
+      .reviews {
+        padding: 4rem 1rem;
+        border-top: 1px solid var(--border);
+        background: #f0ede8;
+      }
+
+      .reviews-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .reviews-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+      }
+
+      .reviews-header h2 {
+        margin: 0 0 1rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 400;
+        line-height: 1.05;
+      }
+
+      .reviews-header p {
+        margin: 0;
+        color: var(--ink-light);
+        font-size: 0.9rem;
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .review-card {
+        position: relative;
+        padding: 2.3rem;
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        min-height: 300px;
+
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: 0 12px 35px rgba(70, 45, 35, 0.035);
+      }
+
+      .review-quote {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 4rem;
+        line-height: 0.7;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .review-card p {
+        margin: 0;
+        color: var(--ink);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        line-height: 1.55;
+        font-style: italic;
+      }
+
+      .review-card span {
+        margin-top: auto;
+        padding-top: 2rem;
+        color: var(--ink-light);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 850px) {
+        .reviews-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .review-card {
+          min-height: auto;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .reviews {
+          padding: 5rem 1.25rem;
+        }
+
+        .review-card {
+          padding: 1.7rem;
+          border-radius: 20px;
+        }
+
+        .review-card p {
+          font-size: 1.15rem;
         }
       }
 
@@ -1151,7 +1255,8 @@
               <button id="backBtn" type="button">Vissza</button>
 
               <p class="signup-note">
-                Feliratkozás után tájékoztatót küldök, később pedig értesítelek az új mesékről és rendelési lehetőségekről. Bármikor leiratkozhatsz.
+                Feliratkozás után tájékoztatót küldök, később pedig értesítelek az új mesékről és
+                rendelési lehetőségekről. Bármikor leiratkozhatsz.
               </p>
             </div>
           </div>
@@ -1218,7 +1323,10 @@
             </a>
 
             <a href="./konyvek/a-roka-es-a-farkas-a-lakodalomban.html" class="book-card">
-              <img src="assets/books/A_roka_es_a_farkas_a_lakodalomban.png" alt="A róka és a farkas a lakodalomban" />
+              <img
+                src="assets/books/A_roka_es_a_farkas_a_lakodalomban.png"
+                alt="A róka és a farkas a lakodalomban"
+              />
               <span>A róka és a farkas a lakodalomban</span>
             </a>
 
@@ -1239,8 +1347,9 @@
             </div>
 
             <p>
-              Miután mindent megbeszéltünk, elkészíthetitek a hangfelvételt. A mesét felolvashatod te, egy családtagod, a nagymama, vagy akár többen is felváltva. 
-              Ha a meglévő mesék közül választottál, elküldöm nektek hozzá a mese szövegét.
+              Miután mindent megbeszéltünk, elkészíthetitek a hangfelvételt. A mesét felolvashatod
+              te, egy családtagod, a nagymama, vagy akár többen is felváltva. Ha a meglévő mesék
+              közül választottál, elküldöm nektek hozzá a mese szövegét.
             </p>
 
             <p class="step-note">
@@ -1258,13 +1367,11 @@
             </div>
 
             <p>
-              Elkészítem a meséhez tartozó rajzokat, tördelem a szöveget, összeállítom
-              a könyv teljes képi világát.
+              Elkészítem a meséhez tartozó rajzokat, tördelem a szöveget, összeállítom a könyv
+              teljes képi világát.
             </p>
 
-            <p class="step-note">
-              Minden illusztráció kézzel készül  az adott meséhez.
-            </p>
+            <p class="step-note">Minden illusztráció kézzel készül az adott meséhez.</p>
           </div>
 
           <div class="step-image">
@@ -1280,28 +1387,62 @@
             </div>
 
             <p>
-              Elkészülnek a keménylapos oldalak, bekerül a hangmodul,
-              rátöltöm a hangot, majd mindent gondosan letesztelek.
+              Elkészülnek a keménylapos oldalak, bekerül a hangmodul, rátöltöm a hangot, majd
+              mindent gondosan letesztelek.
             </p>
 
-            <p class="step-note">
-              A könyv már készen is áll, hogy elinduljon hozzád! ❤️
-            </p>
+            <p class="step-note">A könyv már készen is áll, hogy elinduljon hozzád! ❤️</p>
           </div>
 
           <div class="bookMakingVideoDiv">
-            <video
-              class="bookMakingVideo"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              >
-              <source src="assets/repamese_osszerakas.MP4" type="video/mp4">
+            <video class="bookMakingVideo" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/repamese_osszerakas.MP4" type="video/mp4" />
             </video>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="reviews-inner">
+        <p class="section-label">Visszajelzések</p>
+
+        <div class="reviews-header">
+          <h2>Akiknek már elkészült</h2>
+          <p>Néhány üzenet azoktól, akik már kézbe vették a saját beszélő mesekönyvüket.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-quote">“</div>
+            <p>
+              Ez egyszerűen csodálatos! 🥰<br>
+              Anyukám és nagymamám is megnézte a könyvet.
+              Mindegyik megkönnyezte. ☺️<br>
+              Az egész családot elbűvölte! Rajzaid meg élőbe még elképesztőbb!<br>
+              Remélem hamarosan újra megkereshetlek a nagyszülők meséivel😍
+            </p>
+            <span>— Imola</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-quote">“</div>
+            <p>
+              Megjött a könyv és szeretném nagyon megköszönni! A könyv csodálatos minden elképzelésemet felülmúlta!<br>
+              Mégegyszer köszönöm!😊❤️
+            </p>
+            <span>— Emma</span>
+          </article>
+
+          <article class="review-card">
+            <div class="review-quote">“</div>
+            <p>
+              Nagyon szépen köszönöm a könyvet. Ez valami varázslatos! A gyerekek később fogják megkapni, de már most tudom hogy imádni fogják és hogy egy örök emlék marad! A kép valami zseniális lett annyira cukik. Tényleg nagyon köszönöm!!
+            </p>
+            <span>— Zsani</span>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- LIGHTBOX -->
@@ -1387,11 +1528,8 @@
     <!-- FOOTER -->
     <footer>
       <div class="social-links">
-        <a
-          href="mailto:bondarreni@gmail.com"
-          class="social-link tiktok-link"
-        >
-          <img class="tiktok-logo" src="assets/email.svg" alt="Email icon"/>
+        <a href="mailto:bondarreni@gmail.com" class="social-link tiktok-link">
+          <img class="tiktok-logo" src="assets/email.svg" alt="Email icon" />
           bondarreni@gmail.com
         </a>
       </div>
@@ -1428,10 +1566,7 @@
         const facade = document.getElementById('tiktokFacade')
         const iframe = document.createElement('iframe')
 
-        iframe.src =
-          'https://www.tiktok.com/embed/v2/' +
-          TIKTOK_VIDEO_ID +
-          '?autoplay=1'
+        iframe.src = 'https://www.tiktok.com/embed/v2/' + TIKTOK_VIDEO_ID + '?autoplay=1'
 
         iframe.allow = 'autoplay; fullscreen; picture-in-picture'
         iframe.allowFullscreen = true
