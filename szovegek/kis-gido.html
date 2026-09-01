@@ -128,6 +128,47 @@
         color: var(--ink);
       }
 
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      #nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(250, 250, 248, 0.92);
+        z-index: 1;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      #nav-mobile a {
+        color: var(--ink-light);
+        padding: 1rem 1.5rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+      @media (min-width: 769px) {
+        #nav-mobile {
+          display: none !important;
+        }
+      }
+
       .hero-divider {
         width: 40px;
         height: 1px;
@@ -370,6 +411,16 @@
         <a href="../index.html#rajzaim" class="nav-link">Rajzok</a>
         <a href="../index.html#rolam" class="nav-link">Rólam</a>
       </div>
+
+      <a class="hamburger-menu" onclick="showHamburger()">
+        <img src="../assets/hamburger-menu.svg" alt="Hamburger menu" />
+      </a>
+      <div id="nav-mobile">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../rajzok.html" class="nav-link">Rajzok</a>
+        <a href="../rolam.html" class="nav-link">Rólam</a>
+      </div>
     </nav>
 
     <section class="tale" id="mese">
@@ -456,6 +507,15 @@
       <p class="footer-copy">&copy; 2026 Bondár Reni</p>
     </footer>
 
-    <script></script>
+    <script>
+      function showHamburger() {
+        const navLinks = document.getElementById('nav-mobile')
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none'
+        } else {
+          navLinks.style.display = 'flex'
+        }
+      }
+    </script>
   </body>
 </html>
