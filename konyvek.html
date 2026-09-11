@@ -328,223 +328,251 @@
         }
       }
 
-
       .books-catalogue {
-  --ink: #292521;
-  --muted: #77716b;
-  --gold: #c69b55;
-  --line: #ece7df;
-  --soft: #fbfaf7;
+        --ink: #292521;
+        --muted: #77716b;
+        --gold: #c69b55;
+        --line: #ece7df;
+        --soft: #fbfaf7;
 
-  padding: 140px 32px 110px;
-  color: var(--ink);
-}
+        padding: 140px 32px 110px;
+        color: var(--ink);
+      }
 
-.books-catalogue-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-}
+      .books-catalogue-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
 
-/* fejléc */
+      /* fejléc */
 
-.books-catalogue-header {
-  margin-bottom: 64px;
-}
+      .books-catalogue-header {
+        margin-bottom: 64px;
+      }
 
-.books-catalogue-header .eyebrow {
-  display: block;
-  margin-bottom: 14px;
+      .books-catalogue-header .eyebrow {
+        display: block;
+        margin-bottom: 14px;
 
-  color: var(--gold);
-  font-size: 0.72rem;
-  letter-spacing: 0.28em;
-}
+        color: var(--gold);
+        font-size: 0.72rem;
+        letter-spacing: 0.28em;
+      }
 
-.books-catalogue-header h1 {
-  margin: 0 0 20px;
+      .books-catalogue-header h1 {
+        margin: 0 0 20px;
 
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3rem, 5vw, 4.8rem);
-  font-weight: 400;
-  line-height: 0.95;
-}
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(3rem, 5vw, 4.8rem);
+        font-weight: 400;
+        line-height: 0.95;
+      }
 
-.books-catalogue-header p {
-  margin: 0;
+      .books-catalogue-header p {
+        margin: 0;
 
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.8;
-}
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.8;
+      }
 
-/* grid */
+      /* grid */
 
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 64px 38px;
-}
+      .books-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 64px 38px;
+      }
 
-/* könyv */
+      /* könyv */
 
-.book-card {
-  min-width: 0;
-}
+      .book-card {
+        min-width: 0;
+      }
 
-.book-cover-link {
-  display: block;
-  overflow: hidden;
-  background: var(--soft);
-}
+      .book-cover-link {
+        display: block;
+        overflow: hidden;
+        background: var(--soft);
+      }
 
-.book-cover-link img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  display: block;
-  object-fit: cover;
+      .book-cover-link img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: block;
+        object-fit: cover;
 
-  transition: transform 0.35s ease;
-}
+        transition: transform 0.35s ease;
+      }
 
-.book-card:hover .book-cover-link img {
-  transform: scale(1.018);
-}
+      .book-card:hover .book-cover-link img {
+        transform: scale(1.018);
+      }
 
-.book-card-content {
-  padding-top: 20px;
-}
+      .book-card-content {
+        padding-top: 20px;
+      }
 
-.book-card-content h2 {
-  margin: 0 0 7px;
+      .book-card-content h2 {
+        margin: 0 0 7px;
 
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.65rem;
-  font-weight: 400;
-  line-height: 1.15;
-}
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.65rem;
+        font-weight: 400;
+        line-height: 1.15;
+      }
 
-.book-card-content p {
-  margin: 0 0 16px;
+      .book-card-content p {
+        margin: 0 0 16px;
 
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
 
-.book-card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+      .book-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
 
-  padding-bottom: 4px;
-  border-bottom: 1px solid transparent;
+        padding-bottom: 4px;
+        border-bottom: 1px solid transparent;
 
-  color: var(--gold);
-  text-decoration: none;
-  font-size: 0.8rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
 
-  transition:
-    gap 0.2s ease,
-    border-color 0.2s ease;
-}
+        transition:
+          gap 0.2s ease,
+          border-color 0.2s ease;
+      }
 
-.book-card-link:hover {
-  gap: 12px;
-  border-color: var(--gold);
-}
+      .book-card-link:hover {
+        gap: 12px;
+        border-color: var(--gold);
+      }
 
-/* egyedi mese */
+      /* in progress mese */
 
-.book-card-custom {
-  display: flex;
-}
+      .book-card-coming .book-cover-link {
+        position: relative;
+      }
 
-.custom-book-box {
-  width: 100%;
-  min-height: 100%;
+      .book-card-coming .book-cover-link img {
+        opacity: 0.82;
+      }
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+      .coming-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        padding: 6px 10px;
+        background: rgba(250, 250, 248, 0.92);
+        color: var(--gold);
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
 
-  padding: 42px;
+      .coming-text {
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
 
-  border: 1px solid var(--line);
-  background: var(--soft);
+      /* egyedi mese */
 
-  color: var(--ink);
-  text-decoration: none;
-}
+      .book-card-custom {
+        display: flex;
+      }
 
-.custom-symbol {
-  margin-bottom: 24px;
+      .custom-book-box {
+        width: 100%;
+        min-height: 100%;
 
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 2rem;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
 
-.custom-book-box h2 {
-  margin: 0 0 12px;
+        padding: 42px;
 
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-}
+        border: 1px solid var(--line);
+        background: var(--soft);
 
-.custom-book-box p {
-  max-width: 250px;
-  margin: 0 0 24px;
+        color: var(--ink);
+        text-decoration: none;
+      }
 
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.7;
-}
+      .custom-symbol {
+        margin-bottom: 24px;
 
-/* tablet */
+        color: var(--gold);
+        font-family: Georgia, serif;
+        font-size: 2rem;
+      }
 
-@media (max-width: 900px) {
-  .books-catalogue {
-    padding: 56px 24px 90px;
-  }
+      .custom-book-box h2 {
+        margin: 0 0 12px;
 
-  .books-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 50px 26px;
-  }
-}
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
 
-/* mobil */
+      .custom-book-box p {
+        max-width: 250px;
+        margin: 0 0 24px;
 
-@media (max-width: 560px) {
-  .books-catalogue {
-    padding: 42px 18px 70px;
-  }
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.7;
+      }
 
-  .books-catalogue-header {
-    margin-bottom: 42px;
-  }
+      /* tablet */
 
-  .books-catalogue-header h1 {
-    font-size: 3rem;
-  }
+      @media (max-width: 900px) {
+        .books-catalogue {
+          padding: 56px 24px 90px;
+        }
 
-  .books-grid {
-    grid-template-columns: 1fr;
-    gap: 42px;
-  }
+        .books-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 50px 26px;
+        }
+      }
 
-  .book-card-content h2 {
-    font-size: 1.55rem;
-  }
+      /* mobil */
 
-  .custom-book-box {
-    padding: 34px 28px;
-  }
-}
+      @media (max-width: 560px) {
+        .books-catalogue {
+          padding: 42px 18px 70px;
+        }
+
+        .books-catalogue-header {
+          margin-bottom: 42px;
+        }
+
+        .books-catalogue-header h1 {
+          font-size: 3rem;
+        }
+
+        .books-grid {
+          grid-template-columns: 1fr;
+          gap: 42px;
+        }
+
+        .book-card-content h2 {
+          font-size: 1.55rem;
+        }
+
+        .custom-book-box {
+          padding: 34px 28px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -570,123 +598,127 @@
     </nav>
 
     <section class="books-catalogue">
-  <div class="books-catalogue-inner">
+      <div class="books-catalogue-inner">
+        <div class="books-grid">
+          <article class="book-card">
+            <a href="./konyvek/kis-gido.html" class="book-cover-link">
+              <img src="./assets/books/Kis_gido_borito.png" alt="A kis gidó mesekönyv borítója" />
+            </a>
 
-    <div class="books-grid">
+            <div class="book-card-content">
+              <h2>A kis gidó</h2>
+              <p>Klasszikus népmese</p>
 
-      <article class="book-card">
-        <a href="./konyvek/kis-gido.html" class="book-cover-link">
-          <img
-            src="./assets/books/Kis_gido_borito.png"
-            alt="A kis gidó mesekönyv borítója"
-          >
-        </a>
+              <a href="./konyvek/kis-gido.html" class="book-card-link"> Megnézem <span>→</span> </a>
+            </div>
+          </article>
 
-        <div class="book-card-content">
-          <h2>A kis gidó</h2>
-          <p>Klasszikus népmese</p>
+          <article class="book-card">
+            <a href="./konyvek/repamese.html" class="book-cover-link">
+              <img src="./assets/books/Repamese_borito.png" alt="Répamese mesekönyv borítója" />
+            </a>
 
-          <a href="./konyvek/kis-gido.html" class="book-card-link">
-            Megnézem <span>→</span>
-          </a>
+            <div class="book-card-content">
+              <h2>Répamese</h2>
+              <p>Klasszikus népmese</p>
+
+              <a href="./konyvek/repamese.html" class="book-card-link"> Megnézem <span>→</span> </a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <a href="./konyvek/a-kiskakas-gyemant-felkrajcarja.html" class="book-cover-link">
+              <img
+                src="./assets/books/kiskakas/borito.png"
+                alt="A kiskakas gyémánt félkrajcárja mesekönyv borítója"
+              />
+            </a>
+
+            <div class="book-card-content">
+              <h2>A kiskakas gyémánt félkrajcárja</h2>
+              <p>Klasszikus népmese</p>
+
+              <a href="./konyvek/a-kiskakas-gyemant-felkrajcarja.html" class="book-card-link">
+                Megnézem <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <a href="./konyvek/a-roka-es-a-farkas-a-lakodalomban.html" class="book-cover-link">
+              <img
+                src="./assets/books/A_roka_es_a_farkas_a_lakodalomban.png"
+                alt="A róka és a farkas a lakodalomban mesekönyv borítója"
+              />
+            </a>
+
+            <div class="book-card-content">
+              <h2>A róka és a farkas a lakodalomban</h2>
+              <p>Klasszikus népmese</p>
+
+              <a href="./konyvek/a-roka-es-a-farkas-a-lakodalomban.html" class="book-card-link">
+                Megnézem <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <a href="./konyvek/a-nyulacska-harangocskaja.html" class="book-cover-link">
+              <img
+                src="./assets/books/Nyulacska_borito.png"
+                alt="A nyulacska harangocskája mesekönyv borítója"
+              />
+            </a>
+
+            <div class="book-card-content">
+              <h2>A nyulacska harangocskája</h2>
+              <p>Klasszikus népmese</p>
+
+              <a href="./konyvek/a-nyulacska-harangocskaja.html" class="book-card-link">
+                Megnézem <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="book-card book-card-coming">
+            <a href="./konyvek/a-cinege-cipoje.html" class="book-cover-link">
+              <img
+                src="./assets/books/cinege-cipoje/borito.png"
+                alt="A cinege cipője mesekönyv borítója"
+              />
+              <span class="coming-badge">Készülőben</span>
+            </a>
+
+            <div class="book-card-content">
+              <h2>A cinege cipője</h2>
+              <p>Móra Ferenc</p>
+
+              <a href="./konyvek/a-cinege-cipoje.html" class="book-card-link">
+                Megnézem <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="book-card book-card-custom">
+            <a href="./konyvek/uj-mese.html" class="custom-book-box">
+              <span class="custom-symbol">♡</span>
+              <h2>Más mesét keresel?</h2>
+              <p>
+                Egy régi kedvenc mesédből, vagy akár a teljesen egyedi történetetekből is készülhet
+                könyv.
+              </p>
+              <span class="book-card-link"> Érdeklődöm <span>→</span> </span>
+            </a>
+          </article>
         </div>
-      </article>
-
-      <article class="book-card">
-        <a href="./konyvek/repamese.html" class="book-cover-link">
-          <img
-            src="./assets/books/Repamese_borito.png"
-            alt="Répamese mesekönyv borítója"
-          >
-        </a>
-
-        <div class="book-card-content">
-          <h2>Répamese</h2>
-          <p>Klasszikus népmese</p>
-
-          <a href="./konyvek/repamese.html" class="book-card-link">
-            Megnézem <span>→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="book-card">
-        <a href="./konyvek/a-kiskakas-gyemant-felkrajcarja.html" class="book-cover-link">
-          <img
-            src="./assets/books/kiskakas/borito.png"
-            alt="A kiskakas gyémánt félkrajcárja mesekönyv borítója"
-          >
-        </a>
-
-        <div class="book-card-content">
-          <h2>A kiskakas gyémánt félkrajcárja</h2>
-          <p>Klasszikus népmese</p>
-
-          <a href="./konyvek/a-kiskakas-gyemant-felkrajcarja.html" class="book-card-link">
-            Megnézem <span>→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="book-card">
-        <a href="./konyvek/a-roka-es-a-farkas-a-lakodalomban.html" class="book-cover-link">
-          <img
-            src="./assets/books/A_roka_es_a_farkas_a_lakodalomban.png"
-            alt="A róka és a farkas a lakodalomban mesekönyv borítója"
-          >
-        </a>
-
-        <div class="book-card-content">
-          <h2>A róka és a farkas a lakodalomban</h2>
-          <p>Klasszikus népmese</p>
-
-          <a href="./konyvek/a-roka-es-a-farkas-a-lakodalomban.html" class="book-card-link">
-            Megnézem <span>→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="book-card">
-        <a href="./konyvek/a-nyulacska-harangocskaja.html" class="book-cover-link">
-          <img
-            src="./assets/books/Nyulacska_borito.png"
-            alt="A nyulacska harangocskája mesekönyv borítója"
-          >
-        </a>
-
-        <div class="book-card-content">
-          <h2>A nyulacska harangocskája</h2>
-          <p>Klasszikus népmese</p>
-
-          <a href="./konyvek/a-nyulacska-harangocskaja.html" class="book-card-link">
-            Megnézem <span>→</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="book-card book-card-custom">
-        <a href="./konyvek/uj-mese.html" class="custom-book-box">
-          <span class="custom-symbol">♡</span>
-          <h2>Más mesét keresel?</h2>
-          <p>Egy régi kedvenc mesédből, vagy akár a teljesen egyedi történetetekből is készülhet könyv.</p>
-          <span class="book-card-link">
-            Érdeklődöm <span>→</span>
-          </span>
-        </a>
-      </article>
-
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
       <div class="social-links">
-        <a
-          href="mailto:bondarreni@gmail.com"
-          class="social-link tiktok-link"
-        >
-          <img class="tiktok-logo" src="assets/email.svg" alt="Email icon"/>
+        <a href="mailto:bondarreni@gmail.com" class="social-link tiktok-link">
+          <img class="tiktok-logo" src="assets/email.svg" alt="Email icon" />
           bondarreni@gmail.com
         </a>
       </div>

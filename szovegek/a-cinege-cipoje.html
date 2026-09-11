@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondár Reni</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-ZJ1Q9NGRDW')
+    </script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit"
+      defer
+    ></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --ink-light: #6b6b6b;
+        --paper: #fafaf8;
+        --accent: #c8a96e;
+        --border: #e8e5e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links-right {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links-right-hamburger {
+        display: none;
+      }
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .nav-links-right-hamburger {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--ink);
+      }
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      #nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(250, 250, 248, 0.92);
+        z-index: 1;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      #nav-mobile a {
+        color: var(--ink-light);
+        padding: 1rem 1.5rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+      @media (min-width: 769px) {
+        #nav-mobile {
+          display: none !important;
+        }
+      }
+
+      .hero-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .activeNavLink {
+        color: var(--accent);
+      }
+
+      #signupForm {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      #signupForm .formInput {
+        width: 100%;
+        padding: 0.9rem 1.1rem;
+        background: #fff;
+        border: 1px solid var(--border);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.88rem;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+
+      #signupForm .formInput::placeholder {
+        color: var(--ink-light);
+        opacity: 0.55;
+      }
+
+      #signupForm .formInput:focus {
+        border-color: var(--accent);
+      }
+
+      #submitBtn,
+      #loadingBtn {
+        width: 100%;
+        padding: 0.9rem;
+        background: var(--ink);
+        color: var(--paper);
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        margin-top: 0.25rem;
+      }
+
+      #submitBtn:hover {
+        background: #333;
+        transform: translateY(-1px);
+      }
+
+      #loadingBtn {
+        display: none;
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      #backBtn {
+        display: none;
+        width: 100%;
+        padding: 0.9rem;
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--border);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: border-color 0.2s;
+      }
+
+      #backBtn:hover {
+        border-color: var(--ink);
+      }
+
+      #captchaContainer {
+        display: none;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .signup-note {
+        font-size: 0.7rem;
+        color: var(--ink-light);
+        opacity: 0.5;
+        margin-top: 1rem;
+      }
+
+      .section-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .section-label a {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* TALE */
+      .tale {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 8rem 2rem;
+      }
+
+      .tale-inner {
+        display: flex;
+        justify-content: center;
+      }
+
+      .tale-content {
+        text-align: center;
+      }
+
+      .tale-content .tale-text {
+        text-align: center;
+      }
+
+      .tale-content .hero-divider {
+        margin: 2rem 0;
+      }
+
+      .tale-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        font-weight: 300;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+
+      .tale-text em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .tale-author {
+        margin-top: 6px;
+        color: var(--ink-light);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+      }
+
+      .tale-body {
+        font-size: 0.92rem;
+        color: var(--ink-light);
+        line-height: 1.9;
+        max-width: 58ch;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .tale-body p + p {
+        margin-top: 1.2rem;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .social-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .tiktok-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tiktok-logo {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      .social-link:hover {
+        color: var(--ink);
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: var(--border);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .tale,
+        .projects,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .tale-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="../index.html" class="nav-name">Bondár Reni</a>
+      <div class="nav-links-right">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../index.html#rajzaim" class="nav-link">Rajzok</a>
+        <a href="../index.html#rolam" class="nav-link">Rólam</a>
+      </div>
+
+      <a class="hamburger-menu" onclick="showHamburger()">
+        <img src="../assets/hamburger-menu.svg" alt="Hamburger menu" />
+      </a>
+      <div id="nav-mobile">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../rajzok.html" class="nav-link">Rajzok</a>
+        <a href="../rolam.html" class="nav-link">Rólam</a>
+      </div>
+    </nav>
+
+    <section class="tale" id="mese">
+      <div>
+        <p class="section-label">
+          <a href="../konyvek.html" class="nav-link">Könyvek</a>
+          <a href="../konyvek/a-cinege-cipoje.html" class="nav-link">/ A cinege cipője</a>
+          / szöveg
+        </p>
+      </div>
+      <div class="tale-inner">
+        <div class="tale-content">
+          <p class="tale-text">A cinege cipője</p>
+          <p class="tale-author">Móra Ferenc</p>
+          <div class="hero-divider"></div>
+          <div class="tale-body">
+            <p>
+              Vége van a nyárnak,<br>
+              hűvös szelek járnak,<br>
+              nagy bánata van a<br>
+              cinegemadárnak.<br>
+              <br>
+              Szeretne elmenni,<br>
+              ő is útra kelni.<br>
+              De cipőt az árva<br>
+              sehol se tud venni.<br>
+              <br>
+              Kapkod fűhöz-fához,<br>
+              szalad a vargához,<br>
+              fűzfahegyen lakó<br>
+              Varjú Varga Pálhoz.<br>
+              <br>
+              Azt mondja a varga,<br>
+              nem ér ő most arra,<br>
+              mert ő most a csizmát<br>
+              nagy uraknak varrja.<br>
+              <br>
+              Darunak, gólyának,<br>
+              a bölömbikának,<br>
+              kár, kár, kár, nem ilyen<br>
+              akárki fiának!<br>
+              <br>
+              Daru is, gólya is,<br>
+              a bölömbika is,<br>
+              útra kelt azóta<br>
+              a búbos banka is.<br>
+              <br>
+              Csak a cinegének<br>
+              szomorú az ének:<br>
+              nincsen cipőcskéje<br>
+              máig se szegénynek.<br>
+              <br>
+              Keresi, kutatja,<br>
+              repül gallyrul gallyra:<br>
+              "Kis cipőt, kis cipőt!" -<br>
+              egyre csak azt hajtja.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="social-links">
+        <a
+          href="https://www.tiktok.com/@bondarreni"
+          target="_blank"
+          rel="noopener"
+          class="social-link tiktok-link"
+        >
+          <img class="tiktok-logo" src="../assets/tiktok.svg" alt="TikTok logo" />
+          TikTok
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Bondár Reni</p>
+    </footer>
+
+    <script>
+      function showHamburger() {
+        const navLinks = document.getElementById('nav-mobile')
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none'
+        } else {
+          navLinks.style.display = 'flex'
+        }
+      }
+    </script>
+  </body>
+</html>

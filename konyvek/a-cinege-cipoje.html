@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondár Reni</title>
+    <meta
+      name="description"
+      content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre. Ismerd meg Bondár Reni rajzait és mesekönyveit."
+    />
+    <meta property="og:title" content="Bondár Reni - Beszélő mesekönyv" />
+    <meta
+      property="og:description"
+      content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/books/a-kis-gido/a-kis-gido-1.webp" />
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-ZJ1Q9NGRDW')
+    </script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --ink-light: #6b6b6b;
+        --paper: #fafaf8;
+        --accent: #c8a96e;
+        --border: #e8e5e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links-right {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      #nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(250, 250, 248, 0.92);
+        z-index: 1;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      #nav-mobile a {
+        color: var(--ink-light);
+        padding: 1rem 1.5rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+      @media (min-width: 769px) {
+        #nav-mobile {
+          display: none !important;
+        }
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--ink);
+      }
+
+      .hero-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .activeNavLink {
+        color: var(--accent);
+      }
+
+      /* BOOK */
+      .books {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 8rem 2rem;
+      }
+
+      .books-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem 5rem;
+      }
+
+      .books-content {
+        text-align: left;
+      }
+
+      .books-content .section-label {
+        text-align: left;
+      }
+
+      .books-content .books-text {
+        text-align: left;
+      }
+
+      .books-content .hero-divider {
+        margin: 2rem 0;
+      }
+
+      .books-content {
+        justify-content: flex-start;
+      }
+
+      .books-photo {
+        width: 650px;
+        flex-shrink: 0;
+      }
+
+      .books-photo img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .section-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .section-label a {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .books-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        font-weight: 300;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+
+      .books-text em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .book-author {
+        margin-top: 6px;
+        color: var(--ink-light);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+      }
+
+      .books-body {
+        font-size: 0.92rem;
+        color: var(--ink-light);
+        line-height: 1.9;
+        max-width: 58ch;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .books-body p + p {
+        margin-top: 1.2rem;
+      }
+
+      .price {
+        color: var(--ink);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: x-large;
+      }
+
+      .readLink {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .personalization {
+        padding: 70px 24px 80px;
+        background: #fbfaf7;
+        border-top: 1px solid #f0ede7;
+        border-bottom: 1px solid #f0ede7;
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      .personalization-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+
+      .personalization h2 {
+        text-align: center;
+        font-size: 2.1rem;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: #26221f;
+      }
+
+      .personalization-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 44px;
+      }
+
+      .personalization-item {
+        text-align: center;
+        padding: 0 10px;
+      }
+
+      .personalization-item h3 {
+        margin: 0 0 12px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #312c27;
+      }
+
+      .personalization-item p {
+        margin: 0 auto;
+        max-width: 220px;
+        font-size: 0.98rem;
+        line-height: 1.75;
+        color: #6e6964;
+      }
+
+      /* tablet */
+      @media (max-width: 900px) {
+        .personalization {
+          margin-top: 80px;
+          padding: 56px 24px 64px;
+        }
+
+        .personalization-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 48px 32px;
+        }
+      }
+
+      /* mobil */
+      @media (max-width: 560px) {
+        .personalization {
+          margin-top: 64px;
+          padding: 48px 22px 56px;
+        }
+
+        .personalization h2 {
+          margin-bottom: 36px;
+          font-size: 1.8rem;
+        }
+
+        .personalization-grid {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .personalization-item {
+          padding: 0;
+        }
+
+        .personalization-item p {
+          max-width: 320px;
+        }
+      }
+
+      .book-preview {
+        width: 60%;
+        margin: 0 auto 84px;
+        text-align: center;
+      }
+
+      .book-preview h2 {
+        margin: 0;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #292521;
+      }
+
+      .section-line {
+        width: 38px;
+        height: 1px;
+        margin: 16px auto 28px;
+        background: #c69b55;
+      }
+
+      .preview-images {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        max-width: 430px;
+        margin: 0 auto;
+      }
+
+      .preview-images img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: block;
+        object-fit: cover;
+      }
+
+      @media (max-width: 700px) {
+        .book-preview {
+          width: 100%;
+          margin: 0px auto 64px;
+          padding: 0 18px;
+        }
+
+        .preview-images {
+          gap: 10px;
+        }
+      }
+
+      .personalization-price {
+        display: block;
+        margin-top: 14px;
+
+        color: #c69b55;
+        font-family: Inter, sans-serif;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .personalization-pricing {
+        max-width: 760px;
+        margin: 42px auto 0;
+        padding-top: 24px;
+        border-top: 1px solid #e8e2d9;
+        text-align: center;
+      }
+
+      .personalization-pricing p {
+        margin: 0;
+        color: #77716b;
+        font-size: 0.9rem;
+        line-height: 1.7;
+      }
+
+      .personalization-pricing span {
+        margin-left: 6px;
+        color: #b88d48;
+        font-weight: 500;
+      }
+
+      .story-contact {
+        padding: 52px 24px 56px;
+        border-top: 1px solid #ece8e2;
+        border-bottom: 1px solid #ece8e2;
+        background: #fff;
+      }
+
+      .story-contact-inner {
+        max-width: 900px;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+      }
+
+      .story-contact-copy h2 {
+        margin: 0 0 8px;
+
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 1.9rem;
+        font-weight: 400;
+        color: #2a2724;
+      }
+
+      .story-contact-copy p {
+        max-width: 520px;
+        margin: 0;
+
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #77716b;
+      }
+
+      .story-contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        padding-bottom: 5px;
+        border-bottom: 1px solid #c69b55;
+
+        color: #b88d48;
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        transition: opacity 0.2s ease;
+      }
+
+      .story-contact-link:hover {
+        opacity: 0.65;
+      }
+
+      @media (max-width: 700px) {
+        .story-contact {
+          padding: 42px 22px 46px;
+        }
+
+        .story-contact-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+        }
+
+        .story-contact-copy h2 {
+          font-size: 1.7rem;
+        }
+      }
+
+      /* FOOTER */
+      .social-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .social-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .tiktok-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tiktok-logo {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      .social-link:hover {
+        color: var(--ink);
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: var(--border);
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .books,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .books-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+
+        .books-photo {
+          width: 100%;
+          order: -1;
+        }
+
+        .books-photo img {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="../index.html" class="nav-name">Bondár Reni</a>
+      <div class="nav-links-right">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../rajzok.html" class="nav-link">Rajzok</a>
+        <a href="../rolam.html" class="nav-link">Rólam</a>
+      </div>
+
+      <a class="hamburger-menu" onclick="showHamburger()">
+        <img src="../assets/hamburger-menu.svg" alt="Hamburger menu" />
+      </a>
+      <div id="nav-mobile">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../rajzok.html" class="nav-link">Rajzok</a>
+        <a href="../rolam.html" class="nav-link">Rólam</a>
+      </div>
+    </nav>
+
+    <section class="books" id="konyvek">
+      <div>
+        <p class="section-label">
+          <a href="../konyvek.html" class="nav-link">Könyvek</a>
+          / A cinege cipője
+        </p>
+      </div>
+      <div class="books-inner">
+        <div class="books-photo">
+          <img src="../assets/books/cinege-cipoje/first_page.PNG" alt="A cinege cipője első oldal" />
+        </div>
+        <div class="books-content books-body">
+          <div>
+            <h1 class="books-text">A cinege cipője</h1>
+            <p class="book-author">Móra Ferenc</p>
+            <div class="hero-divider"></div>
+          </div>
+
+          <p>
+            Móra Ferenc kedvelt gyerekverse a mezítlábas kis cinegéről - bájos, játékos őszi történet, az egyik legkedveltebb gyerekvers.<br />
+            <a href="../szovegek/a-cinege-cipoje.html" class="readLink">A mese szövege →</a>
+          </p>
+
+          <div style="margin-top: 20px">
+            <div>
+              <span class="price">30 000 Ft</span><br />
+              <span style="font-size: small"
+                >a saját hangotokkal, a hangfelvétel vágásával és könyvbe illesztésével</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <section class="book-preview">
+      <h2>Pillantás a könyvbe</h2>
+      <div class="section-line"></div>
+
+      <div class="preview-images">
+        <img src="../assets/books/nyulacska/IMG_8273.jpg" alt="A nyulacska harangocskája elkészült könyv" />
+        <img
+          src="../assets/books/nyulacska/IMG_8275.jpg"
+          alt="A nyulacska harangocskája elkészült könyv egyik oldala"
+        />
+      </div>
+    </section>
+    -->
+
+    <section class="personalization">
+      <div class="personalization-inner">
+        <h2>Személyre szabás</h2>
+        <div class="section-line"></div>
+
+        <div class="personalization-grid">
+          <div class="personalization-item">
+            <h3>Hang</h3>
+            <p>Nagyszülő, dédszülő vagy akár több családtag hangján is megszólalhat a mese.</p>
+            <span class="personalization-price">benne van az árban</span>
+          </div>
+
+          <div class="personalization-item">
+            <h3>Fénykép</h3>
+            <p>Kerülhet a borítóra egy kedves családi fotó vagy portré.</p>
+          </div>
+
+          <div class="personalization-item">
+            <h3>Üzenet</h3>
+            <p>Személyes üzenet kerülhet a könyv hátuljára.</p>
+          </div>
+
+          <div class="personalization-item">
+            <h3>Kézírás</h3>
+            <p>A mese vagy egy rövid részlet a saját kézírásotokkal is bekerülhet a könyvbe.</p>
+          </div>
+        </div>
+        <div class="personalization-pricing">
+          <p>
+            * A hang az alapár része.
+            <span>Az első választott extra +5 000 Ft, minden további +3 000 Ft.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-contact">
+      <div class="story-contact-inner">
+        <div class="story-contact-copy">
+          <h2>Érdekel ez a beszélő mesekönyv?</h2>
+          <p>Írj nekem, és megbeszéljük, kinek a hangjával és hogyan készülne el a könyv.</p>
+        </div>
+
+        <div>
+          <div class="social-links">
+            <a href="mailto:bondarreni@gmail.com" class="social-link tiktok-link">
+              <img class="tiktok-logo" src="../assets/email.svg" alt="Email icon" />
+              bondarreni@gmail.com
+            </a>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.tiktok.com/@bondarreni"
+              target="_blank"
+              rel="noopener"
+              class="social-link tiktok-link"
+            >
+              <img class="tiktok-logo" src="../assets/tiktok.svg" alt="TikTok logo" />
+              TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">&copy; 2026 Bondár Reni</div>
+    </section>
+
+    <script>
+      function showHamburger() {
+        const navLinks = document.getElementById('nav-mobile')
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none'
+        } else {
+          navLinks.style.display = 'flex'
+        }
+      }
+    </script>
+  </body>
+</html>
