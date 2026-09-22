@@ -4,41 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bondár Reni</title>
-    <meta
-      name="description"
-      content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre. Ismerd meg Bondár Reni rajzait és mesekönyveit."
-    />
-    <meta property="og:title" content="Bondár Reni - Beszélő mesekönyv" />
-    <meta
-      property="og:description"
-      content="Egyedi, kézzel rajzolt beszélő mesekönyv, amiben a szeretteid hangja szólal meg - őrizd meg a legkedvesebb történeteket és emlékeket örökre."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/books/a-kis-gido/a-kis-gido-1.webp" />
     <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'G-ZJ1Q9NGRDW')
-    </script>
-    <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit"
-      defer
-    ></script>
     <style>
       *,
       *::before,
@@ -320,11 +292,6 @@
         font-weight: 300;
         outline: none;
         transition: border-color 0.2s;
-      }
-
-      #signupForm .formInput::placeholder {
-        color: var(--ink-light);
-        opacity: 0.55;
       }
 
       #signupForm .formInput:focus {
@@ -1134,7 +1101,7 @@
 
       .footer-copy {
         font-size: 0.72rem;
-        color: #c0c0c0;
+        color: var(--border);
       }
 
       /* RESPONSIVE */
@@ -1183,14 +1150,82 @@
           padding-right: 1.5rem;
         }
       }
+
+      .legal-page {
+        padding: 145px 1.5rem 6rem;
+        min-height: 70vh;
+      }
+      .legal-inner {
+        max-width: 880px;
+        margin: 0 auto;
+      }
+      .legal-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+      .legal-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 300;
+        line-height: 1.05;
+        margin-bottom: 1rem;
+      }
+      .legal-updated {
+        color: var(--ink-light);
+        font-size: 0.8rem;
+        margin-bottom: 3rem;
+      }
+      .legal-section {
+        padding: 2rem 0;
+        border-top: 1px solid var(--border);
+      }
+      .legal-section:first-of-type {
+        border-top: 0;
+      }
+      .legal-section h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      .legal-section p,
+      .legal-section li {
+        font-size: 0.92rem;
+        color: var(--ink-light);
+        line-height: 1.85;
+      }
+      .legal-section p + p {
+        margin-top: 0.8rem;
+      }
+      .legal-section ul {
+        margin: 0.7rem 0 0 1.25rem;
+      }
+      .legal-highlight {
+        padding: 1.1rem 1.2rem;
+        background: #f0ede8;
+        border-left: 3px solid var(--accent);
+        margin: 1rem 0;
+      }
+      .legal-page a {
+        color: var(--ink);
+      }
+      @media (max-width: 768px) {
+        .legal-page {
+          padding-top: 120px;
+        }
+      }
     </style>
   </head>
   <body>
     <!-- NAV -->
+
     <nav>
-      <a href="#" class="nav-name">Bondár Reni</a>
+      <a href="./index.html" class="nav-name">Bondár Reni</a>
       <div class="nav-links-right">
-        <a href="#" class="nav-link activeNavLink">Beszélő könyv</a>
+        <a href="./index.html" class="nav-link">Beszélő könyv</a>
         <a href="./konyvek.html" class="nav-link">Könyvek</a>
         <a href="./rajzok.html" class="nav-link">Rajzok</a>
         <a href="./rolam.html" class="nav-link">Rólam</a>
@@ -1200,344 +1235,41 @@
         <img src="assets/hamburger-menu.svg" alt="Hamburger menu" />
       </a>
       <div id="nav-mobile">
-        <a href="#" class="nav-link activeNavLink">Beszélő könyv</a>
+        <a href="./index.html" class="nav-link">Beszélő könyv</a>
         <a href="./konyvek.html" class="nav-link">Könyvek</a>
         <a href="./rajzok.html" class="nav-link">Rajzok</a>
         <a href="./rolam.html" class="nav-link">Rólam</a>
       </div>
     </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-left">
-        <div class="tiktok-facade" id="tiktokFacade">
-          <img id="tiktokThumb" src="" alt="Beszélő könyv TikTok videó" />
-          <div class="tiktok-play-btn">
-            <div class="tiktok-play-icon"></div>
-          </div>
-        </div>
+    <main class="legal-page">
+      <div class="legal-inner">
+        <p class="legal-eyebrow">Jogi információk</p>
+        <h1 class="legal-title">Impresszum</h1>
+        <p class="legal-updated">Hatályos: 2026. szeptember 1-től</p>
+        <section class="legal-section">
+          <h2>1. Szolgáltatói adatok</h2>
+          <p>
+            Név: <b>Bondár Renáta e.v.</b><br />
+            Székhely: <b>MAGYARORSZÁG, 1095 BUDAPEST, MESTER UTCA 40-44. lp.: B em.: 2 ajtó: 10.</b><br />
+            Egyéni vállalkozói nyilvántartási szám: <b>62567819</b><br />
+            Adószám: <b>92214875-1-43</b><br />
+            Nyilvántartást vezető szerv: <b>Magyar Kereskedelmi és Iparkamara</b><br />
+            E-mail: <a href="mailto:bondarreni@gmail.com">bondarreni@gmail.com</a><br />
+            Weboldal: <a href="./index.html">https://bondarreni.com</a><br />
+          </p>
+        </section>
+        <section class="legal-section">
+          <h2>2. Tárhelyszolgáltató</h2>
+          <p>
+            Név: <b>GitHub, Inc.</b><br />
+            Székhely: <b>88 Colin P. Kelly Jr. St. San Francisco, CA 94107 United States</b><br />
+            Weboldal: <b>https://github.com</b><br />
+          </p>
+        </section>
       </div>
-
-      <div class="hero-right" id="feliratkozas">
-        <div class="hero-right-inner">
-          <div class="hero-right-content">
-            <p class="hero-eyebrow">Beszélő mesekönyv</p>
-            <h1 class="hero-title">
-              Őrizd meg a szeretteid hangját egy <br /><em>mesekönyvben.</em>
-            </h1>
-            <div class="hero-divider"></div>
-            <p class="hero-desc">
-              Egyedi, kézzel rajzolt mesekönyv, ami a szeretteid hangján szólal meg, hogy a
-              legkedvesebb történetek és emlékek örökké veled maradhassanak. 🤍
-            </p>
-
-            <div class="hero-form-wrap">
-              <span class="hero-form-label">Szeretnék egy saját mesekönyvet</span>
-              <form
-                id="signupForm"
-                action="https://api.bluefox.email/v1/signup-forms/6a2c64c64dbba21160210763"
-                method="POST"
-              >
-                <input
-                  class="formInput"
-                  type="email"
-                  name="email"
-                  placeholder="E-mail cím"
-                  required
-                />
-                <div id="captchaContainer">
-                  <div id="turnstileWidget"></div>
-                </div>
-                <button id="submitBtn" type="submit">Feliratkozom</button>
-                <button id="loadingBtn" type="button">Kérlek várj...</button>
-              </form>
-
-              <p id="successMessageText">
-                Köszönöm! Küldtem neked egy emailt, nézd meg a beérkező leveleidet!
-              </p>
-              <p id="errorMessageText"></p>
-              <button id="backBtn" type="button">Vissza</button>
-
-              <p class="signup-note">
-                Feliratkozás után tájékoztatót küldök, később pedig értesítelek az új mesékről és
-                rendelési lehetőségekről. Bármikor leiratkozhatsz.
-              </p>
-            </div>
-          </div>
-
-          <div class="polaroid-col">
-            <div class="polaroid" title="A kis gidó – 1. kép">
-              <img src="assets/books/a-kis-gido/book1.webp" alt="A kis gidó – 1. kép" />
-            </div>
-            <div class="polaroid" title="A kis gidó – 2. kép">
-              <img src="assets/books/a-kis-gido/book2.webp" alt="A kis gidó – 2. kép" />
-            </div>
-            <div class="polaroid" title="A kis gidó – 3. kép">
-              <img src="assets/books/a-kis-gido/book3.webp" alt="A kis gidó – 3. kép" />
-            </div>
-            <div class="polaroid" title="A kis gidó – 4. kép">
-              <img src="assets/books/a-kis-gido/book4.webp" alt="A kis gidó – 4. kép" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works" id="how-it-works">
-      <div class="how-it-works-inner">
-        <p class="section-label">Hogyan készül?</p>
-        <h1>Így készül a beszélő mesekönyved</h1>
-
-        <div class="step-card step-card--books">
-          <div class="step-info">
-            <div class="step-heading">
-              <span class="step-number">1</span>
-              <h3>Válassz egy mesét</h3>
-            </div>
-
-            <p>
-              Válassz a már elkészült mesék közül, kérd egy régi kedvencedet, vagy akár egyedi
-              történetet.
-            </p>
-
-            <ul class="step-options">
-              <li>♡ Már elkészült mesék</li>
-              <li>♡ Egy létező kedvenc mese</li>
-              <li>♡ Teljesen egyedi történet</li>
-            </ul>
-
-            <a href="./konyvek.html" class="step-button"> Összes könyv → </a>
-          </div>
-
-          <div class="book-grid">
-            <a href="./konyvek/kis-gido.html" class="book-card">
-              <img src="assets/books/Kis_gido_borito.png" alt="Kis gidó" />
-              <span>A kis gidó</span>
-            </a>
-
-            <a href="./konyvek/repamese.html" class="book-card">
-              <img src="assets/books/Repamese_borito.png" alt="Répamese" />
-              <span>Répamese</span>
-            </a>
-
-            <a href="./konyvek/a-nyulacska-harangocskaja.html" class="book-card">
-              <img src="assets/books/Nyulacska_borito.png" alt="A nyulacska harangocskája" />
-              <span>A nyulacska harangocskája</span>
-            </a>
-
-            <a href="./konyvek/a-kiskakas-gyemant-felkrajcarja.html" class="book-card">
-              <img
-                src="assets/books/kiskakas/borito.png"
-                alt="A kiskakas gyémánt félkrajcárja"
-              />
-              <span>A kiskakas gyémánt félkrajcárja</span>
-            </a>
-
-            <a href="./konyvek/a-cinege-cipoje.html" class="book-card">
-              <img
-                src="assets/books/cinege-cipoje/borito.png"
-                alt="A cinege cipője"
-              />
-              <span>A cinege cipője</span>
-            </a>
-
-            <a class="book-card book-card--custom">
-              <div class="book-card__more">
-                <span class="heart">♡</span>
-                <span>Új vagy egyedi mese</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="step-card card-voice-recording">
-          <div class="step-info">
-            <div class="step-heading">
-              <span class="step-number">2</span>
-              <h3>Vegyétek fel a hangot</h3>
-            </div>
-
-            <p>
-              Miután mindent megbeszéltünk, elkészíthetitek a hangfelvételt. A mesét felolvashatod
-              te, egy családtagod, a nagymama, vagy akár többen is felváltva. Ha a meglévő mesék
-              közül választottál, elküldöm nektek hozzá a mese szövegét.
-            </p>
-
-            <p class="step-note">
-              Nem kell tökéletesnek lennie. Ha valaki elront egy mondatot, nyugodtan újrakezdheti –
-              a hanganyagot én majd megszerkesztem.
-            </p>
-          </div>
-        </div>
-
-        <div class="step-card">
-          <div class="step-info">
-            <div class="step-heading">
-              <span class="step-number">3</span>
-              <h3>Illusztrálás</h3>
-            </div>
-
-            <p>
-              Elkészítem a meséhez tartozó rajzokat, tördelem a szöveget, összeállítom a könyv
-              teljes képi világát.
-            </p>
-
-            <p class="step-note">Minden illusztráció kézzel készül az adott meséhez.</p>
-          </div>
-
-          <div class="step-image">
-            <img src="assets/IMG_0757.jpg" alt="Illusztrálás" class="image-static" />
-          </div>
-        </div>
-
-        <div class="step-card step-card-video">
-          <div class="step-info">
-            <div class="step-heading">
-              <span class="step-number">4</span>
-              <h3>A könyv összeállítása</h3>
-            </div>
-
-            <p>
-              Elkészülnek a keménylapos oldalak, bekerül a hangmodul, rátöltöm a hangot, majd
-              mindent gondosan letesztelek.
-            </p>
-
-            <p class="step-note">A könyv már készen is áll, hogy elinduljon hozzád! ❤️</p>
-          </div>
-
-          <div class="bookMakingVideoDiv">
-            <video class="bookMakingVideo" autoplay muted loop playsinline preload="metadata">
-              <source src="assets/repamese_osszerakas.MP4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews">
-      <div class="reviews-inner">
-        <p class="section-label">Visszajelzések</p>
-
-        <div class="reviews-header">
-          <h2>Akiknek már elkészült</h2>
-          <p>Néhány üzenet azoktól, akik már kézbe vették a saját beszélő mesekönyvüket.</p>
-        </div>
-
-        <div class="reviews-grid">
-          <article class="review-card">
-            <div class="review-quote">“</div>
-            <p>
-              Ez egyszerűen csodálatos! 🥰<br>
-              Anyukám és nagymamám is megnézte a könyvet.
-              Mindegyik megkönnyezte. ☺️<br>
-              Az egész családot elbűvölte! Rajzaid meg élőbe még elképesztőbb!<br>
-              Remélem hamarosan újra megkereshetlek a nagyszülők meséivel😍
-            </p>
-            <span>— Imola</span>
-          </article>
-
-          <article class="review-card">
-            <div class="review-quote">“</div>
-            <p>
-              Megjött a könyv és szeretném nagyon megköszönni! A könyv csodálatos minden elképzelésemet felülmúlta!<br>
-              Mégegyszer köszönöm!😊❤️
-            </p>
-            <span>— Emma</span>
-          </article>
-
-          <article class="review-card">
-            <div class="review-quote">“</div>
-            <p>
-              Nagyon szépen köszönöm a könyvet. Ez valami varázslatos! A gyerekek később fogják megkapni, de már most tudom hogy imádni fogják és hogy egy örök emlék marad! A kép valami zseniális lett annyira cukik. Tényleg nagyon köszönöm!!
-            </p>
-            <span>— Zsani</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightboxClose">&times;</button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 4L8 14L18 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-      <img id="lightboxImg" src="" alt="" />
-      <button class="lightbox-nav lightbox-next" id="lightboxNext">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10 4L20 14L10 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-    </div>
-
-    <!-- BOOK LIGHTBOX -->
-    <div class="book-lightbox" id="bookLightbox">
-      <button class="lightbox-close" id="bookLightboxClose">&times;</button>
-      <button class="lightbox-nav lightbox-prev" id="bookLightboxPrev">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M18 4L8 14L18 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-      <img id="bookLightboxImg" src="" alt="" />
-      <button class="lightbox-nav lightbox-next" id="bookLightboxNext">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10 4L20 14L10 24"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-    </div>
-
+    </main>
     <!-- FOOTER -->
+
     <footer>
       <div class="social-links">
         <a href="mailto:bondarreni@gmail.com" class="social-link tiktok-link">
@@ -1562,283 +1294,13 @@
         <a href="./adatkezeles.html" class="social-link social-link-light">Adatkezelési tájékoztató</a>
         <a href="./impresszum.html" class="social-link social-link-light">Impresszum</a>
       </div>
-
       <p class="footer-copy">&copy; 2026 Bondár Reni</p>
     </footer>
-
     <script>
-      const TIKTOK_VIDEO_ID = '7650158337044090134'
-
-      fetch(
-        'https://www.tiktok.com/oembed?url=' +
-          encodeURIComponent('https://www.tiktok.com/@bondarreni/video/' + TIKTOK_VIDEO_ID)
-      )
-        .then((r) => r.json())
-        .then((data) => {
-          if (data.thumbnail_url) {
-            document.getElementById('tiktokThumb').src = data.thumbnail_url
-          }
-        })
-        .catch(() => {})
-
-      document.getElementById('tiktokFacade').addEventListener('click', () => {
-        const facade = document.getElementById('tiktokFacade')
-        const iframe = document.createElement('iframe')
-
-        iframe.src = 'https://www.tiktok.com/embed/v2/' + TIKTOK_VIDEO_ID + '?autoplay=1'
-
-        iframe.allow = 'autoplay; fullscreen; picture-in-picture'
-        iframe.allowFullscreen = true
-
-        facade.innerHTML = ''
-        facade.appendChild(iframe)
-        facade.style.cursor = 'default'
-      })
-
-      let turnstileToken = null
-      let turnstileWidgetId = null
-      let pendingSubmit = false
-
-      function onloadTurnstileCallback() {
-        const container = document.getElementById('turnstileWidget')
-        if (container) {
-          turnstileWidgetId = turnstile.render(container, {
-            sitekey: '0x4AAAAAADjl8zPCcTc3eqv7',
-            theme: 'light',
-            size: 'normal',
-            appearance: 'execute',
-            callback: function (token) {
-              turnstileToken = token
-              if (pendingSubmit) {
-                pendingSubmit = false
-                localStorage.removeItem('timestamp')
-                document.getElementById('signupForm').dispatchEvent(new Event('submit'))
-              }
-            },
-            'expired-callback': function () {
-              turnstileToken = null
-              pendingSubmit = false
-            },
-            'error-callback': function () {
-              turnstileToken = null
-              pendingSubmit = false
-            }
-          })
-        }
-      }
-
-      function checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton }) {
-        const timestamp = Date.now()
-        const previousTimestamp = localStorage.getItem('timestamp')
-        if (previousTimestamp && Number(previousTimestamp) + 5000 > timestamp) {
-          document.getElementById('captchaContainer').style.display = 'none'
-          errorMessageText.innerText = 'Túl sok kísérlet, kérlek próbáld újra egy kis idő múlva.'
-          inputs.forEach((input) => {
-            if (input) input.style.display = 'none'
-          })
-          submitButton.style.display = 'none'
-          errorMessageText.style.display = 'block'
-          backButton.style.display = 'block'
-          return true
-        }
-      }
-
-      function submitHandler(event) {
-        event.preventDefault()
-        const form = document.getElementById('signupForm')
-        const inputs = document.querySelectorAll('#signupForm .formInput')
-        const successMessageText = document.getElementById('successMessageText')
-        const errorMessageText = document.getElementById('errorMessageText')
-        const submitButton = document.getElementById('submitBtn')
-        const loadingButton = document.getElementById('loadingBtn')
-        const backButton = document.getElementById('backBtn')
-        const emailAddress = document.querySelector('input[name="email"]')?.value
-
-        if (checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })) return
-
-        localStorage.setItem('timestamp', Date.now())
-        submitButton.style.display = 'none'
-        loadingButton.style.display = 'block'
-
-        let data = {}
-        inputs.forEach((input) => {
-          data[input.name] = input.type === 'checkbox' ? input.checked : input.value
-        })
-        data.turnstileToken = turnstileToken
-
-        if (!turnstileToken) {
-          pendingSubmit = true
-          submitButton.style.display = 'block'
-          loadingButton.style.display = 'none'
-          document.getElementById('captchaContainer').style.display = 'flex'
-          if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
-            turnstile.execute(turnstileWidgetId)
-          }
-          return
-        }
-
-        fetch(event.target.action, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        })
-          .then((res) => [res.ok, res.json()])
-          .then(([ok, dataPromise]) => {
-            dataPromise.then((payload) => {
-              if (ok) {
-                if (payload.result && payload.result.redirectTo) {
-                  window.location.href = payload.result.redirectTo
-                } else {
-                  successMessageText.style.display = 'block'
-                  successMessageText.innerText = `Köszönöm! Küldtem neked egy emailt a ${emailAddress} címre, nézd meg a beérkező leveleidet!`
-                }
-                form.reset()
-              } else {
-                errorMessageText.style.display = 'block'
-                if (payload.status === 401) {
-                  errorMessageText.innerText = 'Domain not whitelisted. Please contact support.'
-                } else {
-                  errorMessageText.innerText =
-                    (payload.error && payload.error.message) || 'Hiba történt.'
-                }
-              }
-            })
-          })
-          .catch((error) => {
-            if (error.message === 'Failed to fetch') {
-              checkClickOutLimit({ errorMessageText, inputs, submitButton, backButton })
-              return
-            }
-            errorMessageText.style.display = 'block'
-            errorMessageText.innerText = error.message || 'Váratlan hiba történt.'
-            localStorage.removeItem('timestamp')
-          })
-          .finally(() => {
-            document.getElementById('captchaContainer').style.display = 'none'
-            if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
-              turnstile.reset(turnstileWidgetId)
-              turnstileToken = null
-            }
-            inputs.forEach((input) => {
-              if (input) input.style.display = 'none'
-            })
-            loadingButton.style.display = 'none'
-            backButton.style.display = 'block'
-          })
-      }
-
-      function resetFormHandler() {
-        const inputs = document.querySelectorAll('#signupForm .formInput')
-        const successMessageText = document.getElementById('successMessageText')
-        const errorMessageText = document.getElementById('errorMessageText')
-        const submitButton = document.getElementById('submitBtn')
-        const backButton = document.getElementById('backBtn')
-
-        if (typeof turnstile !== 'undefined' && turnstileWidgetId !== null) {
-          turnstile.reset(turnstileWidgetId)
-          turnstileToken = null
-        }
-        successMessageText.style.display = 'none'
-        errorMessageText.style.display = 'none'
-        errorMessageText.innerText = 'Hoppá! Valami nem sikerült, kérlek próbáld újra.'
-        backButton.style.display = 'none'
-        inputs.forEach((input) => {
-          if (input) input.style.display = 'block'
-        })
-        submitButton.style.display = 'block'
-      }
-
-      // BOOK LIGHTBOX
-      const bookLightbox = document.getElementById('bookLightbox')
-      const bookLightboxImg = document.getElementById('bookLightboxImg')
-      const bookImages = [
-        { src: 'assets/books/a-kis-gido/book1.webp', alt: 'A kis gidó – 1. kép' },
-        { src: 'assets/books/a-kis-gido/book2.webp', alt: 'A kis gidó – 2. kép' },
-        { src: 'assets/books/a-kis-gido/book3.webp', alt: 'A kis gidó – 3. kép' },
-        { src: 'assets/books/a-kis-gido/book4.webp', alt: 'A kis gidó – 4. kép' }
-      ]
-      let blIndex = 0
-      let blTouchStartX = 0
-
-      function showBookLightboxAt(index) {
-        blIndex = (index + bookImages.length) % bookImages.length
-        bookLightboxImg.classList.add('fading')
-        setTimeout(() => {
-          bookLightboxImg.src = bookImages[blIndex].src
-          bookLightboxImg.alt = bookImages[blIndex].alt
-          bookLightboxImg.classList.remove('fading')
-        }, 160)
-      }
-
-      function openBookLightbox(index) {
-        blIndex = index
-        bookLightboxImg.src = bookImages[blIndex].src
-        bookLightboxImg.alt = bookImages[blIndex].alt
-        bookLightbox.classList.add('open')
-        document.body.style.overflow = 'hidden'
-      }
-
-      function closeBookLightbox() {
-        bookLightbox.classList.remove('open')
-        document.body.style.overflow = ''
-      }
-
-      document.querySelectorAll('.polaroid').forEach((polaroid, i) => {
-        polaroid.addEventListener('click', () => openBookLightbox(i))
-      })
-
-      document.getElementById('bookLightboxClose').addEventListener('click', closeBookLightbox)
-      document.getElementById('bookLightboxPrev').addEventListener('click', (e) => {
-        e.stopPropagation()
-        showBookLightboxAt(blIndex - 1)
-      })
-      document.getElementById('bookLightboxNext').addEventListener('click', (e) => {
-        e.stopPropagation()
-        showBookLightboxAt(blIndex + 1)
-      })
-
-      bookLightbox.addEventListener('click', (e) => {
-        if (e.target === bookLightbox) closeBookLightbox()
-      })
-
-      document.addEventListener('keydown', (e) => {
-        if (!bookLightbox.classList.contains('open')) return
-        if (e.key === 'Escape') closeBookLightbox()
-        if (e.key === 'ArrowLeft') showBookLightboxAt(blIndex - 1)
-        if (e.key === 'ArrowRight') showBookLightboxAt(blIndex + 1)
-      })
-
-      bookLightbox.addEventListener(
-        'touchstart',
-        (e) => {
-          blTouchStartX = e.touches[0].clientX
-        },
-        { passive: true }
-      )
-      bookLightbox.addEventListener('touchend', (e) => {
-        const dx = e.changedTouches[0].clientX - blTouchStartX
-        if (Math.abs(dx) > 40) showBookLightboxAt(blIndex + (dx < 0 ? 1 : -1))
-      })
-
-      const signupForm = document.getElementById('signupForm')
-      const backButton = document.getElementById('backBtn')
-
-      if (!signupForm.classList.contains('handlers-added')) {
-        signupForm.addEventListener('submit', submitHandler)
-        signupForm.classList.add('handlers-added')
-      }
-      if (!backButton.classList.contains('handlers-added')) {
-        backButton.addEventListener('click', resetFormHandler)
-        backButton.classList.add('handlers-added')
-      }
-
       function showHamburger() {
-        const navLinks = document.getElementById('nav-mobile')
-        if (navLinks.style.display === 'flex') {
-          navLinks.style.display = 'none'
-        } else {
-          navLinks.style.display = 'flex'
-        }
+        const mobile = document.getElementById('nav-mobile')
+        if (!mobile) return
+        mobile.style.display = mobile.style.display === 'flex' ? 'none' : 'flex'
       }
     </script>
   </body>
