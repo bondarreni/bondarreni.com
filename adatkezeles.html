@@ -1,0 +1,640 @@
+<!doctype html>
+
+<html lang="hu">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Adatkezelési tájékoztató | Bondár Reni</title>
+
+    <link rel="icon" href="favicon.ico" sizes="any" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+
+      rel="stylesheet"
+
+    />
+
+    <style>
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --ink-light: #6b6b6b;
+        --paper: #fafaf8;
+        --accent: #c8a96e;
+        --border: #e8e5e0;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .nav-links-right {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--ink);
+      }
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      #nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        background: rgba(250, 250, 248, 0.92);
+        z-index: 1;
+      }
+
+      #nav-mobile a {
+        display: block;
+        padding: 1rem 1.5rem;
+        color: var(--ink-light);
+        text-decoration: none;
+      }
+
+      /* LEGAL PAGE */
+      .legal-page {
+        padding: 145px 1.5rem 6rem;
+        min-height: 70vh;
+      }
+
+      .legal-inner {
+        max-width: 880px;
+        margin: 0 auto;
+      }
+
+      .legal-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .legal-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 300;
+        line-height: 1.05;
+        margin-bottom: 1rem;
+      }
+
+      .legal-updated {
+        color: var(--ink-light);
+        font-size: 0.8rem;
+        margin-bottom: 3rem;
+      }
+
+      .legal-section {
+        padding: 2rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .legal-section:first-of-type {
+        border-top: 0;
+      }
+
+      .legal-section h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+
+      .legal-section p,
+      .legal-section li {
+        font-size: 0.92rem;
+        color: var(--ink-light);
+        line-height: 1.85;
+      }
+
+      .legal-section p + p {
+        margin-top: 0.8rem;
+      }
+
+      .legal-section ul {
+        margin: 0.7rem 0 0 1.25rem;
+      }
+
+      .legal-page a {
+        color: var(--ink);
+      }
+
+      .legal-highlight {
+        padding: 1.1rem 1.2rem;
+        background: #f0ede8;
+        border-left: 3px solid var(--accent);
+        margin: 1rem 0;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .social-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .social-link-light {
+        color: #c0c0c0;
+      }
+
+      .social-link:hover {
+        color: var(--ink);
+      }
+
+      .tiktok-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tiktok-logo {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: var(--border);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+
+        .hamburger-menu {
+          display: flex;
+        }
+
+        .legal-page {
+          padding-top: 120px;
+        }
+
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .social-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @media (min-width: 769px) {
+        #nav-mobile {
+          display: none !important;
+        }
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- NAV -->
+
+
+
+    <nav>
+
+      <a href="./index.html" class="nav-name">Bondár Reni</a>
+
+      <div class="nav-links-right">
+
+        <a href="./index.html" class="nav-link">Beszélő könyv</a>
+
+        <a href="./konyvek.html" class="nav-link">Könyvek</a>
+
+        <a href="./rajzok.html" class="nav-link">Rajzok</a>
+
+        <a href="./rolam.html" class="nav-link">Rólam</a>
+
+      </div>
+
+
+
+      <a class="hamburger-menu" onclick="showHamburger()">
+
+        <img src="assets/hamburger-menu.svg" alt="Hamburger menu" />
+
+      </a>
+
+      <div id="nav-mobile">
+
+        <a href="./index.html" class="nav-link">Beszélő könyv</a>
+
+        <a href="./konyvek.html" class="nav-link">Könyvek</a>
+
+        <a href="./rajzok.html" class="nav-link">Rajzok</a>
+
+        <a href="./rolam.html" class="nav-link">Rólam</a>
+
+      </div>
+
+    </nav>
+
+    <main class="legal-page">
+    <div class="legal-inner">
+      <p class="legal-eyebrow">Adatvédelem</p>
+      <h1 class="legal-title">Adatkezelési tájékoztató</h1>
+      <p class="legal-updated">Hatályos: 2026. szeptember 1-től</p>
+
+      <section class="legal-section">
+        <h2>1. Az adatkezelő adatai</h2>
+        <p>
+          Név: <b>Bondár Renáta e.v.</b><br />
+          Székhely: <b>1095 Budapest, Mester utca 40–44., B lépcsőház, 2. emelet, 10. ajtó</b><br />
+          Egyéni vállalkozói nyilvántartási szám: <b>62567819</b><br />
+          Adószám: <b>92214875-1-43</b><br />
+          E-mail: <a href="mailto:bondarreni@gmail.com">bondarreni@gmail.com</a><br />
+          Weboldal: <a href="https://bondarreni.com">https://bondarreni.com</a>
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Az adatkezelés alapelvei</h2>
+        <p>
+          A személyes adatokat kizárólag meghatározott célból, a szükséges mértékben és ideig,
+          az alkalmazandó adatvédelmi jogszabályoknak, különösen az Európai Parlament és a Tanács
+          (EU) 2016/679 rendeletének (GDPR) megfelelően kezelem.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Kapcsolatfelvétel és érdeklődés</h2>
+        <p>
+          <b>Kezelt adatok:</b> név, e-mail-cím, telefonszám – ha megadásra kerül –, közösségi
+          média profilnév, valamint az üzenet tartalma.
+        </p>
+        <p>
+          <b>Adatkezelés célja:</b> az érdeklődés megválaszolása, árajánlat adása és a
+          kapcsolattartás.
+        </p>
+        <p>
+          <b>Jogalap:</b> a GDPR 6. cikk (1) bekezdés b) pontja szerinti, az érintett kérésére
+          történő szerződéskötést megelőző lépések.
+        </p>
+        <p>
+          <b>Megőrzési idő:</b> ha nem jön létre megrendelés, az adatokat főszabály szerint az
+          utolsó kapcsolatfelvételtől számított 1 évig őrzöm meg, kivéve, ha jogi igény miatt
+          hosszabb megőrzés indokolt.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Megrendelések kezelése</h2>
+        <p>
+          <b>Kezelt adatok:</b> név, e-mail-cím, telefonszám, számlázási és szállítási adatok,
+          a megrendelés tartalma, az egyeztetések és a fizetéshez kapcsolódó adatok.
+        </p>
+        <p>
+          <b>Adatkezelés célja:</b> a megrendelés rögzítése, a szerződés létrehozása és teljesítése,
+          a kapcsolattartás, a termék elkészítése és átadása.
+        </p>
+        <p>
+          <b>Jogalap:</b> GDPR 6. cikk (1) bekezdés b) pont – a szerződés teljesítése.
+        </p>
+        <p>
+          <b>Megőrzési idő:</b> a szerződés teljesítését követően az esetleges jogi igények
+          érvényesítéséhez szükséges ideig, főszabály szerint 5 évig.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Hangfelvételek, fényképek és egyéb személyes tartalmak</h2>
+        <p>
+          A személyre szabott beszélő mesekönyv elkészítéséhez a Megrendelő hangfelvételt,
+          fényképet, nevet, kézírást vagy más személyes tartalmat adhat át.
+        </p>
+        <p>
+          <b>Adatkezelés célja:</b> a Megrendelő által kért személyre szabott termék elkészítése.
+        </p>
+        <p>
+          <b>Jogalap:</b> a Megrendelő saját adatai esetén GDPR 6. cikk (1) bekezdés b) pont –
+          a szerződés teljesítése. Más személy adatának átadása esetén a Megrendelő felel azért,
+          hogy az adat átadására és a kért felhasználásra megfelelő jogosultsággal rendelkezzen.
+        </p>
+        <p>
+          A hangfelvételt nem használom biometrikus azonosításra, és abból hangprofilt nem készítek.
+        </p>
+        <p>
+          <b>Megőrzési idő:</b> a kapott és a munkához létrehozott hang- és képfájlokat főszabály
+          szerint a termék sikeres átadását követő 30 napig őrzöm meg, majd törlöm, kivéve, ha
+          folyamatban lévő panasz, javítás vagy más jogszerű ok miatt további megőrzés szükséges.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Gyermekek személyes adatai</h2>
+        <p>
+          A személyre szabott könyv elkészítése során gyermek neve, fényképe vagy hangja is
+          felhasználásra kerülhet.
+        </p>
+        <p>
+          A Megrendelő felel azért, hogy jogosult legyen a gyermek személyes adatának átadására
+          és a kért felhasználás engedélyezésére.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Számlázás</h2>
+        <p>
+          <b>Kezelt adatok:</b> számlázási név, cím, szükség esetén adószám, a vásárlás és a
+          számla jogszabály szerint szükséges adatai.
+        </p>
+        <p>
+          <b>Adatkezelés célja:</b> számla kiállítása, valamint számviteli és adózási
+          kötelezettségek teljesítése.
+        </p>
+        <p>
+          <b>Jogalap:</b> GDPR 6. cikk (1) bekezdés c) pont – jogi kötelezettség teljesítése.
+        </p>
+        <p>
+          <b>Megőrzési idő:</b> a vonatkozó számviteli és adójogi jogszabályokban meghatározott
+          ideig.
+        </p>
+        <p>
+          Számlázó szolgáltató: <b>[KITÖLTENDŐ]</b>.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Szállítás</h2>
+        <p>
+          A kézbesítéshez szükséges személyes adatokat – a címzett nevét, telefonszámát,
+          e-mail-címét, szállítási címét vagy a választott csomagautomata adatait – a választott
+          szállítási szolgáltató részére továbbítom.
+        </p>
+        <p>
+          <b>Adatkezelés célja és jogalapja:</b> a megrendelt termék kézbesítése, GDPR 6. cikk
+          (1) bekezdés b) pont.
+        </p>
+        <p>
+          A szállítás során igénybe vett szolgáltató lehet a <b>FOXPOST</b>, a GLS, vagy a
+          <b>Magyar Posta Zrt. (MPL)</b>.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>9. Hírlevél és e-mailes értesítések</h2>
+        <p>
+          <b>Kezelt adat:</b> e-mail-cím, valamint a feliratkozás és leiratkozás igazolásához
+          szükséges technikai adatok.
+        </p>
+        <p>
+          <b>Adatkezelés célja:</b> új mesékről, rendelési lehetőségekről és kapcsolódó hírekről
+          szóló e-mailek küldése.
+        </p>
+        <p>
+          <b>Jogalap:</b> GDPR 6. cikk (1) bekezdés a) pont – az érintett hozzájárulása.
+        </p>
+        <p>
+          A hozzájárulás bármikor visszavonható a levelekben található leiratkozási lehetőséggel
+          vagy a <a href="mailto:bondarreni@gmail.com">bondarreni@gmail.com</a> címre küldött
+          üzenettel.
+        </p>
+        <p>
+          Hírlevélszolgáltató: <b>Bluefox Email</b>.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>10. Weboldal működése és technikai szolgáltatók</h2>
+        <p>
+          A weboldal tárhelyét a <b>GitHub, Inc.</b> által biztosított GitHub Pages szolgáltatás
+          adja.
+        </p>
+        <p>
+          Az űrlapok visszaélésszerű, automatizált használatának megelőzésére a weboldal
+          <b>Cloudflare Turnstile</b> szolgáltatást használhat.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>11. Az adatok címzettjei</h2>
+        <p>A személyes adatok a szükséges mértékben különösen az alábbi címzettekhez kerülhetnek:</p>
+        <ul>
+          <li>számlázási és könyvelési szolgáltató,</li>
+          <li>szállítási szolgáltató,</li>
+          <li>e-mail- és hírlevélszolgáltató,</li>
+          <li>tárhely- és informatikai szolgáltató,</li>
+          <li>bank vagy fizetési szolgáltató,</li>
+          <li>jogszabály alapján eljáró hatóság.</li>
+        </ul>
+        <p>Személyes adatokat nem értékesítek.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>12. Adatbiztonság</h2>
+        <p>
+          A személyes adatok védelme érdekében az adatkezelés jellegéhez és kockázatához igazodó
+          technikai és szervezési intézkedéseket alkalmazok, és az adatokat csak a szükséges
+          mértékben teszem hozzáférhetővé.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>13. Az érintett jogai</h2>
+        <p>Az érintett a GDPR feltételei szerint jogosult különösen:</p>
+        <ul>
+          <li>tájékoztatást és hozzáférést kérni a róla kezelt személyes adatokhoz,</li>
+          <li>kérni a pontatlan adatok helyesbítését,</li>
+          <li>kérni személyes adatainak törlését vagy az adatkezelés korlátozását,</li>
+          <li>bizonyos esetekben tiltakozni az adatkezelés ellen,</li>
+          <li>élni az adathordozhatósághoz való jogával,</li>
+          <li>hozzájáruláson alapuló adatkezelés esetén a hozzájárulását bármikor visszavonni.</li>
+        </ul>
+        <p>
+          A kérelmek a <a href="mailto:bondarreni@gmail.com">bondarreni@gmail.com</a> e-mail-címre
+          küldhetők.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>14. Panasz és jogorvoslat</h2>
+        <p>
+          Ha az érintett úgy véli, hogy személyes adatainak kezelése jogsértő, panasszal fordulhat
+          a Nemzeti Adatvédelmi és Információszabadság Hatósághoz, illetve bírósághoz.
+        </p>
+        <p>
+          <b>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</b><br />
+          1055 Budapest, Falk Miksa utca 9–11.<br />
+          Weboldal: <a href="https://www.naih.hu">https://www.naih.hu</a>
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>15. A tájékoztató módosítása</h2>
+        <p>
+          A tájékoztató jogszabályváltozás, szolgáltatóváltás vagy az adatkezelési folyamatok
+          változása esetén módosítható. A mindenkor hatályos változat a weboldalon érhető el.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+
+
+
+    <footer>
+
+      <div class="social-links">
+
+        <a href="mailto:bondarreni@gmail.com" class="social-link tiktok-link">
+
+          <img class="tiktok-logo" src="assets/email.svg" alt="Email icon" />
+
+          bondarreni@gmail.com
+
+        </a>
+
+      </div>
+
+      <div class="social-links">
+
+        <a
+
+          href="https://www.tiktok.com/@bondarreni"
+
+          target="_blank"
+
+          rel="noopener"
+
+          class="social-link tiktok-link"
+
+        >
+
+          <img class="tiktok-logo" src="assets/tiktok.svg" alt="TikTok logo" />
+
+          TikTok
+
+        </a>
+
+      </div>
+
+
+
+      <div class="social-links">
+
+        <a href="./aszf.html" class="social-link social-link-light">ÁSZF</a>
+
+        <a href="./adatkezeles.html" class="social-link social-link-light">Adatkezelési tájékoztató</a>
+
+        <a href="./impresszum.html" class="social-link social-link-light">Impresszum</a>
+
+      </div>
+
+      <p class="footer-copy">© 2026 Bondár Reni</p>
+
+    </footer>
+
+    <script>
+
+      function showHamburger() {
+
+        const mobile = document.getElementById('nav-mobile')
+
+        if (!mobile) return
+
+        mobile.style.display = mobile.style.display === 'flex' ? 'none' : 'flex'
+
+      }
+
+    </script>
+
+  </body>
+
+</html>
