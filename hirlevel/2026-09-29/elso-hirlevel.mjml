@@ -1,0 +1,322 @@
+<mjml lang="hu">
+  <mj-head>
+    <mj-title>Egy kis mesés update - Bondár Reni</mj-title>
+    <mj-preview>Még nem írtam nektek levelet, de azóta sok minden történt... 🤍</mj-preview>
+    <mj-font
+      name="Cormorant Garamond"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    />
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Inter, Helvetica, Arial, sans-serif" />
+      <mj-body background-color="#fafaf8" width="600px" />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+      <mj-text font-size="15px" font-weight="300" line-height="1.8" color="#1a1a1a" padding="0 32px" />
+      <mj-image padding="0" />
+      <mj-button
+        background-color="#1a1a1a"
+        color="#fafaf8"
+        font-size="12px"
+        font-weight="500"
+        letter-spacing="0.18em"
+        text-transform="uppercase"
+        border-radius="0"
+        inner-padding="16px 28px"
+      />
+      <mj-divider border-color="#e8e5e0" border-width="1px" padding="0 32px" />
+      <mj-class name="eyebrow" font-size="11px" letter-spacing="0.25em" text-transform="uppercase" color="#c8a96e" />
+      <mj-class
+        name="serif"
+        font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-weight="300"
+        line-height="1.15"
+      />
+      <mj-class name="muted" color="#6b6b6b" />
+    </mj-attributes>
+    <mj-style>
+      a { color: #1a1a1a; }
+      em { font-style: italic; }
+      .book-title a { text-decoration: none; color: #1a1a1a; }
+      .book-link a { text-decoration: none; color: #1a1a1a; }
+      .footer a { color: #6b6b6b; text-decoration: none; }
+    </mj-style>
+  </mj-head>
+
+  <mj-body>
+    <!-- FEJLÉC - mint a website navigációja -->
+    <mj-section padding="28px 0" border-bottom="1px solid #e8e5e0">
+      <mj-column>
+        <mj-text
+          mj-class="serif"
+          align="center"
+          font-size="22px"
+          font-weight="400"
+          letter-spacing="0.08em"
+        >
+          <a href="https://bondarreni.com" style="text-decoration: none; color: #1a1a1a">Bondár Reni</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- BEVEZETŐ -->
+    <mj-section padding="48px 0 8px">
+      <mj-column>
+        <mj-text mj-class="eyebrow" padding-bottom="20px">Beszélő mesekönyv · Hírlevél</mj-text>
+        <mj-text mj-class="serif" font-size="40px" padding-bottom="24px">
+          Egy kis <em>mesés</em> update
+        </mj-text>
+        <mj-divider border-color="#c8a96e" width="40px" align="left" padding="0 32px 24px" />
+        <mj-text padding-bottom="16px">Szia!</mj-text>
+        <mj-text padding-bottom="16px">
+          Bevallom, eddig még egyetlen levelet sem küldtem nektek - pedig azóta, hogy feliratkoztatok,
+          nagyon sok minden történt. Úgyhogy gondoltam, ideje jelentkeznem egy kis összefoglalóval.
+        </mj-text>
+        <mj-text padding-bottom="16px">
+          De mielőtt bármi mást mondanék: köszönöm! Őszintén nem gondoltam volna, hogy ennyien
+          kíváncsiak lesztek a beszélő mesekönyvekre. Minden feliratkozásnak és üzenetnek nagyon
+          örülök, és hatalmas boldogság látni, hogy ennyi családnak fontos megőrizni a szerettei
+          hangját. 🤍
+        </mj-text>
+        <mj-text padding-bottom="48px">
+          Elkészült néhány új mese, és a könyvek egyre több családhoz jutottak el. Mutatom!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- LEGÚJABB MESE - A cinege cipője + TikTok videó -->
+    <mj-wrapper padding="0 32px 48px">
+      <mj-section background-color="#f0ede8" border="1px solid #e8e5e0" padding="40px 0 44px">
+        <mj-column>
+          <mj-text mj-class="eyebrow" align="center" padding="0 24px 14px">Legújabb mese</mj-text>
+          <mj-text mj-class="serif" align="center" font-size="34px" padding="0 24px 6px">
+            A cinege <em>cipője</em>
+          </mj-text>
+          <mj-text mj-class="muted" align="center" font-size="13px" padding="0 24px 24px">Móra Ferenc</mj-text>
+          <mj-text align="center" padding="0 40px 28px">
+            Végre elkészült! Nagyon vártam már az őszt, úgyhogy ahogy kicsit lehűlt az idő, egyből
+            megjött a hangulatom ehhez a meséhez. 🍁 A videóban megmutatom, milyen lett a könyv.
+          </mj-text>
+          <mj-image
+            src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/_uJpxSVHCY6JP4LysW0of.jpeg"
+            alt="A cinege cipője beszélő mesekönyv - videó a TikTokon"
+            href="https://www.tiktok.com/@bondarreni/video/7689137456699936022"
+            width="360px"
+            border="1px solid #e8e5e0"
+            padding="0 24px 28px"
+          />
+          <mj-button href="https://www.tiktok.com/@bondarreni/video/7689137456699936022" padding="0 24px 16px">
+            Megnézem a videót →
+          </mj-button>
+          <mj-text css-class="book-link" align="center" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0 24px">
+            <a href="https://bondarreni.com/konyvek/a-cinege-cipoje.html">A mese oldala →</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- MESÉK -->
+    <mj-section padding="8px 0 0">
+      <mj-column>
+        <mj-text mj-class="eyebrow" padding-bottom="12px">Könyvek</mj-text>
+        <mj-text mj-class="serif" font-size="32px" padding-bottom="12px">A jelenlegi mesék</mj-text>
+        <mj-text mj-class="muted" font-size="14px" padding-bottom="32px">
+          Ezek a mesék már elkészültek, bármelyikből rendelhettek saját beszélő mesekönyvet - a
+          ti hangotokkal. Mindegyik 30 000 Ft, ami tartalmazza a hangfelvétel vágását és
+          könyvbe illesztését is.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 1. sor -->
+    <mj-section padding="0 16px 32px">
+      <mj-column padding="0 16px">
+        <mj-image
+          src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/v0p9-LwMD6l5DjNgHSbDx.jpeg"
+          alt="A kis gidó mesekönyv borítója"
+          href="https://bondarreni.com/konyvek/kis-gido.html"
+          border="1px solid #e8e5e0"
+        />
+        <mj-text mj-class="serif" css-class="book-title" font-size="22px" font-weight="400" padding="16px 0 4px">
+          <a href="https://bondarreni.com/konyvek/kis-gido.html">A kis gidó</a>
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px" line-height="1.7" padding="0 0 10px">
+          Népmese egy gondoskodó anyakecskéről, a kis gidójáról, és a farkasról.
+        </mj-text>
+        <mj-text css-class="book-link" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0">
+          <a href="https://bondarreni.com/konyvek/kis-gido.html">Megnézem →</a>
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0 16px">
+        <mj-image
+          src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/fkHiC-zNSm20c1ghRs0uo.jpeg"
+          alt="Répamese mesekönyv borítója"
+          href="https://bondarreni.com/konyvek/repamese.html"
+          border="1px solid #e8e5e0"
+        />
+        <mj-text mj-class="serif" css-class="book-title" font-size="22px" font-weight="400" padding="16px 0 4px">
+          <a href="https://bondarreni.com/konyvek/repamese.html">Répamese</a>
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px" line-height="1.7" padding="0 0 10px">
+          Orosz népmese egy hatalmasra nőtt répáról, amit nem tudnak kihúzni a földből.
+        </mj-text>
+        <mj-text css-class="book-link" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0">
+          <a href="https://bondarreni.com/konyvek/repamese.html">Megnézem →</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 2. sor -->
+    <mj-section padding="0 16px 32px">
+      <mj-column padding="0 16px">
+        <mj-image
+          src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/ABayw-uQZudKhQe7x24Km.jpeg"
+          alt="A kiskakas gyémánt félkrajcárja mesekönyv borítója"
+          href="https://bondarreni.com/konyvek/a-kiskakas-gyemant-felkrajcarja.html"
+          border="1px solid #e8e5e0"
+        />
+        <mj-text mj-class="serif" css-class="book-title" font-size="22px" font-weight="400" padding="16px 0 4px">
+          <a href="https://bondarreni.com/konyvek/a-kiskakas-gyemant-felkrajcarja.html">A kiskakas gyémánt félkrajcárja</a>
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px" line-height="1.7" padding="0 0 10px">
+          A bátor kiskakas az igazságért harcolva túljár a hatalmaskodó török császár eszén.
+        </mj-text>
+        <mj-text css-class="book-link" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0">
+          <a href="https://bondarreni.com/konyvek/a-kiskakas-gyemant-felkrajcarja.html">Megnézem →</a>
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0 16px">
+        <mj-image
+          src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/ky3K1Zsr4BkHKQ6nXYr0M.jpeg"
+          alt="A róka és a farkas a lakodalomban mesekönyv borítója"
+          href="https://bondarreni.com/konyvek/a-roka-es-a-farkas-a-lakodalomban.html"
+          border="1px solid #e8e5e0"
+        />
+        <mj-text mj-class="serif" css-class="book-title" font-size="22px" font-weight="400" padding="16px 0 4px">
+          <a href="https://bondarreni.com/konyvek/a-roka-es-a-farkas-a-lakodalomban.html">A róka és a farkas a lakodalomban</a>
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px" line-height="1.7" padding="0 0 10px">
+          Az éhes róka és a farkas egy lakodalom szagát megérezve besunnyognak a kamrába.
+        </mj-text>
+        <mj-text css-class="book-link" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0">
+          <a href="https://bondarreni.com/konyvek/a-roka-es-a-farkas-a-lakodalomban.html">Megnézem →</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 3. sor -->
+    <mj-section padding="0 16px 40px">
+      <mj-column padding="0 16px">
+        <mj-image
+          src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/2sKTS1brHwuM2UTztzdYC.jpeg"
+          alt="A nyulacska harangocskája mesekönyv borítója"
+          href="https://bondarreni.com/konyvek/a-nyulacska-harangocskaja.html"
+          border="1px solid #e8e5e0"
+        />
+        <mj-text mj-class="serif" css-class="book-title" font-size="22px" font-weight="400" padding="16px 0 4px">
+          <a href="https://bondarreni.com/konyvek/a-nyulacska-harangocskaja.html">A nyulacska harangocskája</a>
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px" line-height="1.7" padding="0 0 10px">
+          Láncmese, amiben a nyuszi vissza szeretné szerezni a nyakába való kis harangocskát.
+        </mj-text>
+        <mj-text css-class="book-link" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0">
+          <a href="https://bondarreni.com/konyvek/a-nyulacska-harangocskaja.html">Megnézem →</a>
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0 16px">
+        <mj-image
+          src="https://cdn.bluefox.email/65bea83c319fe92b4639ed52/6aba4b7be375062407d280da/2rkyrpudE_kIteSbMnIgr.jpeg"
+          alt="A cinege cipője mesekönyv borítója"
+          href="https://bondarreni.com/konyvek/a-cinege-cipoje.html"
+          border="1px solid #e8e5e0"
+        />
+        <mj-text mj-class="serif" css-class="book-title" font-size="22px" font-weight="400" padding="16px 0 4px">
+          <a href="https://bondarreni.com/konyvek/a-cinege-cipoje.html">A cinege cipője</a>
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px" line-height="1.7" padding="0 0 10px">
+          Móra Ferenc kedvelt verse a mezítlábas kis cinegéről - bájos, játékos őszi történet.
+        </mj-text>
+        <mj-text css-class="book-link" font-size="11px" font-weight="400" letter-spacing="0.15em" text-transform="uppercase" padding="0">
+          <a href="https://bondarreni.com/konyvek/a-cinege-cipoje.html">Megnézem →</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 0 48px">
+      <mj-column>
+        <mj-button href="https://bondarreni.com/konyvek.html" align="center">Összes könyv →</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- SZEMÉLYRE SZABÁS -->
+    <mj-section padding="0 0 48px">
+      <mj-column>
+        <mj-divider padding="0 32px 48px" />
+        <mj-text mj-class="eyebrow" padding-bottom="12px">Személyre szabás</mj-text>
+        <mj-text mj-class="serif" font-size="30px" padding-bottom="16px">
+          Hogy igazán a <em>tiétek</em> legyen
+        </mj-text>
+        <mj-text padding-bottom="16px">
+          A mese megszólalhat a nagyszülő, a dédszülő vagy akár több családtag hangján is - ez
+          mindig benne van az árban. Ha szeretnétek, kerülhet bele még:
+        </mj-text>
+        <mj-text mj-class="muted" font-size="14px" line-height="2" padding-bottom="16px">
+          ♡&nbsp; egy kedves családi fotó vagy portré a borítóra<br />
+          ♡&nbsp; személyes üzenet a könyv hátuljára<br />
+          ♡&nbsp; egy részlet a saját kézírásotokkal
+        </mj-text>
+        <mj-text mj-class="muted" font-size="13px">
+          Az első választott extra +5 000 Ft, minden további +3 000 Ft.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- VISSZAJELZÉS -->
+    <mj-section padding="0 0 48px">
+      <mj-column>
+        <mj-text mj-class="eyebrow" align="center" padding-bottom="20px">Akiknek már elkészült</mj-text>
+        <mj-text mj-class="serif" align="center" font-size="48px" color="#c8a96e" line-height="1" padding-bottom="0">“</mj-text>
+        <mj-text mj-class="serif" align="center" font-size="21px" font-style="italic" line-height="1.5" padding="0 48px 16px">
+          Nagyon szépen köszönöm a könyvet. Ez valami varázslatos! A gyerekek később fogják
+          megkapni, de már most tudom, hogy imádni fogják és hogy egy örök emlék marad!
+        </mj-text>
+        <mj-text mj-class="muted" align="center" font-size="13px">- Zsani</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- ZÁRÁS -->
+    <mj-section padding="0 0 56px">
+      <mj-column>
+        <mj-divider padding="0 32px 40px" />
+        <mj-text padding-bottom="16px">
+          Köszönöm, hogy itt vagytok és velem tartotok ebben a mesés kalandban! Ha kérdésetek
+          van, vagy szeretnétek egy saját mesekönyvet, csak válaszoljatok erre a levélre. ❤️
+        </mj-text>
+        <mj-text mj-class="serif" font-size="24px" font-style="italic" padding-bottom="32px">Reni</mj-text>
+        <mj-button href="https://bondarreni.com" align="center" padding="0 32px">
+          Szeretnék egy saját mesekönyvet
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- LÁBLÉC -->
+    <mj-section padding="32px 0" border-top="1px solid #e8e5e0">
+      <mj-column>
+        <mj-text css-class="footer" align="center" font-size="12px" color="#6b6b6b" line-height="2">
+          <a href="mailto:bondarreni@gmail.com">bondarreni@gmail.com</a> &nbsp;·&nbsp;
+          <a href="https://www.tiktok.com/@bondarreni">TikTok</a><br />
+          <a href="https://bondarreni.com/aszf.html">ÁSZF</a> &nbsp;·&nbsp;
+          <a href="https://bondarreni.com/adatkezeles.html">Adatkezelési tájékoztató</a> &nbsp;·&nbsp;
+          <a href="https://bondarreni.com/impresszum.html">Impresszum</a>
+        </mj-text>
+        <mj-text css-class="footer" align="center" font-size="11px" color="#6b6b6b" padding-top="12px">
+          Azért kaptad ezt a levelet, mert feliratkoztál a bondarreni.com oldalon.<br />
+          <a href="{{unsubscribeLink}}" style="text-decoration: underline">Leiratkozás</a>
+        </mj-text>
+        <mj-text css-class="footer" align="center" font-size="11px" color="#6b6b6b" padding-top="8px">
+          © 2026 Bondár Reni
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
