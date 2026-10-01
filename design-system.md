@@ -152,7 +152,8 @@ Minden hírlevél a saját, **kiküldési dátummal elnevezett mappájába** ker
 
 ```
 hirlevel/
-  2026-09-29/
+  utm.md                        <- UTM szabályok, minden hírlevélre érvényes
+  2026-10-01/
     elso-hirlevel.mjml          <- forrás, ezt szerkesztjük
     elso-hirlevel.html          <- ebből generálva, ezt küldjük ki
     kepek/                      <- a levél képei emailhez méretezve (a Bluefoxba feltöltött képek helyi példánya)
@@ -161,11 +162,11 @@ hirlevel/
 Generálás (a levél mappájában):
 
 ```
-cd hirlevel/2026-09-29
+cd hirlevel/2026-10-01
 npx mjml elso-hirlevel.mjml -o elso-hirlevel.html
 ```
 
-A `hirlevel/2026-09-29/elso-hirlevel.mjml` a minta, az `<mj-attributes>` blokkja tartalmazza a fenti színeket és betűket MJML formában (`mj-class`: `eyebrow`, `serif`, `muted`). Új levélnél másold le a mappát új dátummal, és módosítsd.
+A `hirlevel/2026-10-01/elso-hirlevel.mjml` a minta, az `<mj-attributes>` blokkja tartalmazza a fenti színeket és betűket MJML formában (`mj-class`: `eyebrow`, `serif`, `muted`). Új levélnél másold le a mappát új dátummal, és módosítsd.
 
 Emailben néhány dolog máshogy működik, mint a weben:
 
@@ -177,4 +178,5 @@ Emailben néhány dolog máshogy működik, mint a weben:
 - **Képméret:** az `assets/` képeit ne használd közvetlenül, mert a borító PNG-k 1-4,5 MB-osak. Minden képből készíts egy kisebb JPG másolatot a `kepek/` mappába, a megjelenített méret kétszeresére (retina): kétoszlopos borító 540×540 px, kiemelt kép 720 px széles. Egy kép 150 KB alatt legyen, az egész levél lehetőleg 500 KB alatt. **WebP képet ne használj**, mert az Outlook nem jeleníti meg.
 - **TikTok videó:** a borítókép URL-je (oEmbed `thumbnail_url`) pár nap alatt lejár. Töltsd le, tegyél rá lejátszás gombot, és mentsd a `kepek/` mappába, majd töltsd fel a Bluefox galériába. A kép a videóra linkeljen.
 - **Lábléc:** ugyanazok a linkek, mint a weben, plusz "Azért kaptad ezt a levelet, mert feliratkoztál a bondarreni.com oldalon." és a **leiratkozó link**. A leiratkozó link a Bluefox változója: `<a href="{{unsubscribeLink}}">Leiratkozás</a>`. Ezt a Bluefox küldéskor minden címzettnek a saját leiratkozó linkjére cseréli.
+- **UTM tagek:** minden bondarreni.com-ra mutató link kapjon UTM-et a [`hirlevel/utm.md`](hirlevel/utm.md) szabályai szerint (`utm_source=bluefox`, `utm_medium=email`, `utm_campaign=ÉÉÉÉ-HH-NN-rovid-tema`, `utm_content` a link helye szerint). Új levélnél az ottani "Eddigi kampányok" táblázatba is vedd fel a kampányt.
 - Legyen `<mj-preview>` (a tárgy mellett megjelenő előnézeti szöveg) és `<mj-title>`.

@@ -14,6 +14,7 @@ Ez a leírás a website szövegeinek hangját rögzíti, hogy az új aloldalak �
 ## Hangnem
 
 - **Meleg, közvetlen, szerény.** Úgy szól, mint egy kedves ismerős, aki szívesen segít. Nem túlzó és nem nyomulós.
+- **Nem nyálas.** Reni visszajelzése az első hírlevél után: túl édes volt, főleg az eleje és a vége. Egy rövid, egyszerű köszönet elég ("Először is köszönöm, hogy ennyien érdeklődtök..., nagyon jólesik."). Ne legyen benne áradozás ("hatalmas boldogság", "őszintén nem gondoltam volna", "mesés kaland"), és ne halmozzuk a köszönetet: egy levélben egyszer köszönjünk.
 - **Megnyugtató.** Leveszi a terhet az olvasóról: *"Nem kell tökéletesnek lennie. Ha valaki elront egy mondatot, nyugodtan újrakezdheti - a hanganyagot én majd megszerkesztem."*
 - **Őszinte és átlátható.** Az árak mindig ott vannak, és ha valami függ valamitől, azt kimondja: *"A pontos ár a mese hosszától és az elkészítendő illusztrációk számától függ. Az összeget minden esetben előre egyeztetjük."* A szerzői jogról is nyíltan ír.
 - **Személyes, de nem túl sok.** Egy-egy mondat magáról (programozó, két kisgyerek anyukája, kevés szabadidő) belefér, de a fókusz a meséken és az olvasón van.
@@ -56,7 +57,7 @@ Kevés és meleg: **🤍 ❤️ ♥️ 🥰 ☺️**. Legfeljebb egy egy bekezd�
 - **Megszólítás:** "Szia!". Nem "Kedves Feliratkozó!".
 - **Nyitás:** egy-két mondat arról, miért jön most a levél. Nyugodtan lehet benne egy kis önirónia vagy őszinteség ("Bevallom, eddig még egyetlen levelet sem küldtem nektek...").
 - **Törzs:** egy fő téma (pl. új mese, új lehetőség, egy elkészült könyv története), alatta a könyvek vagy képek. Leírásnak a könyvoldalak egymondatos leírása jó kiindulás.
-- **Zárás:** köszönet, meghívás a válaszra ("csak válaszoljatok erre a levélre"), aláírás: **Reni**. Egy fő gomb a végén, pl. "Szeretnék egy saját mesekönyvet".
+- **Zárás:** rövid, gyakorlatias: meghívás a válaszra ("Ha kérdésetek van, vagy szeretnétek egy saját mesekönyvet, csak válaszoljatok erre a levélre."), aláírás: **Reni**. Ha a levél elején már volt köszönet, a végén ne legyen még egy. Az aláírás után **ne legyen gomb**: a zárás CTA-ja a válasz a levélre, egy gomb csak megzavarná. Egy rövid mellékes infó (pl. új Instagram fiók) mehet az aláírás után egy "Ps.:" sorba, kisebb, szürke betűvel.
 - **Csak igaz dolog kerüljön bele.** Új mesét, dátumot, eladási számot vagy visszajelzést csak akkor írjunk, ha Reni megerősítette. A visszajelzések szó szerint az `index.html`-ből jönnek, a névvel együtt.
 
 ---
