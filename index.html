@@ -1211,7 +1211,7 @@
     <section class="hero">
       <div class="hero-left">
         <div class="tiktok-facade" id="tiktokFacade">
-          <img id="tiktokThumb" src="" alt="Beszélő könyv TikTok videó" />
+          <img id="tiktokThumb" src="./assets/beszelo_mesekonyv_thumbnail.avif" alt="Beszélő könyv TikTok videó" />
           <div class="tiktok-play-btn">
             <div class="tiktok-play-icon"></div>
           </div>
@@ -1577,18 +1577,6 @@
 
     <script>
       const TIKTOK_VIDEO_ID = '7650158337044090134'
-
-      fetch(
-        'https://www.tiktok.com/oembed?url=' +
-          encodeURIComponent('https://www.tiktok.com/@bondarreni/video/' + TIKTOK_VIDEO_ID)
-      )
-        .then((r) => r.json())
-        .then((data) => {
-          if (data.thumbnail_url) {
-            document.getElementById('tiktokThumb').src = data.thumbnail_url
-          }
-        })
-        .catch(() => {})
 
       document.getElementById('tiktokFacade').addEventListener('click', () => {
         const facade = document.getElementById('tiktokFacade')
