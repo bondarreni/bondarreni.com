@@ -207,7 +207,21 @@
         aspect-ratio: 3 / 4;
       }
 
+      .navLinkDiv {
+        margin-top: 6rem;
+        text-align: center;
+      }
+
       .section-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .section-label a {
         font-size: 0.72rem;
         letter-spacing: 0.3em;
         text-transform: uppercase;
@@ -339,8 +353,9 @@
         --line: #ece7df;
         --soft: #fbfaf7;
 
-        padding: 140px 32px 110px;
+        padding: 8rem 32px 110px;
         color: var(--ink);
+        margin: 0 auto;
       }
 
       .books-catalogue-inner {
@@ -700,6 +715,25 @@
             </div>
           </article>
           
+          <article class="book-card">
+            <a href="./konyvek/kismalac-es-a-farkasok.html" class="book-cover-link">
+              <img
+                src="./assets/books/kismalac-es-a-farkasok/borito_kismalac.png"
+                alt="Kismalac és a farkasok mesekönyv borítója"
+              />
+            </a>
+
+            <div class="book-card-content">
+              <h2>Kismalac és a farkasok</h2>
+              <p>Verses vagy prózai változatban</p>
+
+              <a href="./konyvek/kismalac-es-a-farkasok.html" class="book-card-link">
+                Megnézem <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!--
           <article class="book-card book-card-coming">
             <a href="./konyvek/kismalac-es-a-farkasok.html" class="book-cover-link">
               <img
@@ -718,6 +752,7 @@
               </a>
             </div>
           </article>
+          -->
 
           <article class="book-card book-card-custom">
             <a href="./konyvek/uj-mese.html" class="custom-book-box">
@@ -730,6 +765,12 @@
               <span class="book-card-link"> Érdeklődöm <span>→</span> </span>
             </a>
           </article>
+        </div>
+
+        <div class="navLinkDiv">
+          <p class="section-label">
+            <a href="../index.html" class="nav-link">← Vissza a főoldalra</a>
+          </p>
         </div>
       </div>
     </section>
