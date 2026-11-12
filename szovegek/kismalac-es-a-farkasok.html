@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondár Reni</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ1Q9NGRDW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-ZJ1Q9NGRDW')
+    </script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback&render=explicit"
+      defer
+    ></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --ink-light: #6b6b6b;
+        --paper: #fafaf8;
+        --accent: #c8a96e;
+        --border: #e8e5e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+        min-height: 100vh;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(250, 250, 248, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links-right {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links-right-hamburger {
+        display: none;
+      }
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .nav-links-right-hamburger {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+
+      .nav-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        color: var(--ink);
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .nav-link:hover {
+        color: var(--ink);
+      }
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .hamburger-menu img {
+        height: 25px;
+      }
+
+      #nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(250, 250, 248, 0.92);
+        z-index: 1;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      #nav-mobile a {
+        color: var(--ink-light);
+        padding: 1rem 1.5rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links-right {
+          display: none;
+        }
+        .hamburger-menu {
+          display: flex;
+        }
+      }
+      @media (min-width: 769px) {
+        #nav-mobile {
+          display: none !important;
+        }
+      }
+
+      .hero-divider {
+        width: 40px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+
+      .activeNavLink {
+        color: var(--accent);
+      }
+
+      #signupForm {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      #signupForm .formInput {
+        width: 100%;
+        padding: 0.9rem 1.1rem;
+        background: #fff;
+        border: 1px solid var(--border);
+        color: var(--ink);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.88rem;
+        font-weight: 300;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+
+      #signupForm .formInput::placeholder {
+        color: var(--ink-light);
+        opacity: 0.55;
+      }
+
+      #signupForm .formInput:focus {
+        border-color: var(--accent);
+      }
+
+      #submitBtn,
+      #loadingBtn {
+        width: 100%;
+        padding: 0.9rem;
+        background: var(--ink);
+        color: var(--paper);
+        border: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        margin-top: 0.25rem;
+      }
+
+      #submitBtn:hover {
+        background: #333;
+        transform: translateY(-1px);
+      }
+
+      #loadingBtn {
+        display: none;
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      #backBtn {
+        display: none;
+        width: 100%;
+        padding: 0.9rem;
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--border);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        transition: border-color 0.2s;
+      }
+
+      #backBtn:hover {
+        border-color: var(--ink);
+      }
+
+      #captchaContainer {
+        display: none;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .signup-note {
+        font-size: 0.7rem;
+        color: var(--ink-light);
+        opacity: 0.5;
+        margin-top: 1rem;
+      }
+
+      .section-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .section-label a {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2.5rem;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* TALE */
+      .tale {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 8rem 2rem;
+      }
+
+      .tale-inner {
+        display: flex;
+        justify-content: center;
+      }
+
+      .tale-content {
+        text-align: center;
+      }
+
+      .tale-content .tale-text {
+        text-align: center;
+      }
+
+      .tale-content .hero-divider {
+        margin: 2rem 0;
+      }
+
+      .tale-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        font-weight: 300;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+
+      .tale-text em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .tale-author {
+        margin-top: 6px;
+        color: var(--ink-light);
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+      }
+
+      .tale-body {
+        font-size: 0.92rem;
+        color: var(--ink-light);
+        line-height: 1.9;
+        max-width: 58ch;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .tale-body p + p {
+        margin-top: 1.2rem;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .social-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink-light);
+        transition: color 0.2s;
+      }
+
+      .social-link-light {
+        color: #c0c0c0;
+      }
+
+      .tiktok-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .tiktok-logo {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      .social-link:hover {
+        color: var(--ink);
+      }
+
+      .footer-copy {
+        font-size: 0.72rem;
+        color: #c0c0c0;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .tale,
+        .projects,
+        footer {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .tale-inner {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="../index.html" class="nav-name">Bondár Reni</a>
+      <div class="nav-links-right">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../rolam.html" class="nav-link">Rólam</a>
+      </div>
+
+      <a class="hamburger-menu" onclick="showHamburger()">
+        <img src="../assets/hamburger-menu.svg" alt="Hamburger menu" />
+      </a>
+      <div id="nav-mobile">
+        <a href="../index.html" class="nav-link">Beszélő könyv</a>
+        <a href="../konyvek.html" class="nav-link activeNavLink">Könyvek</a>
+        <a href="../rolam.html" class="nav-link">Rólam</a>
+      </div>
+    </nav>
+
+    <section class="tale" id="mese">
+      <div>
+        <p class="section-label">
+          <a href="../index.html" class="nav-link">Főoldal</a>
+          /
+          <a href="../konyvek.html" class="nav-link">Könyvek</a>
+          <a href="../konyvek/kismalac-es-a-farkasok.html" class="nav-link">/ Kismalac és a farkasok</a>
+          / szöveg
+        </p>
+      </div>
+      <div class="tale-inner">
+        <div class="tale-content">
+          <p class="tale-text">Kismalac és a farkasok</p>
+          <p class="tale-author">Móricz Zsigmond</p>
+          <div class="hero-divider"></div>
+          <div class="tale-body">
+            <p>
+              Volt a világon egy kis malac, annak volt egy kis háza egy nagy rengeteg erdő közepén.<br>
+              Egyszer, amint ebben a kis házban főzögetett magának, odamegy egy nagy, ordas farkas, és beszól az ajtón:<br>
+              - Eressz be, kedves malackám, nagyon hideg van idekint, fázom.<br>
+              - Nem eresztelek biz én, mert megeszel.<br>
+              - Ereszd be hát legalább az egyik hátulsó lábam.<br>
+              <br>
+              ⋆ ⋆ ⋆
+              <br>
+              <br>
+              A kis malac beeresztette az egyik hátulsó lábát. Hanem alattomban odatett egy nagy fazék vizet a tűzhöz.<br>
+              Kicsi idő múlva megint megszólalt a farkas:<br>
+              - Ugyan, kedves kis malackám, ereszd be a másik hátulsó lábam is!<br>
+              A kis malac beeresztette azt is.<br>
+              <br>
+              ⋆ ⋆ ⋆
+              <br>
+              <br>
+              De a farkas azzal se érte be, hanem egy kis idő múlva megint beszólott:<br>
+              - Kedves kis malackám, ereszd be a két első lábam is!<br>
+              A kis malac beeresztette a két első lábát is, de a farkasnak az se volt elég. Megint megszólalt:<br>
+              - Édes-kedves kis malackám, eressz be már egészen, majd meglásd, egy ujjal se nyúlok hozzád!<br>
+              <br>
+              ⋆ ⋆ ⋆
+              <br>
+              <br>
+              Erre a kis malac egy zsákot szépen odatett a nyíláshoz, hogy amint a farkas jön háttal befelé, egyenesen abba menjen be.<br>
+              Azzal beeresztette. A farkas csakugyan a zsákba farolt be. A kis malac se volt rest, hirtelen bekötötte a zsák száját, lekapta a tűzről a nagy fazék forró vizet, leforrázta vele a farkast, azután hirtelen felmászott egy nagy fára.<br>
+              A farkas egy darabig ordított, mert a forró víz úgy levitte a szőrét, hogy egy szál se maradt rajta.<br>
+              Azután addig hányta-vetette magát, míg végül kioldódott a zsák szája. Kibújt belőle, szaladt egyenesen segítséget hozni.<br>
+              <br>
+              ⋆ ⋆ ⋆
+              <br>
+              <br>
+              Vissza is jött nemsokára vagy tizedmagával. Elkezdték keresni a kis malacot.<br>
+              Addig-addig keresték, míg valamelyik csakugyan meglátta a fa tetején. Odamentek a fa alá, elkezdtek tanakodni, hogy mitévők legyenek, mi módon fogják meg a kis malacot, mert egyik se tudott a fára felmászni.<br>
+              Nagy sokára aztán arra határozták magukat, hogy egymás hátára állnak mindnyájan, úgy aztán a legfelső majd csak eléri. El is kezdtek egymás hátára felmászni. A kopasz maradt legalól, mert félt feljebb menni. Így hát a többi mind az ő hátán volt.<br>
+              Már olyan magasan voltak, hogy csak egyetlenegy hibázott. Az az egy is elkezdett már mászni.<br>
+              <br>
+              ⋆ ⋆ ⋆
+              <br>
+              <br>
+              Akkor a kis malac hirtelen elkiáltotta magát:<br>
+              - Forró vizet a kopaszra!<br>
+              A kopasz megijedt, kiugrott a többi alól, a sok farkas mind lepotyogott. Kinek lába, kinek nyaka tört ki, a kopasz meg úgy elszaladt, hogy sose látták többet.<br>
+              A kis malac szépen leszállott a fáról, hazament, többet felé se mertek menni a háza tájékának a farkasok.<br>
+              Boldogan élt, míg meg nem halt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="social-links">
+        <a href="mailto:reni@bondarreni.com" class="social-link tiktok-link">
+          <img class="tiktok-logo" src="../assets/email.svg" alt="Email icon" />
+          reni@bondarreni.com
+        </a>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://www.tiktok.com/@bondarreni"
+          target="_blank"
+          rel="noopener"
+          class="social-link tiktok-link"
+        >
+          <img class="tiktok-logo" src="../assets/tiktok.svg" alt="TikTok logo" />
+          TikTok
+        </a>
+        <a
+          href="https://www.instagram.com/bondar.reni"
+          target="_blank"
+          rel="noopener"
+          class="social-link tiktok-link"
+        >
+          <img class="tiktok-logo" src="../assets/insta.svg" alt="Instagram logo" />
+          Instagram
+        </a>
+      </div>
+
+      <div class="social-links">
+        <a href="../aszf.html" class="social-link social-link-light">ÁSZF</a>
+        <a href="../adatkezeles.html" class="social-link social-link-light">Adatkezelési tájékoztató</a>
+        <a href="../impresszum.html" class="social-link social-link-light">Impresszum</a>
+      </div>
+
+      <p class="footer-copy">&copy; 2026 Bondár Reni</p>
+    </footer>
+
+    <script>
+      function showHamburger() {
+        const navLinks = document.getElementById('nav-mobile')
+        if (navLinks.style.display === 'flex') {
+          navLinks.style.display = 'none'
+        } else {
+          navLinks.style.display = 'flex'
+        }
+      }
+    </script>
+  </body>
+</html>
